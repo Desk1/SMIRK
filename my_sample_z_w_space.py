@@ -64,6 +64,8 @@ def sample():
     SIZE = 25 # 20K sampling
     iter_times = SIZE * (100 // batch_size)
 
+    os.makedirs('signal', exist_ok=True)
+    os.makedirs('samples', exist_ok=True)
     for i in tqdm(range(1, iter_times+1)):
         if use_z_plus_space:
             signal_file = './signal/my_sample_zplus_w_space_{}.signal'.format(SIZE)
@@ -86,7 +88,7 @@ def sample():
             filename = f'{dirname}/sample_{i}'
         else:
             latent_in = torch.randn(batch_size, latent_dim, device=device)
-            dirname = f'./stylegan_sample_z_{genforce_model}_{trunc_psi}_{trunc_layers}_{SIZE}'
+            dirname = f'./samples/stylegan_sample_z_{genforce_model}_{trunc_psi}_{trunc_layers}_{SIZE}'
             filename = f'{dirname}/sample_{i}'
 
         if not os.path.isdir(dirname):
