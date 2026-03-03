@@ -55,7 +55,7 @@ def get_generator(batch_size, device):
 
 @torch.no_grad()
 def sample():
-    device = 'cuda'
+    device = 'cpu'
     latent_dim = 512
     batch_size = 100
     generator = get_generator(batch_size, device)
@@ -66,9 +66,9 @@ def sample():
 
     for i in tqdm(range(1, iter_times+1)):
         if use_z_plus_space:
-            signal_file = './my_sample_zplus_w_space_{}.signal'.format(SIZE)
+            signal_file = './signal/my_sample_zplus_w_space_{}.signal'.format(SIZE)
         else:
-            signal_file = './my_sample_z_w_space_{}.signal'.format(SIZE)
+            signal_file = './signal/my_sample_z_w_space_{}.signal'.format(SIZE)
         if not os.path.isfile(signal_file):
             with open(signal_file, 'w') as out_file:
                 out_file.write('0')
