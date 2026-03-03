@@ -21,7 +21,11 @@ def postprocess(images):
     images = torch.clamp((images + 1.) / 2., 0., 1.)
     return images
 
-
+def download_model_checkpoints(url, checkpoint_path):
+    import gdown
+    gdown.download(url, checkpoint_path)
+    print("Download complete")
+    
 def parse_args(model_name, num, batch_size, trunc_psi=0.7, trunc_layers=8):
     """Parses arguments."""
     parser = argparse.ArgumentParser(
@@ -102,9 +106,10 @@ def main(device, model_name, num, batch_size, use_w_space=True, use_discri=True,
     # print(checkpoint_path)
     print(f'Loading checkpoint from `{checkpoint_path}` ...')
     if not os.path.exists(checkpoint_path):
-        print(f'  Downloading checkpoint from `{url}` ...')
-        subprocess.call(['wget', '--quiet', '-O', checkpoint_path, url])
-        print('  Finish downloading checkpoint.')
+        #print(f'  Downloading checkpoint from `{url}` ...')
+        #subprocess.call(['wget', '--quiet', '-O', checkpoint_path, url])
+        #print('  Finish downloading checkpoint.')
+        download_model_checkpoints(url, checkpoint_path)
     checkpoint = torch.load(checkpoint_path, map_location='cpu')
 
     if 'generator_smooth' in checkpoint:
