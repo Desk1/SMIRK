@@ -55,7 +55,7 @@ def get_generator(batch_size, device):
 
 @torch.no_grad()
 def sample():
-    device = 'cpu'
+    device = 'cuda'
     latent_dim = 512
     batch_size = 100
     generator = get_generator(batch_size, device)
