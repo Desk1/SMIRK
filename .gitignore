@@ -1,3 +1,4 @@
+/blackbox_attack/*
 /blackbox_attack_data/*
 /checkpoints/*
 /samples/*
@@ -5,5 +6,6 @@
 /work_dirs/
 /datasets/*
 /classification_models/*
+/runs_SMILE/*
 __pycache__/
 Dockerfile
