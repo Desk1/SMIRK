@@ -3,5 +3,7 @@
 /samples/*
 /signal/*
 /work_dirs/
+/datasets/*
+/classification_models/*
 __pycache__/
 Dockerfile

@@ -426,7 +426,7 @@ def main(args):
                 Normalize(Mean, Std)
             ])
 
-        totalset = torchvision.datasets.ImageFolder("../vggface2/train", transform=test_transform)
+        totalset = torchvision.datasets.ImageFolder("./datasets/vggface2/train", transform=test_transform)
         trainset_list, testset_list = train_test_split(list(range(len(totalset.samples))), test_size=0.01, random_state=666)
         trainset_no_use= Subset(totalset, trainset_list)
         testset= Subset(totalset, testset_list)
