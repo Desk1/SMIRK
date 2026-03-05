@@ -12,7 +12,7 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 import torchvision.utils as vutils
 from my_utils import crop_img, resize_img, normalize, create_folder, Tee
-from my_target_models import get_model, get_input_resolution
+from model_architectures.my_target_models import get_model, get_input_resolution
 
 random.seed(0)
 

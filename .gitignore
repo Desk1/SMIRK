@@ -3,5 +3,5 @@
 /samples/*
 /signal/*
 /work_dirs/
-/__pycache__/
+__pycache__/
 Dockerfile

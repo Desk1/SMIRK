@@ -4,11 +4,11 @@ import torch
 from torch import nn
 import torchvision.models as models
 
-import vgg_m_face_bn_dag
-import resnet50_scratch_dag
-import vgg_face_dag
+import model_architectures.vgg_m_face_bn_dag
+import model_architectures.resnet50_scratch_dag
+import model_architectures.vgg_face_dag
 from facenet_pytorch import InceptionResnetV1
-import net_sphere
+import model_architectures.net_sphere as net_sphere
 from typing import Any, Callable, List, Optional, Tuple
 from torch import nn, Tensor
 import torch.nn.functional as F

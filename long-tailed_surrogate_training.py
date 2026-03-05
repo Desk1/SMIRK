@@ -1,44 +1,41 @@
-import torch
-import torchvision
-import torch.nn.functional as F
-from torchvision import transforms
-from torch.utils.data.dataloader import DataLoader
-from torch.utils.data import Dataset
-from torch.utils.data.dataset import Subset
-from sklearn.model_selection import train_test_split
-from resnet50_scratch_dag import Resnet50_scratch_dag as resnet50
-from facenet_pytorch import InceptionResnetV1, fixed_image_standardization, training
-from inceptionresnetv1_4finetune import InceptionResnetV1_4finetune, InceptionResnetV1_4finetune_E
-from mobilenetv2_4finetune import MobileNetV2_E
-from torch.optim.lr_scheduler import MultiStepLR
-from torch.utils.tensorboard import SummaryWriter
-from my_target_models import get_model, get_input_resolution
-from my_utils import crop_and_resize, normalize, ALL_MEANS, ALL_STDS
-
-import torch.nn as nn
 import os
 import glob
 import numpy as np
+import torch
+import torchvision
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data.dataloader import DataLoader
+from torch.utils.data import Dataset
+from torch.utils.data.dataset import Subset
+from torch.utils.tensorboard import SummaryWriter
 
-import net_sphere
-from net_sphere import AngleLinear
-import resnet50_scratch_dag
+from model_architectures.resnet50_scratch_dag import Resnet50_scratch_dag as resnet50
+from model_architectures.inceptionresnetv1_4finetune import InceptionResnetV1_4finetune, InceptionResnetV1_4finetune_E
+from model_architectures.mobilenetv2_4finetune import MobileNetV2_E
+from model_architectures.my_target_models import get_model, get_input_resolution
+import model_architectures.net_sphere as net_sphere
+from model_architectures.net_sphere import AngleLinear
+import model_architectures.resnet50_scratch_dag
+from model_architectures.my_target_models import InceptionAux
+from model_architectures.efficientnetb0_4finetune import EfficientNet_E
+from model_architectures.inceptionv3_4finetune import Inception3_E
+from model_architectures.swintransformer_4finetune import SwinTransformer_E
+from model_architectures.vitb16_4finetune import VisionTransformer_E
+
+from torchvision import transforms
 import torchvision.models as models
-from my_target_models import InceptionAux
-from collections import OrderedDict
 from torchvision.ops.misc import Conv2dNormActivation
-from efficientnetb0_4finetune import EfficientNet_E
 from torchvision.models.efficientnet import _efficientnet_conf
-from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple, Union
-from inceptionv3_4finetune import Inception3_E
-from torchvision.models.inception import BasicConv2d, InceptionE
-from swintransformer_4finetune import SwinTransformer_E
+from torchvision.models.inception import InceptionE
 from torchvision.models.swin_transformer import SwinTransformerBlockV2, PatchMergingV2
-from torchvision.ops.misc import MLP, Permute
-from vitb16_4finetune import VisionTransformer_E
+from torchvision.ops.misc import MLP
 
-from torchvision.utils import save_image
+from collections import OrderedDict
+from typing import Any, Callable, Dict, List, Optional, Sequence, Tuple, Union
 from tqdm import tqdm
+from sklearn.model_selection import train_test_split
+from my_utils import crop_and_resize, normalize, ALL_MEANS, ALL_STDS
 
 def build_weight_k(all_logits):
     beta = 0.9
