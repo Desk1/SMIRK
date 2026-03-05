@@ -1,4 +1,6 @@
+/blackbox_attack_data/*
 /checkpoints/*
 /samples/*
 /signal/*
 /work_dirs/
+/__pycache__/
