@@ -55,7 +55,7 @@ def get_generator(batch_size, device):
 
 @torch.no_grad()
 def sample():
-    device = 'cpu'
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     latent_dim = 512
     batch_size = 100
     generator = get_generator(batch_size, device)
@@ -63,6 +63,8 @@ def sample():
 
     SIZE = 25 # 20K sampling
     iter_times = SIZE * (100 // batch_size)
+
+    print(f"Using device: {device}")
 
     os.makedirs('signal', exist_ok=True)
     os.makedirs('samples', exist_ok=True)
