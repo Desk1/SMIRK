@@ -10,8 +10,8 @@
 #SBATCH --mem=32G
 #SBATCH --time=1:00:00
 
-# SBATCH --output=jobs/job_output_%j.log   # Standard output (print statements)
-# SBATCH --error=jobs/job_error_%j.log     # Errors/Tracebacks
+#SBATCH --output=jobs/job_output_%j.log   # Standard output (print statements)
+#SBATCH --error=jobs/job_error_%j.log     # Errors/Tracebacks
 
 
 
