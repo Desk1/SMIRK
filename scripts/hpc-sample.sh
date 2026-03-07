@@ -2,7 +2,7 @@
 #SBATCH --job-name=sample-synthetic-images
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
-#SBATCH --partition=uoa-gpu
+#SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:2
 #SBATCH --ntasks-per-node=2
