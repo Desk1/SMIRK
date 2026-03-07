@@ -4,8 +4,8 @@
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:2
-#SBATCH --ntasks-per-node=2
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=1:00:00
@@ -16,11 +16,9 @@
 
 
 # activate environment
-module load conda
 conda activate SMIRK-HPC
 
 # run py script
-source activate pytorch
 python my_sample_z_w_space.py &
 PID=$!
 
