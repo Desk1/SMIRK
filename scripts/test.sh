@@ -1,14 +1,23 @@
 #!/bin/bash --login
-#SBATCH --job-name=test_script # Replace with the name of your job
-#SBATCH --mail-user=k.jacob.22@abdn.ac.uk # use your own email
-#SBATCH --mail-type=BEGIN,END,FAIL # when to send notification email
-#SBATCH -o slurm.%j.out # STDOUT '%j' will be replaced with job-id
-#SBATCH -e slurn.%j.err # STDERR
-#SBATCH --ntasks=1 # The number of tasks
-# (default is 1 cpu per task)
-#SBATCH --time=00:05:00 # length of time your job needs
-#SBATCH --partition=compute # 'queue' job to be submitted to
+#SBATCH --job-name=sample-synthetic-images
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=k.jacob.22@abdn.ac.uk
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:2
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH --time=1:00:00
 
+#SBATCH --output=jobs/job_output_%j.log   # Standard output (print statements)
+#SBATCH --error=jobs/job_error_%j.log     # Errors/Tracebacks
+
+
+
+# activate environment
 module load conda
 conda activate SMIRK-HPC
-pwd
+
+# run py script
+python scripts/hpc-gpudebug.py
