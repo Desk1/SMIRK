@@ -110,7 +110,7 @@ def main(device, model_name, num, batch_size, use_w_space=True, use_discri=True,
         #subprocess.call(['wget', '--quiet', '-O', checkpoint_path, url])
         #print('  Finish downloading checkpoint.')
         download_model_checkpoints(url, checkpoint_path)
-    checkpoint = torch.load(checkpoint_path, map_location='cpu')
+    checkpoint = torch.load(checkpoint_path, map_location=device)
 
     if 'generator_smooth' in checkpoint:
         generator.load_state_dict(checkpoint['generator_smooth'])
