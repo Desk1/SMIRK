@@ -96,7 +96,6 @@ def sample():
         if not os.path.isdir(dirname):
             os.mkdir(dirname)
 
-        
         img_gen = generator(latent_in)
         torch.save(img_gen, f'{filename}_img.pt')
 
