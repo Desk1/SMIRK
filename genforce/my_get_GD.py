@@ -8,7 +8,6 @@ from tqdm import tqdm
 import numpy as np
 
 import torch
-import torch.nn as nn
 from torchvision.utils import save_image
 
 from .models import MODEL_ZOO
@@ -100,10 +99,6 @@ def main(device, model_name, num, batch_size, use_w_space=True, use_discri=True,
         print('Finish building discriminator.')
     else:
         discriminator = None
-
-    # DP
-    if torch.cuda.device_count() > 1:
-        generator = nn.DataParallel(generator)
 
     # Load pre-trained weights.
     os.makedirs('checkpoints', exist_ok=True)

@@ -4,10 +4,11 @@
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:4
+#SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --mem=8G
+#SBATCH --mem-per-gpu=8G
 #SBATCH --time=1:00:00
 
 #SBATCH --output=jobs/job_output_%j.log
