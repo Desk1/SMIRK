@@ -7,11 +7,11 @@
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=0
+#SBATCH --mem=16G
 #SBATCH --time=1:00:00
 
-#SBATCH --output=jobs/job_output_%j.log   # Standard output (print statements)
-#SBATCH --error=jobs/job_error_%j.log     # Errors/Tracebacks
+#SBATCH --output=jobs/job_output_%j.log
+#SBATCH --error=jobs/job_error_%j.log  
 
 
 
