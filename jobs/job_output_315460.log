@@ -1,3 +1,0 @@
-Is CUDA available?: True
-Number of CUDA devices: 1
-A torch tensor: tensor([0.2666, 0.5335, 0.2614, 0.5474, 0.9146], device='cuda:0')
