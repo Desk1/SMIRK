@@ -4,7 +4,8 @@
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:3g.20gb:1
+#SBATCH --gres=gpu:1
+#SBATCH --nodelist=gpu02
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=0
