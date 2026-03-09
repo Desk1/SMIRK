@@ -1,5 +1,5 @@
 #!/bin/bash --login
-#SBATCH --job-name=query-blackbox-model
+#SBATCH --job-name=merge-tensors
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
 #SBATCH --partition=gpu
