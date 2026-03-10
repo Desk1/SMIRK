@@ -1,5 +1,5 @@
 #!/bin/bash --login
-#SBATCH --job-name=surrogate-training
+#SBATCH --job-name=run-attack
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
 #SBATCH --partition=gpu
