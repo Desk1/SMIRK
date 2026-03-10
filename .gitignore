@@ -5,7 +5,9 @@
 /signal/*
 /work_dirs/
 /datasets/*
-/classification_models/*
+classification_models/*.pt
+classification_models/*.pth
+classification_models/*.7z
 /runs_SMILE/*
 __pycache__/
 Dockerfile
