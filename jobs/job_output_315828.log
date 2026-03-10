@@ -1,0 +1,6 @@
+all_logits.shape:  torch.Size([2500, 8631])
+len(img_files):  25
+img_files[0].shape:  torch.Size([100, 3, 256, 256])
+weight:  torch.Size([8631])
+tensor([0.3690, 0.5263, 0.3690,  ..., 0.2908, 0.5263, 0.2134], device='cuda:0')
+tensor(0.1000, device='cuda:0') tensor(1.0000, device='cuda:0')
