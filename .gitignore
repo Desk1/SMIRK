@@ -9,5 +9,6 @@ classification_models/*.pt
 classification_models/*.pth
 classification_models/*.7z
 /runs_SMILE/*
+/model_checkpoints_SMILE/*
 __pycache__/
 Dockerfile
