@@ -1,0 +1,400 @@
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=1, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:55:23.149365
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=2, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:56:00.663680
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=3, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:56:37.678808
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=4, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:57:13.958951
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=5, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:57:51.238683
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=6, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:58:28.730818
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=7, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:59:08.287244
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=8, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 18:59:45.760503
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=9, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:00:21.953658
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=10, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:00:57.097095
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=11, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:01:33.921038
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=12, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:02:12.830071
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=13, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:02:50.238128
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=14, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:03:27.808242
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=15, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:04:04.676307
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=16, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:04:41.823085
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=17, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:05:14.335202
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=18, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:05:46.431875
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=19, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:06:25.413411
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=20, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:07:03.601188
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=21, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:07:38.983557
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=22, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:08:16.987475
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=23, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:08:55.154926
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=24, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:09:31.437190
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=25, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:10:07.196876
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=26, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:10:43.984880
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=27, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:11:18.334386
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=28, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:11:55.904118
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=29, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:12:33.117351
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=30, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:13:10.039210
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=31, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:13:47.292873
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=32, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:14:23.731139
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=33, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:15:02.926299
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=34, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:15:41.917617
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=35, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:16:18.919419
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=36, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:16:54.808314
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=37, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:17:27.162019
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=38, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:18:02.469025
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=39, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:18:39.857239
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=40, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:19:16.309422
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=41, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:19:54.176727
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=42, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:20:30.938294
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=43, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:21:08.954986
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=44, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:21:48.731942
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=45, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:22:25.652441
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=46, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:23:01.435897
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=47, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:23:39.797087
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=48, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:24:18.113447
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=49, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:24:54.928651
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=50, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target=None)
+2026-03-11 19:25:32.429665
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
