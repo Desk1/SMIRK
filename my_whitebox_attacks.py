@@ -449,9 +449,9 @@ def init_population_ours_w(args):
     find args.n images with highest confidence
     """
     if args.dataset == 'celeba_partial256':
-        all_ws_pt_file = './stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
     elif args.dataset == 'ffhq':
-        all_ws_pt_file = './stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
 
     # compute bound in p space
     invert_lrelu = nn.LeakyReLU(negative_slope=5.)
