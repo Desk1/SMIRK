@@ -703,7 +703,7 @@ def my_attack_PPA(args, generator, generate_images_func):
 
 def load_finetune_model(args):
     if args.target_dataset == 'vggface2':
-        save_path = f'vggface2_target/model_checkpoints_{args.EorOG}/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.population_size}_{args.num_experts}'
+        save_path = f'model_checkpoints_{args.EorOG}/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.population_size}_{args.num_experts}'
     else:
         save_path = f'model_checkpoints_{args.EorOG}/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.population_size}_{args.num_experts}'
     
