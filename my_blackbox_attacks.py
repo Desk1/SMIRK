@@ -618,7 +618,7 @@ def compute_conf(args, exp_name, net, arch_name, resolution, targets, imgs):
     if arch_name == 'sphere20a':
         outputs = outputs[0]
 
-    if args.target_dataset != 'vggface':
+    if False:#args.target_dataset != 'vggface':  skip this metric due to bugs - why he uses hardcoded paths to local files on his machine?
         if args.test_arch_name == 'sphere20a':
             base_dir = '/root/autodl-tmp/CASIA-WebFace_eval/eval/sphere20a'
         elif args.test_arch_name == 'inception_resnetv1_casia':
