@@ -18,6 +18,6 @@
 conda activate SMIRK-HPC
 
 # run py script
-python my_blackbox_attacks.py --test_only --test_target 1 --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target $target --budget 1000 --population_size 2500 --epochs 200 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --lr 0.2 --x 1.7
+python my_blackbox_attacks.py --test_only --test_target 1 --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target 1 --budget 1000 --population_size 2500 --epochs 200 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --lr 0.2 --x 1.7
 
 
