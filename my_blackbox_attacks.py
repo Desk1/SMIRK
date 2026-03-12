@@ -707,14 +707,14 @@ def compute_conf(args, exp_name, net, arch_name, resolution, targets, imgs):
         f.write(f'top1 acc: {correct_cnt}/{total_cnt} = {correct_cnt/total_cnt:.4f}\n')
         f.write(f'topk acc: {topk_correct_cnt}/{total_cnt} = {topk_correct_cnt/total_cnt:.4f}\n')
         if args.target_dataset != 'vggface':
-            f.write(f"l2 distances mean: {l2_distances_mean}\n")
-            f.write(f"knn distances mean: {knn_l2_distances_mean}\n")
+            #f.write(f"l2 distances mean: {l2_distances_mean}\n")
+            #f.write(f"knn distances mean: {knn_l2_distances_mean}\n")
             f.write(f"image path:\n")
 
         f.write(str(test_true_list))
 
-        if args.target_dataset != 'vggface':
-            f.write(f"{knn_img_paths}\n")
+        #if args.target_dataset != 'vggface':
+            #f.write(f"{knn_img_paths}\n")
 
     return test_true_list, target_conf
 
