@@ -1,0 +1,320 @@
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=1, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='1')
+2026-03-12 12:28:33.477960
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.8823155760765076]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=2, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='2')
+2026-03-12 12:29:11.899646
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.7799153923988342]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=3, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='3')
+2026-03-12 12:29:49.523624
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.005232788156718016]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 0/1 = 0.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=4, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='4')
+2026-03-12 12:30:28.727332
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.5201557874679565]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=5, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='5')
+2026-03-12 12:31:10.056708
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.047578271478414536]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 1/1 = 1.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=6, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='6')
+2026-03-12 12:31:51.068043
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.7659056782722473]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=7, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='7')
+2026-03-12 12:32:31.461871
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.32048001885414124]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=8, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='8')
+2026-03-12 12:33:12.541600
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.014963415451347828]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 0/1 = 0.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=9, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='9')
+2026-03-12 12:33:51.952298
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.9373714327812195]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=10, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='10')
+2026-03-12 12:34:32.646691
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.285893052816391]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=11, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='11')
+2026-03-12 12:35:15.117918
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.12361457943916321]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 1/1 = 1.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=12, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='12')
+2026-03-12 12:35:55.153922
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [5.59103864361532e-06]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 0/1 = 0.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=13, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='13')
+2026-03-12 12:36:33.331356
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.8358093500137329]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=14, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='14')
+2026-03-12 12:37:11.796214
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.13735826313495636]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 1/1 = 1.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=15, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='15')
+2026-03-12 12:37:52.777433
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.93678218126297]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=16, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='16')
+2026-03-12 12:38:35.532886
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.01192297413945198]
+resnet50
+top1 acc: 0/1 = 0.0000
+topk acc: 0/1 = 0.0000
+[]
+[]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=17, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='17')
+2026-03-12 12:39:16.311617
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.6675098538398743]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=18, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='18')
+2026-03-12 12:39:57.344868
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.9744467735290527]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=19, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='19')
+2026-03-12 12:40:37.096598
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.9725623726844788]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
+Namespace(attack_mode='ours-surrogate_model', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=1000, target=20, p_std_ce=1.0, index=0, budget=1000, strategy='NGOpt', early_stage=50, candidate_num=10, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, x=1.7, epochs=200, lr=0.2, max_episodes=40000, max_step=1, alpha=0, z_dim=100, generations=10, mutation_prob=0.1, mutation_ce=0.1, min_score=0.95, test_only=True, test_target='20')
+2026-03-12 12:41:18.627374
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=1000, batch_size=1000, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+Note: centroid_logits.pt is not found
+top-5 labels
+target conf: [0.6771083474159241]
+resnet50
+top1 acc: 1/1 = 1.0000
+topk acc: 1/1 = 1.0000
+[0]
+[0]
