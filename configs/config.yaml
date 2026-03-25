@@ -1,0 +1,10 @@
+defaults:
+  - latent_space: z
+  - GAN_model: stylegan_celeba_partial256
+  - _self_
+
+sampling:
+  batch_size: 100
+  size: 25
+  latent_dim: 512
+  resolution: 256

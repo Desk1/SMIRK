@@ -1,0 +1,7 @@
+# w+ space: per-layer latent vectors
+use_w_space: true
+repeat_w: false
+use_z_plus_space: true
+num_layers: 14 # 18 for celebahq1024
+trunc_psi: 0.7
+trunc_layers: 8

@@ -1,0 +1,7 @@
+# standard z-space sampling (default)
+use_w_space: false
+repeat_w: true
+use_z_plus_space: false
+num_layers: 14 
+trunc_psi: 0.7
+trunc_layers: 8
