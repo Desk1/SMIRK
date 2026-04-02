@@ -23,6 +23,7 @@ def get_generator(cfg: DictConfig, batch_size: int, device: torch.device):
         trunc_psi=cfg.latent_space.trunc_psi,
         trunc_layers=cfg.latent_space.trunc_layers,
     )
+    return generator
 
 # use_z_plus_space requires use_w_space=true, repeat_w=false
 def validate_latent_config(cfg: DictConfig):
@@ -43,20 +44,16 @@ def sample(cfg: DictConfig):
 
     iter_times = cfg.size * (100 // batch_size)
     dirname = (
-        f"{cfg.output_dir}/stylegan_sample_z_"
+        f"{cfg.output_dir}/"
         f"{cfg.model.genforce_model}_"
         f"{cfg.latent_space.trunc_psi}_"
         f"{cfg.latent_space.trunc_layers}_"
         f"{cfg.size}"
     )
 
-    print(OmegaConf.to_yaml(cfg))
-
-    return
     os.makedirs(dirname, exist_ok=True)
-    os.makedirs("signal", exist_ok=True)
 
-    signal_file = f"./signal/my_sample_z_w_space_{cfg.sampling.size}.signal"
+    signal_file = f"{dirname}/signal"
 
     for i in tqdm(range(1, iter_times + 1)):
         if not os.path.isfile(signal_file):
@@ -67,7 +64,7 @@ def sample(cfg: DictConfig):
                 print("Stop iteration now")
                 break
 
-        latent_in = torch.randn(batch_size, cfg.sampling.latent_dim, device=device)
+        latent_in = torch.randn(batch_size, cfg.latent_dim, device=device)
         filename = f"{dirname}/sample_{i}"
 
         img_gen = generator(latent_in)
@@ -84,7 +81,7 @@ def sample(cfg: DictConfig):
         all_ws.append(w)
 
     all_ws = torch.cat(all_ws, dim=0).cpu()
-    torch.save(all_ws, f"{dirname}/{cfg.model.genforce_model}_all_ws.pt")
+    torch.save(all_ws, f"{dirname}/all_ws.pt")
 
 
 if __name__ == "__main__":

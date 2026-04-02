@@ -3,7 +3,7 @@ defaults:
   - latent_space: z
   - _self_
 
-output_dir: "output/samples/"
+output_dir: "output/samples"
 batch_size: 100
 size: 25
 latent_dim: 512
