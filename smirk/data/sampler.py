@@ -5,7 +5,7 @@ import torch
 import torchvision.transforms.functional as F
 from tqdm import tqdm
 import hydra
-from omegaconf import DictConfig, OmegaConf
+from omegaconf import DictConfig
 from torchvision.utils import save_image
 from smirk.utils.paths import get_config_path
 
