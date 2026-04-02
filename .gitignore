@@ -13,3 +13,5 @@ conf_mask.pt
 /model_checkpoints_SMILE/*
 __pycache__/
 Dockerfile
+
+outputs
