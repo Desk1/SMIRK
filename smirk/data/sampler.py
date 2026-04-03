@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+# smirk/data/sampler.py - generate GAN samples
+
 import os
 import glob
 import torch
