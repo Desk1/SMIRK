@@ -278,3 +278,22 @@ if __name__ == '__main__':
     k = 2
     comb_ind = find_most_overlapped_topk(labels_list, target, k)
     print('returned', comb_ind)
+class Tee(object):
+    # from https://github.com/MKariya1998/GMI-Attack/blob/master/Celeba/utils.py
+    def __init__(self, name, mode):
+        self.file = open(name, mode)
+        self.stdout = sys.stdout
+        sys.stdout = self
+
+    def __del__(self):
+        sys.stdout = self.stdout
+        self.file.close()
+
+    def write(self, data):
+        if '...' not in data:
+            self.file.write(data)
+        self.stdout.write(data)
+        self.flush()
+
+    def flush(self):
+        self.file.flush()

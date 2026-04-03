@@ -2,7 +2,7 @@
 
 # API
 # -------------------------------------------
-# clip_quantile_bound(inputs, mins, maxs)    -> Tensor   — clamp elements to bounds
+# clip_quantile_bound(inputs, mins, maxs)    -> Tensor  # clamp elements to bounds
 
 import torch
 

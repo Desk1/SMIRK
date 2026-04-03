@@ -7,7 +7,7 @@ from tqdm import tqdm
 import hydra
 from omegaconf import DictConfig
 from torchvision.utils import save_image
-from smirk.utils.paths import get_config_path
+from smirk.utils.files import get_config_path
 
 def get_generator(cfg: DictConfig, batch_size: int, device: torch.device):
     from smirk.genforce import my_get_GD
