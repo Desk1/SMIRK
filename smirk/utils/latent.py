@@ -1,8 +1,10 @@
 # smirk/utils/latent.py - latent space utils
 
-# API
-# -------------------------------------------
-# clip_quantile_bound(inputs, mins, maxs)    -> Tensor  # clamp elements to bounds
+"""
+API
+-------------------------------------------
+clip_quantile_bound(inputs, mins, maxs)    # clamp elements to bounds
+"""
 
 import torch
 

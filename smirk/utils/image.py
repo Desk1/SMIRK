@@ -1,12 +1,14 @@
 # smirk/utils/image.py - image processing utils
 
-# API
-# -----------------------------------------
-# normalize(image_tensor, arch_name)      -> Tensor    # normalise [0,255] RGB → model input
-# denormalize(image_tensor, arch_name)    -> Tensor    # invert normalisation → [0,1] RGB
-# resize_img(img, image_resolution)       -> Tensor    # resize img
-# crop_img(img, arch_name)                -> Tensor    # centre crop based on architecture
-# crop_and_resize(img, arch_name, res)    -> Tensor    # crop and resize img
+"""
+API
+-----------------------------------------
+normalize(image_tensor, arch_name)        # normalise [0,255] RGB  model input
+denormalize(image_tensor, arch_name)      # invert normalisationRGB
+resize_img(img, image_resolution)         # resize img
+crop_img(img, arch_name)                  # centre crop based on architecture
+crop_and_resize(img, arch_name, res)      # crop and resize img
+"""
 
 import torch
 import torchvision.transforms.functional as F
