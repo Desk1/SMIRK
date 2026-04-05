@@ -42,12 +42,15 @@ class ModelSpec:
     std: list[float]
 
     # callable (spec, device) -> nn.Module
-    # builds and returns the fully initialised base model
+    # builds and returns the model
     loader: Callable[["ModelSpec", Union[str, torch.device]], nn.Module]
 
     # optional  callable (spec, num_experts) -> nn.Module (default = None)
     # wraps the base model into the multi head expert variant ('_E' suffix)
     expert_wrapper: Optional[Callable[["ModelSpec", int], nn.Module]] = None
+
+    # optional path to load model weights from
+    weights_path: Optional[str] = None
 
 
 ##############
@@ -62,7 +65,9 @@ def register_model(
     resolution: Union[int, tuple],
     mean: list[float],
     std: list[float],
-    expert_wrapper: Optional[Callable] = None
+    expert_wrapper: Optional[Callable] = None,
+    weights_path: Optional[str] = None,
+    **kwargs
 ):
     if name in REGISTRY:
         raise ValueError(f"{name} is already registered")
@@ -74,7 +79,8 @@ def register_model(
             mean=mean,
             std=std,
             loader=loader,
-            expert_wrapper=expert_wrapper
+            expert_wrapper=expert_wrapper,
+            weights_path=weights_path
         )
 
         REGISTRY[name] = spec
@@ -97,21 +103,20 @@ def get_model(
 ):
     spec = get_spec(name)
     model = spec.loader(spec, device)
-    model = model.to(device)
     model.eval()
     return model
  
  
 def get_expert_model(
     name: str,
-    num_experts: int,
     device: Union[str, torch.device],
+    num_experts: int,
 ):
     spec = get_spec(name)
     if spec.expert_wrapper is None:
         raise ValueError(f"{name}' does not have an expert_wrapper defined.")
     model = spec.expert_wrapper(spec, num_experts)
-    model = model.to(device)
+    model.eval()
     return model
  
  
