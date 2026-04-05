@@ -2,8 +2,8 @@
 
 # API
 # ---------------------------------
-# get_config_path(relative)       -> String   # get path to config directory/files
-# create_folder(folder)           -> None     # create folder(s)
+# get_path(relative)               # get path to relative location from project root
+# create_folder(folder)            # create folder(s)
 
 import os, sys
 from pathlib import Path
@@ -12,10 +12,9 @@ from pathlib import Path
 # File handling #
 #################
 
-def get_config_path(relative: str):
+def get_path(relative: str):
     PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-    CONFIGS_DIR = PROJECT_ROOT / "configs"
-    return str(CONFIGS_DIR / relative)
+    return str(PROJECT_ROOT / relative)
 
 # todo: rewrite
 def create_folder(folder):

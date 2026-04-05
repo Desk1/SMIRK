@@ -8,7 +8,7 @@ from tqdm import tqdm
 import hydra
 from omegaconf import DictConfig
 from torchvision.utils import save_image
-from smirk.utils.files import get_config_path
+from smirk.utils.files import get_path
 
 def get_generator(cfg: DictConfig, batch_size: int, device: torch.device):
     from smirk.genforce import my_get_GD
@@ -33,7 +33,7 @@ def validate_latent_config(cfg: DictConfig):
         assert not cfg.latent_space.repeat_w
 
 @torch.no_grad()
-@hydra.main(config_path=get_config_path(""), config_name="sampling", version_base=None)
+@hydra.main(config_path=get_path("configs"), config_name="sampling", version_base=None)
 def sample(cfg: DictConfig):
     validate_latent_config(cfg)
 
