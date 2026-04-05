@@ -22,11 +22,6 @@ from smirk.utils.files import get_path
 def load_resnet50(spec, device):
     model = InceptionResnetV1(classify=True, pretrained='vggface2')
 
-    if spec.weights_path:
-        state_dict = torch.load(spec.weights_path)
-        model.load_state_dict(state_dict)
-
-    model = model.to(device)
     return model
 
 @register_model(
@@ -38,10 +33,5 @@ def load_resnet50(spec, device):
 def load_resnet50(spec, device):
     model = InceptionResnetV1(classify=True, pretrained='casia-webface')
 
-    if spec.weights_path:
-        state_dict = torch.load(spec.weights_path)
-        model.load_state_dict(state_dict)
-
-    model = model.to(device)
     return model
 

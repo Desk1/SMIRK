@@ -41,9 +41,9 @@ class ModelSpec:
     # channel normalisation mean in [0,255] space
     std: list[float]
 
-    # callable (spec, device) -> nn.Module
+    # callable -> nn.Module
     # builds and returns the model
-    loader: Callable[["ModelSpec", Union[str, torch.device]], nn.Module]
+    loader: Callable[[], nn.Module]
 
     # optional  callable (spec, num_experts) -> nn.Module (default = None)
     # wraps the base model into the multi head expert variant ('_E' suffix)
@@ -99,10 +99,19 @@ def get_spec(name: str):
 
 def get_model(
     name: str,
-    device: Union[str, torch.device]
+    device: Union[str, torch.device],
+    load_weights: bool = False
 ):
     spec = get_spec(name)
-    model = spec.loader(spec, device)
+    model = spec.loader()
+
+    if load_weights:
+        if spec.weights_path is None:
+            raise ValueError(f"Model '{name}' does not have a weights_path defined.")
+        state_dict = torch.load(spec.weights_path)
+        model.load_state_dict(state_dict)
+    
+    model = model.to(device)
     model.eval()
     return model
  

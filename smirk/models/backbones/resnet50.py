@@ -13,11 +13,6 @@ from smirk.utils.files import get_path
 def load_resnet50_E(spec, num_experts, device):
     model = resnet50.Resnet50_scratch_dag_E(num_experts)
 
-    if spec.weights_path:
-        state_dict = torch.load(spec.weights_path)
-        model.load_state_dict(state_dict)
-    
-    model = model.to(device)
     return model
 
 @register_model(
@@ -31,10 +26,5 @@ def load_resnet50_E(spec, num_experts, device):
 def load_resnet50(spec, device):
     model = resnet50.Resnet50_scratch_dag()
 
-    if spec.weights_path:
-        state_dict = torch.load(spec.weights_path)
-        model.load_state_dict(state_dict)
-
-    model = model.to(device)
     return model
 
