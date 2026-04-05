@@ -3,9 +3,6 @@
 # registers the InceptionResnetV1 model backbones and defines model loader
 # inception_resnetv1_vggface2 - pretrained on VGGFace2
 # inception_resnetv1_casia    - pretrained on CASIA-WebFace
-
-import torch
-import torch.nn as nn
  
 from smirk.models.registry import register_model
 from smirk.models.stats import ALL_MEANS, ALL_STDS
