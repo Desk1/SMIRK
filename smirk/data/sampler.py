@@ -43,7 +43,7 @@ def sample(cfg: DictConfig):
     batch_size = cfg.batch_size
     generator = get_generator(cfg, batch_size, device)
 
-    iter_times = cfg.size * (100 // batch_size)
+    iter_times = cfg.size
     dirname = (
         f"{cfg.output_dir}/"
         f"{cfg.model.genforce_model}_"
