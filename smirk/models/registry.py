@@ -85,7 +85,9 @@ def register_model(
 
         REGISTRY[name] = spec
 
-        return decorator
+        return loader
+    
+    return decorator
     
 def get_spec(name: str):
     if name not in REGISTRY:

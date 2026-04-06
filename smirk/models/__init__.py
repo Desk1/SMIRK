@@ -1,4 +1,4 @@
-# trigger all registrations when importing this package
+# trigger all backbone registrations when importing this package
 #
 # only 'import smirk.models' required instead of individual models
 

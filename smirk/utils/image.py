@@ -12,6 +12,7 @@ crop_and_resize(img, arch_name, res)      # crop and resize img
 
 import torch
 import torchvision.transforms.functional as F
+from smirk.models.stats import ALL_MEANS, ALL_STDS
 
 
 ####################
