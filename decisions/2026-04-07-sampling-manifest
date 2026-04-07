@@ -1,0 +1,3 @@
+Decision: use manifest json file to store metadata about sampling process
+
+Rationale: helps validate the sampling process to confirm it was sucessful, and makes it easier to retrieve the sampling files later without relying on glob sorting
