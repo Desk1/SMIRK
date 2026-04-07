@@ -6,8 +6,8 @@ QueryDataset: the dataset used to train the surrogate model.
 Each item is an (image, soft_label) pair where the soft label is the logit vector produced by querying the target blackbox model.
 The dataset expects:
 
-    - A list of image batch tensors, each of shape (B, C, H, W) in [0, 1] as saved by smirk/data/sampler.py.
-    - A single merged logits tensor of shape (N, num_classes), as produced by scripts/build_query_dataset.py.
+    - A list of image batch tensors produced by smirk/data/sampler.py.
+    - A single merged logits tensor of shape (N, num_classes) produced by scripts/generate_attack_dataset.py.
 """
 
 from typing import List, Optional
