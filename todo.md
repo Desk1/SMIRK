@@ -1,1 +1,3 @@
 - refactor smirk/data/sampler.py, move file handling etc into smirk/scrips/sample.py to be separate from actual sampling logic
+
+- write tests for full data pipeline
