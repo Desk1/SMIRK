@@ -12,9 +12,9 @@ from pathlib import Path
 # File handling #
 #################
 
-def get_path(relative_location: str):
+def get_path(relative_location: str) -> Path:
     PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-    return str(PROJECT_ROOT / relative_location)
+    return PROJECT_ROOT / relative_location
 
 # todo: rewrite
 def create_folder(folder):

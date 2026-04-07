@@ -9,6 +9,8 @@ import hydra
 from omegaconf import DictConfig
 from torchvision.utils import save_image
 from smirk.utils.files import get_path
+import json
+import datetime
 
 def get_generator(cfg: DictConfig, batch_size: int, device: torch.device):
     from smirk.genforce import my_get_GD
@@ -56,6 +58,20 @@ def sample(cfg: DictConfig):
 
     signal_file = f"{dirname}/signal"
 
+    # Initialize manifest dictionary
+    manifest_data = {
+        "start_timestamp": datetime.datetime.now().isoformat(),
+        "model": cfg.model.genforce_model,
+        "truncation_psi": cfg.latent_space.trunc_psi,
+        "truncation_layers": cfg.latent_space.trunc_layers,
+        "requested_iterations": cfg.size,
+        "batch_size": batch_size,
+        "latent_dim": cfg.latent_dim,
+        "device": str(device),
+        "completed_iterations": 0,
+        "batch_files": []
+    }
+
     for i in tqdm(range(1, iter_times + 1)):
         if not os.path.isfile(signal_file):
             with open(signal_file, "w") as f:
@@ -72,6 +88,14 @@ def sample(cfg: DictConfig):
         torch.save(img_gen, f"{filename}_img.pt")
         torch.save(latent_in, f"{filename}_latent.pt")
 
+        # Update manifest 
+        manifest_data["completed_iterations"] += 1
+        manifest_data["batch_files"].append({
+            "iteration": i,
+            "image_file": f"sample_{i}_img.pt",
+            "latent_file": f"sample_{i}_latent.pt"
+        })
+
     # Collect all_ws.pt
     all_ws = []
     for i in tqdm(range(0, len(sorted(glob.glob(f"{dirname}/sample_*_latent.pt"))), batch_size)):
@@ -83,6 +107,15 @@ def sample(cfg: DictConfig):
 
     all_ws = torch.cat(all_ws, dim=0).cpu()
     torch.save(all_ws, f"{dirname}/all_ws.pt")
+
+    # Finalize and save the manifest file
+    manifest_data["all_ws_file"] = "all_ws.pt"
+    manifest_data["end_timestamp"] = datetime.datetime.now().isoformat()
+    manifest_data["status"] = "completed" if manifest_data["completed_iterations"] == iter_times else "interrupted"
+
+    manifest_path = f"{dirname}/manifest.json"
+    with open(manifest_path, "w") as f:
+        json.dump(manifest_data, f, indent=4)
 
 
 if __name__ == "__main__":
