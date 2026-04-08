@@ -15,8 +15,7 @@ from smirk.utils.files import get_path
     "swin_transformer",
     resolution=260,
     mean=ALL_MEANS["swin_transformer"],
-    std=ALL_STDS["swin_transformer"],
-    #weights_path=get_path("smirk/models/weights/swin_transformer_best_model.pth")
+    std=ALL_STDS["swin_transformer"]
 )
 def load_swin_transformer(spec, device):
     model = models.swin_transformer.swin_v2_t(pretrained=True)

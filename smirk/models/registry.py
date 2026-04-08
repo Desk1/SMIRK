@@ -19,6 +19,7 @@ list_models()                    # sorted list of all registered names
 import torch
 import torch.nn as nn
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Callable, Dict, Optional, Union
 
 
@@ -50,7 +51,7 @@ class ModelSpec:
     expert_wrapper: Optional[Callable[["ModelSpec", int], nn.Module]] = None
 
     # optional path to load model weights from
-    weights_path: Optional[str] = None
+    weights_path: Optional[Path] = None
 
 
 ##############
@@ -66,7 +67,7 @@ def register_model(
     mean: list[float],
     std: list[float],
     expert_wrapper: Optional[Callable] = None,
-    weights_path: Optional[str] = None,
+    weights_path: Optional[Path] = None,
     **kwargs
 ):
     if name in REGISTRY:
@@ -102,16 +103,20 @@ def get_spec(name: str):
 def get_model(
     name: str,
     device: Union[str, torch.device],
-    load_weights: bool = False
+    load_weights: bool = True
 ):
     spec = get_spec(name)
     model = spec.loader()
 
-    if load_weights:
-        if spec.weights_path is None:
-            raise ValueError(f"Model '{name}' does not have a weights_path defined.")
-        state_dict = torch.load(spec.weights_path)
-        model.load_state_dict(state_dict)
+    if load_weights and spec.weights_path is not None:
+        if spec.weights_path.exists():
+            state_dict = torch.load(spec.weights_path, map_location=device)
+            model.load_state_dict(state_dict)
+        else:
+            raise FileNotFoundError(
+                f"Model {name} does not have a weights file at {spec.weights_path}"
+                "Set a valid weights_path in smirk/models/backbones/"
+            )
     
     model = model.to(device)
     model.eval()

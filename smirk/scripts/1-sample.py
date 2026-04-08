@@ -6,12 +6,6 @@ Generates an initial pool of synthetic images by sampling from a StyleGAN model.
 This script uses the smirk.data.sampler module to synthesize a dataset of face images by sampling latent vectors from a pre-trained StyleGAN generator.
 The generated images and their corresponding latent codes are saved.
 
-Pipeline
---------
-1. Sample random latent vectors (z or w) from a StyleGAN model
-2. Generate synthetic images from the sampled latent codes
-3. Save generated images and latent codes to disk
-
 Output layout
 -------------
 samples/

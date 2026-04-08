@@ -16,8 +16,7 @@ from smirk.utils.files import get_path
     "vision_transformer",
     resolution=224,
     mean=ALL_MEANS["vision_transformer"],
-    std=ALL_STDS["vision_transformer"],
-    weights_path=get_path("smirk/models/weights/vision_transformer_2_best_model.pth")
+    std=ALL_STDS["vision_transformer"]
 )
 def load_vision_transformer(spec, device):
     model = models.vision_transformer.vit_b_16(pretrained=True)

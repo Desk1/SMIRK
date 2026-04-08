@@ -17,8 +17,7 @@ from smirk.utils.files import get_path
     "efficientnet_b0",
     resolution=256,
     mean=ALL_MEANS["efficientnet_b0"],
-    std=ALL_STDS["efficientnet_b0"],
-    #weights_path=get_path("smirk/models/weights/efficientnet_b0_best_model.pth")
+    std=ALL_STDS["efficientnet_b0"]
 )
 def load_efficientnet_b0(spec, device):
     model = models.efficientnet.efficientnet_b0(pretrained=True)

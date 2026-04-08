@@ -15,8 +15,7 @@ from smirk.utils.files import get_path
     "mobilenet_v2",
     resolution=224,
     mean=ALL_MEANS["mobilenet_v2"],
-    std=ALL_STDS["mobilenet_v2"],
-    #weights_path=get_path("smirk/models/weights/mobilenet_v2_best_model.pth")
+    std=ALL_STDS["mobilenet_v2"]
 )
 def load_mobilenet_v2(spec, device):
     model = models.mobilenet.mobilenet_v2(pretrained=False)
