@@ -1,0 +1,3 @@
+Decision: build util function to derive script output names from config
+
+Rationale: prevents having to hardcode directory paths into scripts, handles passing output info between scripts
