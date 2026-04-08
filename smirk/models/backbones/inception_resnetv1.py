@@ -16,7 +16,7 @@ from smirk.utils.files import get_path
     mean = ALL_MEANS["inception_resnetv1_vggface2"],
     std = ALL_STDS["inception_resnetv1_vggface2"]
 )
-def load_resnet50(spec, device):
+def load_inception_resnetv1_vggface2():
     model = InceptionResnetV1(classify=True, pretrained='vggface2')
 
     return model
@@ -27,7 +27,7 @@ def load_resnet50(spec, device):
     mean = ALL_MEANS["inception_resnetv1_casia"],
     std = ALL_STDS["inception_resnetv1_casia"]
 )
-def load_resnet50(spec, device):
+def load_inception_resnetv1_casia():
     model = InceptionResnetV1(classify=True, pretrained='casia-webface')
 
     return model

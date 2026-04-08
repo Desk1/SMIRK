@@ -19,7 +19,7 @@ from smirk.utils.files import get_path
     mean=ALL_MEANS["efficientnet_b0"],
     std=ALL_STDS["efficientnet_b0"]
 )
-def load_efficientnet_b0(spec, device):
+def load_efficientnet_b0():
     model = models.efficientnet.efficientnet_b0(pretrained=True)
     model.classifier = nn.Sequential(
         nn.Dropout(p=0.2, inplace=True),
@@ -33,10 +33,9 @@ def load_efficientnet_b0(spec, device):
     "efficientnet_b0_casia",
     resolution=256,
     mean=ALL_MEANS["efficientnet_b0_casia"],
-    std=ALL_STDS["efficientnet_b0_casia"],
-    #weights_path=get_path("smirk/models/weights/efficientnet_b0_best_model_casia.pth")
+    std=ALL_STDS["efficientnet_b0_casia"]
 )
-def load_efficientnet_b0_casia(spec, device):
+def load_efficientnet_b0_casia():
     model = models.efficientnet.efficientnet_b0(pretrained=True)
     model.classifier = nn.Sequential(
         nn.Dropout(p=0.2, inplace=True),

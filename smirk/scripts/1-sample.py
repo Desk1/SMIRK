@@ -53,33 +53,33 @@ def validate_latent_config(cfg: DictConfig):
         assert cfg.latent_space.use_w_space
         assert not cfg.latent_space.repeat_w
 
-@hydra.main(config_path=get_path("configs"), config_name="sampling")
+@hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
 def main(config: DictConfig):
-    validate_latent_config(config)
+    validate_latent_config(config.sampling)
 
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
-    generator = get_generator(config, device)
+    generator = get_generator(config.sampling, device)
 
-    sampler = Sampler(device, generator, config)
-    iter_times = config.size
+    sampler = Sampler(device, generator, config.sampling)
     output_dir = get_sampling_directory(config)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    sampler.generate_samples(iter_times, output_dir)
+    sampler.generate_samples(output_dir)
     sampler.merge_vectors(output_dir)
 
     manifest_data = sampler.manifest_data
-    manifest_path =  output_dir / "manifest.json"
+    manifest_path = output_dir / "manifest.json"
 
     if manifest_data["status"] == "completed":
         with open(manifest_path, "w") as f:
             json.dump(manifest_data, f, indent=4)
             print(
-                f"Finished sampling {config.model.genforce_model}"
+                f"Finished sampling {config.sampling.model.genforce_model} "
                 f"to {output_dir}"
             )
     else:
         raise RuntimeError(
-            f"Sampling failed with status {manifest_data["status"]}"
+            f"Sampling failed with status {manifest_data['status']}"
         )
 
 if __name__ == "__main__":

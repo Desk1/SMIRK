@@ -44,7 +44,7 @@ class InceptionAux(nn.Module):
     std=ALL_STDS["inception_v3"],
     #weights_path=get_path("smirk/models/weights/inception_v3_best_model.pth")
 )
-def load_inception_v3(spec, device):
+def load_inception_v3():
     model = models.inception_v3(pretrained=True)
     
     if hasattr(model, 'AuxLogits'):

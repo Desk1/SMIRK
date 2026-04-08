@@ -17,7 +17,7 @@ from smirk.utils.files import get_path
     mean=ALL_MEANS["swin_transformer"],
     std=ALL_STDS["swin_transformer"]
 )
-def load_swin_transformer(spec, device):
+def load_swin_transformer():
     model = models.swin_transformer.swin_v2_t(pretrained=True)
     model.head = nn.Linear(768, 8631)
 

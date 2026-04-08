@@ -33,24 +33,15 @@ Usage
 -----
 # Configure all parameters from configs/...
 
-# todo redo config info
-# Full run (inference + merge):
-python scripts/build_query_dataset.py
-
-# Inference only:
-python scripts/build_query_dataset.py --inference-only
-
-# Merge only (after inference is complete):
-python scripts/build_query_dataset.py --merge-only
+python -m smirk.scripts.2-generate_blackbox_attack_data.py
 """
 
-import argparse
 import torch
 import hydra
 import json
-import os
 from tqdm import tqdm
 from pathlib import Path
+from typing import Union
 from omegaconf import DictConfig
 
 import smirk.models
@@ -60,34 +51,32 @@ from smirk.utils.image import normalize, resize_img, crop_img
 
 @torch.no_grad()
 def run_inference(
-    config: DictConfig,
+    arch_name: str,
+    resolution: Union[int, tuple],
+    sample_dir: Path,
+    output_dir: Path,
     device: torch.device
 ):
     """
-    Run target model inference on every image batch and save logits.
-
-    config:
+    Run target model inference on every image batch and save logits:
         - arch_name: name of target model architecture
-        - sampling_dataset: name of StyleGAN sample dataset
-        - output_dir: (optional) manually set output directory
+        - resolution: img resolution for target model
+        - sample_dir: path to sample directory
+        - output_dir: path to output directory
     """
-    sample_dir = get_sampling_directory(config)
-    output_dir = get_blackbox_attack_data_directory(config)
-    resolution = get_resolution(config.arch_name)
     manifest_path = sample_dir / "manifest.json"
-
     if manifest_path.exists():
         with manifest_path.open() as f:
             manifest = json.load(f)
         
-        img_files = sorted(sample_dir / batch for batch in manifest["batch_files"])
+        img_files = sorted(sample_dir / batch["image_file"] for batch in manifest["batch_files"])
     else:
         raise FileNotFoundError(
-            f"Manifest file not found within {sample_dir}"
-            "Run smirk/scripts/sample.py to generate a manifest"
+            f"Manifest file not found at {manifest_path} "
+            "Run smirk/scripts/1-sample.py to generate a manifest"
         )
     
-    model = get_model(config.arch_name, device)
+    model = get_model(arch_name, device)
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -95,24 +84,23 @@ def run_inference(
         save_path = output_dir / (img_file.stem + "_logits.pt")
 
         img = torch.load(img_file).to(device)
-        img = crop_img(img, config.arch_name)
-        img = normalize(resize_img(img*255., resolution), config.arch_name)
+        img = crop_img(img, arch_name)
+        img = normalize(resize_img(img*255., resolution), arch_name)
 
         logits = model(img)
-        if config.arch_name == "sphere20a":
+        if arch_name == "sphere20a":
             logits = logits[0]
 
         torch.save(logits, save_path)
 
 
-def run_merge(config: DictConfig):
+def run_merge(output_dir: Path, remove: bool):
     """
     Concatenate intermediate batch logit files into a single all_logits.pt
 
     config:
         - remove: bool indicating whether to remove intermediate files
     """
-    output_dir = get_blackbox_attack_data_directory(config)
     logit_files = sorted(output_dir.glob("sample_*_img_logits.pt"))
 
     if not logit_files:
@@ -123,28 +111,37 @@ def run_merge(config: DictConfig):
     
     all_logits = []
     for f in tqdm(logit_files, desc="Merge"):
-        all_logits.apppend(torch.load(f, map_location="cpu"))
+        all_logits.append(torch.load(f, map_location="cpu"))
     
     all_logits = torch.cat(all_logits, dim=0)
 
-    if config.remove:
+    torch.save(all_logits, output_dir / "all_logits.pt")
+
+    if remove:
         for f in logit_files:
             f.unlink()
 
-@hydra.main(config_path=get_path("configs"), config_name="blackbox_query")
+@hydra.main(config_path=str(get_path("configs")), config_name="config")
 def main(config: DictConfig):
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
 
+    arch_name = config.blackbox_sample_query.arch_name
+    remove_intermediate = config.blackbox_sample_query.remove_intermediate
+
+    sample_dir = get_sampling_directory(config)
+    output_dir = get_blackbox_attack_data_directory(config)
+    resolution = get_resolution(arch_name)
+
     # merge only
-    if config.merge_only:
-        run_merge(config)
+    if config.blackbox_sample_query.merge_only:
+        run_merge(output_dir, remove_intermediate)
         return
 
-    run_inference(config, device)
+    run_inference(arch_name, resolution, sample_dir, output_dir, device)
 
     # inference + merge
-    if not config.inference_only:
-        run_merge(config)
+    if not config.blackbox_sample_query.inference_only:
+        run_merge(output_dir, remove_intermediate)
 
 if __name__ == "__main__":
     main()

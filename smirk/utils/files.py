@@ -19,22 +19,32 @@ def get_path(relative_location: str) -> Path:
 
 def get_sampling_directory(cfg: DictConfig) -> Path:
     dirname = (
-        f"{cfg.output_dir}/"
-        f"{cfg.model.genforce_model}_"
-        f"{cfg.latent_space.trunc_psi}_"
-        f"{cfg.latent_space.trunc_layers}_"
-        f"{cfg.size}"
+        f"{cfg.sampling.output_dir}/"
+        f"{cfg.sampling.model.genforce_model}_"
+        f"{cfg.sampling.latent_space.trunc_psi}_"
+        f"{cfg.sampling.latent_space.trunc_layers}_"
+        f"{cfg.sampling.size}"
     )
 
-    return Path(dirname)
+    return get_path(dirname)
+
 
 def get_blackbox_attack_data_directory(cfg: DictConfig) -> Path:
-    dirname = (
-        f"{cfg.output_dir}/"
-        f"{cfg.target_dataset}/"
-        f"{cfg.arch_name}/"
-        f"{cfg.sampling_dataset}/"
+    sample_dataset = (
+        f"{cfg.sampling.model.genforce_model}_"
+        f"{cfg.sampling.latent_space.trunc_psi}_"
+        f"{cfg.sampling.latent_space.trunc_layers}_"
+        f"{cfg.sampling.size}"
     )
+
+    dirname = (
+        f"{cfg.blackbox_sample_query.output_dir}/"
+        f"{cfg.blackbox_sample_query.target_dataset}/"
+        f"{cfg.blackbox_sample_query.arch_name}/"
+        f"{sample_dataset}/"
+    )
+
+    return get_path(dirname)
 
 # todo: rewrite
 def create_folder(folder):

@@ -1,10 +1,9 @@
 defaults:
   - model: celeba
   - latent_space: z
-  - _self_
 
 output_dir: "samples"
 batch_size: 100
-size: 25
+size: 5
 latent_dim: 512
 resolution: 256

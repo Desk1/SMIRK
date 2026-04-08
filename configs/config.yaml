@@ -1,0 +1,11 @@
+# base config file
+
+defaults:
+- sampling: celeba_5
+- blackbox_sample_query: resnet50_vggface2
+
+device: "cuda"
+
+# override default values
+# sampling: ...
+# blackbox_sample_query: ...

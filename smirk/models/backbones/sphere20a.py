@@ -20,7 +20,7 @@ from smirk.utils.files import get_path
     std = ALL_STDS["sphere20a"],
     weights_path=get_path("smirk/models/weights/sphere20a_20171020.pth")
 )
-def load_resnet50(spec, device):
+def load_sphere20a():
     model = net_sphere.sphere20a()
 
     return model

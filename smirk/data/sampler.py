@@ -37,21 +37,12 @@ class Sampler():
         }
 
     @torch.no_grad()
-    def generate_samples(self, iter_times: int, output_dir: Path):
-        signal_file = output_dir / "signal"
+    def generate_samples(self, output_dir: Path):
 
-        for i in tqdm(range(1, iter_times + 1), desc="Sampling"):
-            if not os.path.isfile(signal_file):
-                with open(signal_file, "w") as f:
-                    f.write("0")
-            with open(signal_file) as f:
-                if f.readline().strip() == "1":
-                    print("Stop iteration now")
-                    break
-            
+        for i in tqdm(range(1, self.config.size + 1), desc="Sampling"):
             # generate latent vector
             latent_in = torch.randn(self.config.batch_size, self.config.latent_dim, device=self.device)
-            filename = output_dir / f"/sample_{i}"
+            filename = output_dir / f"sample_{i}"
 
             # save vector + image
             img_gen = self.generator(latent_in)

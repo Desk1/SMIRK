@@ -91,6 +91,11 @@ def register_model(
     return decorator
     
 def get_spec(name: str):
+    if len(REGISTRY) == 0:
+        raise RuntimeError(
+            f"Registry is empty or has not been loaded"
+            f"Include 'import smirk.models' to initialise registry"
+        )
     if name not in REGISTRY:
         registered = sorted(REGISTRY)
         raise KeyError(

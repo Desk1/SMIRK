@@ -23,7 +23,7 @@ def load_resnet50_E(spec, num_experts, device):
     expert_wrapper=load_resnet50_E,
     weights_path=get_path("smirk/models/weights/resnet50_scratch_dag.pth")
 )
-def load_resnet50(spec, device):
+def load_resnet50():
     model = resnet50.Resnet50_scratch_dag()
 
     return model

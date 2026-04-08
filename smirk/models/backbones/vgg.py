@@ -22,7 +22,7 @@ from smirk.utils.files import get_path
     std=ALL_STDS["vgg16bn"],
     weights_path=get_path("smirk/models/weights/vgg_m_face_bn_dag.pth")
 )
-def load_vgg16bn(spec, device):
+def load_vgg16bn():
     model = vggbn.Vgg_m_face_bn_dag()
     
     return model
@@ -35,7 +35,7 @@ def load_vgg16bn(spec, device):
     std=ALL_STDS["vgg16"],
     weights_path=get_path("smirk/models/weights/vgg_face_dag.pth")
 )
-def load_vgg16(spec, device):
+def load_vgg16():
     model = vgg.Vgg_face_dag()
 
     return model

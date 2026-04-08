@@ -17,7 +17,7 @@ from smirk.utils.files import get_path
     mean=ALL_MEANS["mobilenet_v2"],
     std=ALL_STDS["mobilenet_v2"]
 )
-def load_mobilenet_v2(spec, device):
+def load_mobilenet_v2():
     model = models.mobilenet.mobilenet_v2(pretrained=False)
     model.classifier = nn.Sequential(
         nn.Dropout(p=0.2),
