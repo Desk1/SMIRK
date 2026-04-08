@@ -8,7 +8,7 @@ from tqdm import tqdm
 import hydra
 from omegaconf import DictConfig
 from torchvision.utils import save_image
-from smirk.utils.files import get_path
+from smirk.utils.files import get_path, get_sampling_directory
 import json
 import datetime
 
@@ -35,7 +35,7 @@ def validate_latent_config(cfg: DictConfig):
         assert not cfg.latent_space.repeat_w
 
 @torch.no_grad()
-@hydra.main(config_path=get_path("configs"), config_name="sampling", version_base=None)
+@hydra.main(config_path=get_path("configs"), config_name="sampling")
 def sample(cfg: DictConfig):
     validate_latent_config(cfg)
 
@@ -46,15 +46,9 @@ def sample(cfg: DictConfig):
     generator = get_generator(cfg, batch_size, device)
 
     iter_times = cfg.size
-    dirname = (
-        f"{cfg.output_dir}/"
-        f"{cfg.model.genforce_model}_"
-        f"{cfg.latent_space.trunc_psi}_"
-        f"{cfg.latent_space.trunc_layers}_"
-        f"{cfg.size}"
-    )
+    dirname = get_sampling_directory(cfg)
 
-    os.makedirs(dirname, exist_ok=True)
+    dirname.mkdir(parents=True, exist_ok=True)
 
     signal_file = f"{dirname}/signal"
 

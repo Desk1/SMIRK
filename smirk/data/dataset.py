@@ -7,7 +7,7 @@ Each item is an (image, soft_label) pair where the soft label is the logit vecto
 The dataset expects:
 
     - A list of image batch tensors produced by smirk/data/sampler.py.
-    - A single merged logits tensor of shape (N, num_classes) produced by scripts/generate_attack_dataset.py.
+    - A single merged logits tensor of shape (N, num_classes) produced by scripts/generate_blackbox_attack_data.py.
 """
 
 from typing import List, Optional
