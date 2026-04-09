@@ -60,10 +60,13 @@ class Sampler():
     
     def merge_vectors(self, output_dir: Path):
         # Collect all_ws.pt
+        
         all_ws = []
-        for i in tqdm(range(0, len(sorted(glob.glob(f"{output_dir}/sample_*_latent.pt"))), self.config.batch_size), desc="Merging"):
-            latent_files = sorted(glob.glob(f"{output_dir}/sample_*_latent.pt"))[i:i+self.config.batch_size]
-            latent_in = [torch.load(f) for f in latent_files]
+        latent_files = sorted(glob.glob(f"{output_dir}/sample_*_latent.pt"))
+        for i in tqdm(range(0, len(latent_files), self.config.batch_size), desc="Merging"):
+            batch_files = latent_files[i:i+self.config.batch_size]
+            print(batch_files)
+            latent_in = [torch.load(f) for f in batch_files]
             latent_in = torch.cat(latent_in, dim=0)
             w = self.generator.G.mapping(latent_in.to(self.device))["w"]
             all_ws.append(w)

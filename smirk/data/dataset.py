@@ -67,7 +67,7 @@ def make_transform(resolution: int, mean: List[float], std: List[float]) -> tran
             return image_tensor
         
     return transforms.Compose([
-        scale255(),
+        scale255,
         transforms.Resize(resolution),
         Normalize(mean, std)
     ])
@@ -97,7 +97,7 @@ def build_query_dataset(sample_dir: Path, logits_path: Path, transform: transfor
             f"Manifest lists {len(expected_files)} expected files but {len(missing)} are missing"
         )
 
-    image_batches = [torch.load(sample_dir / fn, map_location=device) for fn in expected_files]
+    image_batches = [torch.load(sample_dir / batch['image_file'], map_location=device) for batch in expected_files]
 
     logits = torch.load(logits_path, map_location=device)    
 

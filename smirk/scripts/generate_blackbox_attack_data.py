@@ -121,7 +121,7 @@ def run_merge(output_dir: Path, remove: bool):
         for f in logit_files:
             f.unlink()
 
-@hydra.main(config_path=str(get_path("configs")), config_name="config")
+@hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
 def main(config: DictConfig):
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
 

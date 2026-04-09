@@ -49,13 +49,13 @@ def get_generator(cfg: DictConfig, device: torch.device):
 
 # use_z_plus_space requires use_w_space=true, repeat_w=false
 def validate_latent_config(cfg: DictConfig):
-    if cfg.latent_space.use_z_plus_space:
-        assert cfg.latent_space.use_w_space
-        assert not cfg.latent_space.repeat_w
+    if cfg.use_z_plus_space:
+        assert cfg.use_w_space
+        assert not cfg.repeat_w
 
 @hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
 def main(config: DictConfig):
-    validate_latent_config(config.sampling)
+    validate_latent_config(config.sampling.latent_space)
 
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
     generator = get_generator(config.sampling, device)
