@@ -15,8 +15,7 @@ from smirk.genforce import my_get_GD
 @pytest.fixture
 def mock_sample_dir(tmp_path):
     """
-    Creates a simulated 'samples/model_name_...' directory containing
-    a manifest.json and a few dummy image batch tensors.
+    Creates a simulated 'samples/model_name_...' directory
     """
     sample_dir = tmp_path / "samples" / "dummy_model"
     sample_dir.mkdir(parents=True)
@@ -44,7 +43,7 @@ def mock_sample_dir(tmp_path):
 
 @pytest.fixture
 def mock_logits_path(tmp_path):
-    """Creates a simulated 'all_logits.pt' file."""
+    """Creates a simulated all_logits.pt file."""
     logits_dir = tmp_path / "blackbox_attack_data"
     logits_dir.mkdir(parents=True)
     logits_path = logits_dir / "all_logits.pt"
@@ -174,16 +173,11 @@ class TestSampler:
         for i in range(1, sampler_config.size+1):
             vector = torch.randn(sampler_config.batch_size, sampler_config.latent_dim)
             torch.save(vector, out_dir / f"sample_{i}_latent.pt")
-            print(f"saved {i}: {vector.shape}")
-            print(f"    {vector}")
             
         sampler.merge_vectors(out_dir)
         
         assert (out_dir / "all_ws.pt").exists()
         merged = torch.load(out_dir / "all_ws.pt")
-        # 3 batches * 2 batch_size
-        print(merged)
-        print(merged.shape)
         assert merged.shape[0] == sampler_config.batch_size * sampler_config.size
 
     def test_validate_latent_config(self, sampler_config):
