@@ -1,0 +1,2 @@
+Decsion: use the same registry structure as found in torchvision library
+(@register_model and global registry)
