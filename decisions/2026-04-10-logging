@@ -1,0 +1,3 @@
+Decision: use logging package for debug instead of print() statements
+
+Rationale: easily see where logging call is made from, categorise msgs, and enable/disable logging based on categories or 'debug mode'. basically much easier to manage the outputs compared to print statements - big benefit if code is intended to be modified / extended by anyone else
