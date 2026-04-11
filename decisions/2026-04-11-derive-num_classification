@@ -1,0 +1,3 @@
+Decision: derive num_classification from the black box model output instead of hardcoding the values in 
+
+Rationale: this matches how the attack would work in a real (non academic / experimental) setting and avoids uneccessary code
