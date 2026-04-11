@@ -4,17 +4,102 @@
 # inception_resnetv1_vggface2 - pretrained on VGGFace2
 # inception_resnetv1_casia    - pretrained on CASIA-WebFace
  
-from smirk.models.registry import register_model
+import torch.nn as nn
+from smirk.models.registry import register_model, get_weights
 from smirk.models.stats import ALL_MEANS, ALL_STDS
 from facenet_pytorch import InceptionResnetV1
-from smirk.utils.files import get_path
+from smirk.models.definitions import inceptionresnetv1_4finetune
+
+
+def load_inception_resnetv1_vggface2_E(spec, num_experts, num_classification, device, load_weights):
+    model = inceptionresnetv1_4finetune.InceptionResnetV1_4finetune_E(
+        classify=True,
+        pretrained="vggface2",
+        num_classes=num_classification,
+        num_experts=num_experts
+    )
+    
+    if load_weights:
+        state_dict = get_weights(spec, device)
+
+        if state_dict:
+            model.load_state_dict(state_dict)
+
+    # replace layers
+    model.logits = nn.ModuleList(
+        [nn.Linear(512, num_classification) for _ in range(num_experts)]
+    )
+    model.last_linear = nn.ModuleList(
+        [nn.Linear(1792, 512, bias=False) for _ in range(num_experts)]
+    )
+
+    # selectively enable gradients
+    for param in model.parameters():
+        param.requires_grad = False
+    for param in model.last_linear.parameters():
+        param.requires_grad = True
+    for param in model.logits.parameters():
+        param.requires_grad = True
+
+    # store parameters for modified layers (for building surrogate optimizer)
+    model.modified_layer_parameters = [
+        model.last_linear.parameters(),
+        model.logits.parameters()
+    ]
+
+    model = model.to(device)
+    return model
+
+
+def load_inception_resnetv1_casia_E(spec, num_experts, num_classification, device, load_weights):
+    model = inceptionresnetv1_4finetune.InceptionResnetV1_4finetune_E(
+        classify=True,
+        pretrained="casia-webface",
+        num_classes=num_classification,
+        num_experts=num_experts
+    )
+    
+    if load_weights:
+        state_dict = get_weights(spec, device)
+
+        if state_dict:
+            model.load_state_dict(state_dict)
+
+    # replace layers
+    model.logits = nn.ModuleList(
+        [nn.Linear(512, num_classification) for _ in range(num_experts)]
+    )
+    model.last_linear = nn.ModuleList(
+        [nn.Linear(1792, 512, bias=False) for _ in range(num_experts)]
+    )
+
+    # selectively enable gradients
+    for param in model.parameters():
+        param.requires_grad = False
+    for param in model.last_bn.parameters():
+        param.requires_grad = True
+    for param in model.last_linear.parameters():
+        param.requires_grad = True
+    for param in model.logits.parameters():
+        param.requires_grad = True
+
+    # store parameters for modified layers (for building surrogate optimizer)
+    model.modified_layer_parameters = [
+        model.last_bn.parameters(),
+        model.last_linear.parameters(),
+        model.logits.parameters()
+    ]
+
+    model = model.to(device)
+    return model
 
 
 @register_model(
     "inception_resnetv1_vggface2",
     resolution = 160,
     mean = ALL_MEANS["inception_resnetv1_vggface2"],
-    std = ALL_STDS["inception_resnetv1_vggface2"]
+    std = ALL_STDS["inception_resnetv1_vggface2"],
+    expert_wrapper=load_inception_resnetv1_vggface2_E
 )
 def load_inception_resnetv1_vggface2():
     model = InceptionResnetV1(classify=True, pretrained='vggface2')
@@ -25,7 +110,8 @@ def load_inception_resnetv1_vggface2():
     "inception_resnetv1_casia",
     resolution = 160,
     mean = ALL_MEANS["inception_resnetv1_casia"],
-    std = ALL_STDS["inception_resnetv1_casia"]
+    std = ALL_STDS["inception_resnetv1_casia"],
+    expert_wrapper=load_inception_resnetv1_casia_E
 )
 def load_inception_resnetv1_casia():
     model = InceptionResnetV1(classify=True, pretrained='casia-webface')

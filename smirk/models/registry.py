@@ -20,7 +20,7 @@ import torch
 import torch.nn as nn
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Dict, Optional, Union
+from typing import Callable, Dict, Optional, Union, Mapping, Any
 
 
 #############
@@ -108,20 +108,13 @@ def get_spec(name: str):
 def get_model(
     name: str,
     device: Union[str, torch.device],
-    load_weights: bool = True
+    load_weights_file: bool = True
 ):
     spec = get_spec(name)
     model = spec.loader()
 
-    if load_weights and spec.weights_path is not None:
-        if spec.weights_path.exists():
-            state_dict = torch.load(spec.weights_path, map_location=device)
-            model.load_state_dict(state_dict)
-        else:
-            raise FileNotFoundError(
-                f"Model {name} does not have a weights file at {spec.weights_path} \n"
-                "Set a valid weights_path in smirk/models/backbones/"
-            )
+    if load_weights_file:
+        model.load_state_dict(get_weights(spec, device))
     
     model = model.to(device)
     return model
@@ -129,8 +122,9 @@ def get_model(
  
 def get_expert_model(
     name: str,
-    device: Union[str, torch.device],
     num_experts: int,
+    device: Union[str, torch.device],
+    load_weights: bool = True
 ):
     spec = get_spec(name)
     if spec.expert_wrapper is None:
@@ -142,6 +136,23 @@ def get_expert_model(
     
     model = model.to(device)
     return model
+
+def get_weights(
+    spec: ModelSpec,
+    device: Union[str, torch.device]
+):
+    state_dict = None
+
+    if spec.weights_path is not None:
+        if spec.weights_path.exists():
+            state_dict = torch.load(spec.weights_path, map_location=device)
+        else:
+            raise FileNotFoundError(
+                f"Model {spec.name} does not have a weights file at {spec.weights_path} \n"
+                "Set a valid weights_path in smirk/models/backbones/"
+            )
+        
+    return state_dict
  
  
 def get_resolution(name: str) -> Union[int, tuple]:

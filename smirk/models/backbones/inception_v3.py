@@ -6,10 +6,11 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 from collections import OrderedDict
+from torchvision.models.inception import InceptionE
 
-from smirk.models.registry import register_model
+from smirk.models.registry import register_model, get_weights
 from smirk.models.stats import ALL_MEANS, ALL_STDS
-from smirk.utils.files import get_path
+from smirk.models.definitions import inception3_4finetune
 
 
 class InceptionAux(nn.Module):
@@ -37,12 +38,59 @@ class InceptionAux(nn.Module):
         return x
 
 
+def load_inception_v3_E(spec, num_experts, num_classification, device, load_weights):
+    model = inception3_4finetune.Inception3_E(num_classes=8631, num_experts=num_experts)
+    
+    if load_weights:
+        state_dict = get_weights(spec, device)
+
+        if state_dict:
+            model_pretrain = models.inception_v3(pretrained=True)
+            if hasattr(model_pretrain, 'AuxLogits'):
+                model_pretrain.AuxLogits = InceptionAux(768, 8631)  
+                model_pretrain.fc = nn.Linear(2048, 8631)
+            model_pretrain.load_state_dict(state_dict)
+            model.load_state_dict(model_pretrain.state_dict())
+    
+    if hasattr(model, 'AuxLogits'):
+        model.AuxLogits = nn.ModuleList(
+            [InceptionAux(768, num_classification) for _ in range(num_experts)]
+        )
+        model.fc = nn.ModuleList(
+            [nn.Linear(2048, num_classification) for _ in range(num_experts)]
+        )
+    
+    model.Mixed_7c = nn.ModuleList(
+        [InceptionE(2048) for _ in range(num_experts)]
+    )
+    
+    # selectively enable gradients
+    for param in model.parameters():
+        param.requires_grad = False
+    for param in model.AuxLogits.parameters():
+        param.requires_grad = True
+    for param in model.fc.parameters():
+        param.requires_grad = True
+    for param in model.Mixed_7c.parameters():
+        param.requires_grad = True
+    
+    # store parameters for modified layers (for building surrogate optimizer)
+    model.modified_layer_parameters = [
+        model.Mixed_7c.parameters(),
+        model.AuxLogits.parameters(),
+        model.fc.parameters()
+    ]
+    
+    model = model.to(device)
+    return model
+
+
 @register_model(
     "inception_v3",
     resolution=342,
     mean=ALL_MEANS["inception_v3"],
     std=ALL_STDS["inception_v3"],
-    #weights_path=get_path("smirk/models/weights/inception_v3_best_model.pth")
+    expert_wrapper=load_inception_v3_E
 )
 def load_inception_v3():
     model = models.inception_v3(pretrained=True)

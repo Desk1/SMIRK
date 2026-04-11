@@ -1,8 +1,6 @@
 # smirk/models/backbones/inception_resnetv1.py - InceptionResnetV1 model backbones
 
-# registers the InceptionResnetV1 model backbones and defines model loader
-# inception_resnetv1_vggface2 - pretrained on VGGFace2
-# inception_resnetv1_casia    - pretrained on CASIA-WebFace
+# registers the sphere20a model backbone and defines model loader
 
 import torch
 import torch.nn as nn
