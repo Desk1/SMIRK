@@ -77,6 +77,7 @@ def run_inference(
         )
     
     model = get_model(arch_name, device)
+    model = model.eval()
 
     output_dir.mkdir(parents=True, exist_ok=True)
 

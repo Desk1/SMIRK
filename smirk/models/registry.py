@@ -47,7 +47,7 @@ class ModelSpec:
     loader: Callable[[], nn.Module]
 
     # optional  callable (spec, num_experts) -> nn.Module (default = None)
-    # wraps the base model into the multi head expert variant ('_E' suffix)
+    # wraps the base model into the multi head expert variant ('_E' suffix) used for surrogate training
     expert_wrapper: Optional[Callable[["ModelSpec", int], nn.Module]] = None
 
     # optional path to load model weights from
@@ -119,12 +119,11 @@ def get_model(
             model.load_state_dict(state_dict)
         else:
             raise FileNotFoundError(
-                f"Model {name} does not have a weights file at {spec.weights_path}"
+                f"Model {name} does not have a weights file at {spec.weights_path} \n"
                 "Set a valid weights_path in smirk/models/backbones/"
             )
     
     model = model.to(device)
-    model.eval()
     return model
  
  
@@ -135,9 +134,13 @@ def get_expert_model(
 ):
     spec = get_spec(name)
     if spec.expert_wrapper is None:
-        raise ValueError(f"{name}' does not have an expert_wrapper defined.")
+        raise ValueError(
+            f"{name}' does not have an expert_wrapper defined. \n"
+            f"Define an expert wrapper at smirk/models/backbones"
+            )
     model = spec.expert_wrapper(spec, num_experts)
-    model.eval()
+    
+    model = model.to(device)
     return model
  
  
