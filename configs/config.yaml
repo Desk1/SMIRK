@@ -1,11 +1,17 @@
 # base config file
 
+# script config groups
 defaults:
 - sampling: celeba_5
 - blackbox_sample_query: resnet50_vggface2
+- surrogate_training:
 
 device: "cuda"
 
-# override default values
-# sampling: ...
-# blackbox_sample_query: ...
+
+
+# override specific values
+
+# sampling:
+#   output_dir: "new_samples"
+#   size: 100

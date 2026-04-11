@@ -18,20 +18,17 @@ class SurrogateTrainer:
     Trains a surrogate model with long-tail reweighting and expert diversity
 
     Args:
-        model:        The surrogate model to train (multi-expert architecture)
-        train_loader: DataLoader yielding (image, soft_target) batches
-        test_loader:  DataLoader for evaluation, or None to skip evaluation
-        optimizer:    Optimizer preconfigured for the model
-        writer:       TensorBoard SummaryWriter
-        topk_weights: Class weights derived from long-tail label distribution
-        config:
-            - arch_name_finetune (str)
-            - num_experts (int)
-            - lambda_diversity (float)
-            - lambda_ce (float)
-            - epoch (int)
-            - batch_size (int)
-            - temperature (float, default 0.5)
+        model:              The surrogate model to train (multi-expert architecture)
+        train_loader:       DataLoader yielding (image, soft_target) batches
+        test_loader:        DataLoader for evaluation, or None to skip evaluation
+        optimizer:          Optimizer preconfigured for the model
+        writer:             TensorBoard SummaryWriter
+        topk_weights:       Class weights derived from long-tail label distribution
+
+        epochs:             Number of training epochs
+        num_experts         Number of expert classifiers
+        lambda_diversity    Diversity loss weighting 
+        lambda_ce           Cross entropy loss weighting     
     """
 
     def __init__(
@@ -47,8 +44,7 @@ class SurrogateTrainer:
         epochs: int,
         num_experts: int,
         lambda_diversity: float,
-        lambda_ce: float,
-        temperature: float
+        lambda_ce: float
 
     ):
         self.model = model
@@ -63,7 +59,6 @@ class SurrogateTrainer:
         self.num_experts = num_experts
         self.lambda_diversity = lambda_diversity
         self.lambda_ce = lambda_ce
-        self.temperature = temperature
 
     def fit(self) -> nn.Module:
         """Run the full training loop"""
@@ -85,7 +80,7 @@ class SurrogateTrainer:
  
         return self.model
     
-    def train_epoch(self, epoch: int, log_interval: int = 100) -> None:
+    def train_epoch(self, epoch: int, log_interval: int = 100):
         self.model.train()
         topk_weights = self.topk_weights.to(self.device)
  
@@ -104,8 +99,7 @@ class SurrogateTrainer:
                 topk_weight=topk_weight,
                 num_experts=self.num_experts,
                 lambda_diversity=self.lambda_diversity,
-                lambda_ce=self.lambda_ce,
-                temperature=self.temperature,
+                lambda_ce=self.lambda_ce
             )
  
             loss.backward()
