@@ -39,6 +39,7 @@ python -m smirk.scripts.2-generate_blackbox_attack_data.py
 import torch
 import hydra
 import json
+import logging
 from tqdm import tqdm
 from pathlib import Path
 from typing import Union
@@ -46,8 +47,10 @@ from omegaconf import DictConfig
 
 import smirk.models
 from smirk.models.registry import get_model, get_resolution
-from smirk.utils.files import get_path, get_sampling_directory, get_blackbox_attack_data_directory
+from smirk.utils.files import get_path, get_sampling_directory, get_blackbox_attack_data_directory, get_sample_images
 from smirk.utils.image import normalize, resize_img, crop_img
+
+log = logging.getLogger(__name__)
 
 @torch.no_grad()
 def run_inference(
@@ -64,17 +67,7 @@ def run_inference(
         - sample_dir: path to sample directory
         - output_dir: path to output directory
     """
-    manifest_path = sample_dir / "manifest.json"
-    if manifest_path.exists():
-        with manifest_path.open() as f:
-            manifest = json.load(f)
-        
-        img_files = sorted(sample_dir / batch["image_file"] for batch in manifest["batch_files"])
-    else:
-        raise FileNotFoundError(
-            f"Manifest file not found at {manifest_path} "
-            "Run smirk/scripts/1-sample.py to generate a manifest"
-        )
+    img_files = get_sample_images(sample_dir)
     
     model = get_model(arch_name, device)
     model = model.eval()
@@ -125,6 +118,7 @@ def run_merge(output_dir: Path, remove: bool):
 @hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
 def main(config: DictConfig):
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
+    log.info(f"Using device: {device}")
 
     arch_name = config.blackbox_sample_query.arch_name
     remove_intermediate = config.blackbox_sample_query.remove_intermediate
@@ -143,6 +137,10 @@ def main(config: DictConfig):
     # inference + merge
     if not config.blackbox_sample_query.inference_only:
         run_merge(output_dir, remove_intermediate)
+
+    log.info(
+        f"Finished querying {arch_name} to {output_dir}"
+    )
 
 if __name__ == "__main__":
     main()

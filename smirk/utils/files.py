@@ -5,9 +5,10 @@
 # get_path(relative)               # get path to relative location from project root
 # create_folder(folder)            # create folder(s)
 
-import os, sys
+import os, sys, json
 from pathlib import Path
 from omegaconf import DictConfig
+from typing import List
 
 #################
 # File handling #
@@ -46,12 +47,22 @@ def get_blackbox_attack_data_directory(cfg: DictConfig) -> Path:
 
     return get_path(dirname)
 
-# todo: rewrite
-def create_folder(folder):
-    if os.path.exists(folder):
-        assert os.path.isdir(folder), 'it exists but is not a folder'
+def get_sample_images(sample_dir: Path) -> List[str]:
+    img_files = []
+    manifest_path = sample_dir / "manifest.json"
+
+    if manifest_path.exists():
+        with manifest_path.open() as f:
+            manifest = json.load(f)
+        
+        img_files = sorted(sample_dir / batch["image_file"] for batch in manifest["batch_files"])
     else:
-        os.makedirs(folder)
+        raise FileNotFoundError(
+            f"No sample manifest found at {manifest_path}. "
+            "Run smirk/scripts/sample.py to generate a for this config first"
+        )
+    
+    return img_files
 
 #############
 #  Logging  #

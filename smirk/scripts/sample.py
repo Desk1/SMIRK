@@ -27,10 +27,13 @@ python scripts/1-sample.py
 import torch
 import hydra
 import json
+import logging
 from omegaconf import DictConfig
 from smirk.utils.files import get_path, get_sampling_directory
 from smirk.genforce import my_get_GD
 from smirk.data.sampler import Sampler
+
+log = logging.getLogger(__name__)
 
 def get_generator(cfg: DictConfig, device: torch.device):
     generator, _ = my_get_GD.main(
@@ -58,6 +61,7 @@ def main(config: DictConfig):
     validate_latent_config(config.sampling.latent_space)
 
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
+    log.info(f"Using device: {device}")
     generator = get_generator(config.sampling, device)
 
     sampler = Sampler(device, generator, config.sampling)
@@ -73,7 +77,7 @@ def main(config: DictConfig):
     if manifest_data["status"] == "completed":
         with open(manifest_path, "w") as f:
             json.dump(manifest_data, f, indent=4)
-            print(
+            log.info(
                 f"Finished sampling {config.sampling.model.genforce_model} "
                 f"to {output_dir}"
             )
