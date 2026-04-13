@@ -1,6 +1,6 @@
 from pathlib import Path
 
 
-x = Path("samples/stylegan_celeba_partial256_0.7_8_5/manifest.json")
+x= f"test/{None}"
 
-print(x.exists())
+print(Path(x).exists())

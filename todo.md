@@ -6,3 +6,5 @@
     supposedly not actually achieving sample level reweighting but a global scalar reweight
 
 - document long-tailed_surrogate_training line 701, 0.15 > int bug in report
+
+- implement datasets properly for surrogate testing

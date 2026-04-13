@@ -10,9 +10,6 @@ from pathlib import Path
 from omegaconf import DictConfig
 from typing import List
 
-#################
-# File handling #
-#################
 
 def get_path(relative_location: str) -> Path:
     PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -47,6 +44,21 @@ def get_blackbox_attack_data_directory(cfg: DictConfig) -> Path:
 
     return get_path(dirname)
 
+def get_surrogate_training_directory(cfg: DictConfig) -> Path:
+    dirname = (
+        f"{cfg.surrogate_training.output_dir}"
+    )
+
+    return get_path(dirname)
+
+def get_dataset_directory(dataset: str) -> Path:
+    dirname = (
+        "datasets/"
+        f"{dataset}"
+    )
+
+    return get_path(dirname)
+
 def get_sample_images(sample_dir: Path) -> List[str]:
     img_files = []
     manifest_path = sample_dir / "manifest.json"
@@ -63,27 +75,3 @@ def get_sample_images(sample_dir: Path) -> List[str]:
         )
     
     return img_files
-
-#############
-#  Logging  #
-#############
-
-class Tee(object):
-    # from https://github.com/MKariya1998/GMI-Attack/blob/master/Celeba/utils.py
-    def __init__(self, name, mode):
-        self.file = open(name, mode)
-        self.stdout = sys.stdout
-        sys.stdout = self
-
-    def __del__(self):
-        sys.stdout = self.stdout
-        self.file.close()
-
-    def write(self, data):
-        if '...' not in data:
-            self.file.write(data)
-        self.stdout.write(data)
-        self.flush()
-
-    def flush(self):
-        self.file.flush()

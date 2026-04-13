@@ -1,12 +1,11 @@
+import logging
+from tqdm import tqdm
+from typing import Optional
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
-import logging
-from omegaconf import DictConfig
-from tqdm import tqdm
-from typing import Optional
 
 from smirk.training.losses import calculate_loss
 
@@ -21,7 +20,6 @@ class SurrogateTrainer:
         model:              The surrogate model to train (multi-expert architecture)
         train_loader:       DataLoader yielding (image, soft_target) batches
         test_loader:        DataLoader for evaluation, or None to skip evaluation
-        optimizer:          Optimizer preconfigured for the model
         writer:             TensorBoard SummaryWriter
         topk_weights:       Class weights derived from long-tail label distribution
 
@@ -37,7 +35,6 @@ class SurrogateTrainer:
         device: torch.device,
         train_loader: DataLoader,
         test_loader: Optional[DataLoader],
-        optimizer: torch.optim.Optimizer,
         writer: SummaryWriter,
         topk_weights: torch.Tensor,
         # Hyperparameters
@@ -51,7 +48,6 @@ class SurrogateTrainer:
         self.device = device
         self.train_loader = train_loader
         self.test_loader = test_loader
-        self.optimizer = optimizer
         self.writer = writer
         self.topk_weights = topk_weights
 
@@ -60,26 +56,30 @@ class SurrogateTrainer:
         self.lambda_diversity = lambda_diversity
         self.lambda_ce = lambda_ce
 
+        self.optimizer = self.build_optimizer()
+
     def fit(self) -> nn.Module:
         """Run the full training loop"""
         best_acc = 0.0
-        epochs = self.cfg.epoch
+        epochs = self.cfg.epochs
  
         for epoch in range(epochs):
             log.info(f"Epoch {epoch+1} / {epochs}",)
-            self._train_epoch(epoch)
+            self.train_epoch(epoch)
  
             if self.test_loader is not None and (epoch % 25 == 0 or epoch == epochs - 1):
-                acc_top1, _ = self._test_epoch(epoch)
+                acc_top1, _ = self.test_epoch(epoch)
                 if acc_top1 > best_acc:
                     best_acc = acc_top1
                     log.info("New best accuracy: %.4f", best_acc)
-                    self._on_best(epoch, best_acc)
+                    self.on_best(epoch, best_acc)
+
+            self.on_epoch_end(epoch)
  
-            self._on_epoch_end(epoch)
  
         return self.model
     
+    # core training / eval
     def train_epoch(self, epoch: int, log_interval: int = 100):
         self.model.train()
         topk_weights = self.topk_weights.to(self.device)
@@ -161,3 +161,15 @@ class SurrogateTrainer:
         self.writer.add_scalar("Accuracy/top5", acc_top5, epoch)
  
         return acc_top1, acc_top5
+    
+    # checkpointing
+    def on_best(self, epoch: int, acc: float):
+        pass
+
+    def on_epoch_end(self, epoch: int):
+        pass
+
+    # optimizer
+    def build_optimizer(self):
+        paramlist = [{'params': x} for x in self.model.modified_layer_parameters]
+        return torch.optim.Adam(paramlist, lr=0.001)

@@ -123,6 +123,7 @@ def get_model(
 def get_expert_model(
     name: str,
     num_experts: int,
+    num_classification: int,
     device: Union[str, torch.device],
     load_weights: bool = True
 ):
@@ -132,7 +133,13 @@ def get_expert_model(
             f"{name}' does not have an expert_wrapper defined. \n"
             f"Define an expert wrapper at smirk/models/backbones"
             )
-    model = spec.expert_wrapper(spec, num_experts)
+    model = spec.expert_wrapper(
+        spec,
+        num_experts,
+        num_classification,
+        device,
+        load_weights
+    )
     
     model = model.to(device)
     return model

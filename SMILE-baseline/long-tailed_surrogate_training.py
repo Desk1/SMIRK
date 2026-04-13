@@ -698,7 +698,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--num_experts', type=int, default=3)
     parser.add_argument('--lambda_diversity', type=int, default=10)
-    parser.add_argument('--lambda_ce', type=int, default=0.15)
+    parser.add_argument('--lambda_ce', type=int, default=0.15) # ?
 
     args = parser.parse_args()
     main(args)
