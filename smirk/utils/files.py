@@ -38,7 +38,7 @@ def get_blackbox_attack_data_directory(cfg: DictConfig) -> Path:
     dirname = (
         f"{cfg.blackbox_sample_query.output_dir}/"
         f"{cfg.blackbox_sample_query.target_dataset}/"
-        f"{cfg.blackbox_sample_query.arch_name}/"
+        f"{cfg.blackbox_sample_query.arch_name_target}/"
         f"{sample_dataset}/"
     )
 
@@ -46,7 +46,17 @@ def get_blackbox_attack_data_directory(cfg: DictConfig) -> Path:
 
 def get_surrogate_training_directory(cfg: DictConfig) -> Path:
     dirname = (
-        f"{cfg.surrogate_training.output_dir}"
+        f"{cfg.surrogate_training.output_dir}/"
+        f"{cfg.surrogate_training.arch_name_surrogate}"
+    )
+
+    return get_path(dirname)
+
+def get_attack_execution_directory(cfg: DictConfig) -> Path:
+    dirname = (
+        f"{cfg.attack_execution.output_dir}/"
+        f"{cfg.attack_execution.attack_mode}/",
+        f"{cfg.surrogate_training.arch_name_surrogate} -> {cfg.blackbox_sample_query.arch_name_target}"
     )
 
     return get_path(dirname)

@@ -5,12 +5,11 @@
 import torch
 import torch.nn as nn
 import torchvision.models as models
-from collections import OrderedDict
 from torchvision.models.inception import InceptionE
 
 from smirk.models.registry import register_model, get_weights
 from smirk.models.stats import ALL_MEANS, ALL_STDS
-from smirk.models.definitions import inception3_4finetune
+from smirk.models.definitions import inceptionv3_4finetune
 
 
 class InceptionAux(nn.Module):
@@ -39,7 +38,7 @@ class InceptionAux(nn.Module):
 
 
 def load_inception_v3_E(spec, num_experts, num_classification, device, load_weights):
-    model = inception3_4finetune.Inception3_E(num_classes=8631, num_experts=num_experts)
+    model = inceptionv3_4finetune.Inception3_E(num_classes=8631, num_experts=num_experts)
     
     if load_weights:
         state_dict = get_weights(spec, device)

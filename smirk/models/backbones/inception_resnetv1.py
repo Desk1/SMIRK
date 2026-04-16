@@ -9,6 +9,7 @@ from smirk.models.registry import register_model, get_weights
 from smirk.models.stats import ALL_MEANS, ALL_STDS
 from facenet_pytorch import InceptionResnetV1
 from smirk.models.definitions import inceptionresnetv1_4finetune
+from smirk.utils.files import get_path
 
 
 def load_inception_resnetv1_vggface2_E(spec, num_experts, num_classification, device, load_weights):
@@ -63,7 +64,8 @@ def load_inception_resnetv1_casia_E(spec, num_experts, num_classification, devic
         state_dict = get_weights(spec, device)
 
         if state_dict:
-            model.load_state_dict(state_dict)
+            state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k}
+            model.load_state_dict(state_dict, strict=False)
 
     # replace layers
     model.logits = nn.ModuleList(
@@ -99,7 +101,8 @@ def load_inception_resnetv1_casia_E(spec, num_experts, num_classification, devic
     resolution = 160,
     mean = ALL_MEANS["inception_resnetv1_vggface2"],
     std = ALL_STDS["inception_resnetv1_vggface2"],
-    expert_wrapper=load_inception_resnetv1_vggface2_E
+    expert_wrapper=load_inception_resnetv1_vggface2_E,
+    weights_path=get_path("smirk/models/weights/20180402-114759-vggface2.pt")
 )
 def load_inception_resnetv1_vggface2():
     model = InceptionResnetV1(classify=True, pretrained='vggface2')
@@ -111,7 +114,8 @@ def load_inception_resnetv1_vggface2():
     resolution = 160,
     mean = ALL_MEANS["inception_resnetv1_casia"],
     std = ALL_STDS["inception_resnetv1_casia"],
-    expert_wrapper=load_inception_resnetv1_casia_E
+    expert_wrapper=load_inception_resnetv1_casia_E,
+    weights_path=get_path("smirk/models/weights/20180408-102900-casia-webface.pt")
 )
 def load_inception_resnetv1_casia():
     model = InceptionResnetV1(classify=True, pretrained='casia-webface')

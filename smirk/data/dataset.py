@@ -109,5 +109,3 @@ def make_test_transform(
     )
 
     return transforms.Compose(transformlist)
-
-transforms.Identity()

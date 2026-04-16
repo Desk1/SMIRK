@@ -74,7 +74,7 @@ def ce_cross_entropy_loss(
     _, predicted = torch.max(target, 1)
     criterion = nn.CrossEntropyLoss()
 
-    return criterion[expert_output, predicted]
+    return criterion(expert_output, predicted)
 
 def diversity_loss(
     raw_output: Tensor,

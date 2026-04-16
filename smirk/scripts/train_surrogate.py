@@ -1,20 +1,6 @@
-"""Entry point for surrogate model training.
-
-Usage:
-    python -m smirk.scripts.train_surrogate \
-        arch_name_target=resnet50 \
-        arch_name_finetune=inception_resnetv1_vggface2 \
-        target_dataset=vggface2 \
-        dataset=celeba_partial256 \
-        finetune_mode='CASIA->vggface2' \
-        query_num=2500 \
-        num_experts=3
-
-All keys map to fields in conf/train_surrogate.yaml (or overrides on the CLI).
-"""
-
 from __future__ import annotations
 
+import json
 import logging
 import os
 from pathlib import Path
@@ -39,9 +25,8 @@ from smirk.utils.files import *
 log = logging.getLogger(__name__)
 
 
-@hydra.main(config_path=get_path("configs"), config_name="config", version_base=None)
+@hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
 def main(config: DictConfig):
-
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
     log.info(f"Using device: {device}")
 
@@ -62,14 +47,20 @@ def main(config: DictConfig):
     model = get_expert_model(
         name = config.surrogate_training.arch_name_surrogate,
         num_experts = config.surrogate_training.num_experts,
+        num_classification= all_logits.shape[1],
         device = device
     )
     spec = get_spec(config.surrogate_training.arch_name_surrogate)
+
+    # build optimizer
+    paramlist = [{'params': x} for x in model.modified_layer_parameters]
+    optimizer = torch.optim.Adam(paramlist, lr=0.001)
     
     # load img files
     sample_dir = get_sampling_directory(config)
     img_files = get_sample_images(sample_dir)
     img_files = img_files[: int(config.surrogate_training.query_num / 100.0)]
+    img_files = [torch.load(img).to(device) for img in img_files]
 
     # build training data
     train_transform = make_train_transform(spec.resolution, spec.mean, spec.std)
@@ -82,7 +73,7 @@ def main(config: DictConfig):
 
     # build test data - target dataset specific
     dataset = None
-    match config.surrogate_training.target_dataset:
+    match config.blackbox_sample_query.target_dataset:
         case "CASIA":
             test_transform = make_test_transform(
                 resize_resolution = spec.resolution,
@@ -159,7 +150,19 @@ def main(config: DictConfig):
     finally:
         writer.close()
         torch.save(model.state_dict(), output_dir / "final_model.pt")
-        log.info(f"Training complete. Checkpoints saved to {output_dir}")
+        
+        # save manifest with surrogate model metadata
+        manifest = {
+            "model_architecture": config.surrogate_training.arch_name_surrogate,
+            "num_experts": config.surrogate_training.num_experts,
+            "num_classification": all_logits.shape[1]
+        }
+        
+        manifest_path = output_dir / "manifest.json"
+        with open(manifest_path, 'w') as f:
+            json.dump(manifest, f, indent=2)
+        
+        log.info(f"Training complete. Checkpoints and manifest saved to {output_dir}")
 
 
 class CheckpointingSurrogateTrainer(SurrogateTrainer):
@@ -169,11 +172,11 @@ class CheckpointingSurrogateTrainer(SurrogateTrainer):
         super().__init__(*args, **kwargs)
         self.output_dir = output_dir
 
-    def _on_best(self, epoch: int, acc: float):
+    def on_best(self, epoch: int, acc: float):
         path = self.output_dir / "best_model.pt"
         torch.save(self.model.state_dict(), path)
 
-    def _on_epoch_end(self, epoch: int):
+    def on_epoch_end(self, epoch: int):
         pass
 
 
@@ -181,7 +184,7 @@ def set_seed(seed: int):
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
-        
+
 
 if __name__ == "__main__":
     main()

@@ -8,9 +8,6 @@ This script replaces two separate scripts from the SMILE codebase:
     - my_generate_blackbox_attack_dataset.py  (inference pass)
     - my_merge_all_tensors.py                 (merge pass)
  
-The two passes are run sequentially by default.
-Pass --inference-only or --merge-only arguments to run a single step
- 
 Pipeline
 --------
 1. Inference pass: for each image batch saved in samples/, run it through
@@ -120,7 +117,7 @@ def main(config: DictConfig):
     device = torch.device(config.device if torch.cuda.is_available() else "cpu")
     log.info(f"Using device: {device}")
 
-    arch_name = config.blackbox_sample_query.arch_name
+    arch_name = config.blackbox_sample_query.arch_name_target
     remove_intermediate = config.blackbox_sample_query.remove_intermediate
 
     sample_dir = get_sampling_directory(config)

@@ -112,8 +112,9 @@ def get_model(
 ):
     spec = get_spec(name)
     model = spec.loader()
+    weights = get_weights(spec, device)
 
-    if load_weights_file:
+    if load_weights_file and weights is not None:
         model.load_state_dict(get_weights(spec, device))
     
     model = model.to(device)

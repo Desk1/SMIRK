@@ -370,13 +370,13 @@ class InceptionResnetV1_4finetune_E(nn.Module):
         self.last_linear = nn.Linear(1792, 512, bias=False)
         self.last_bn = nn.BatchNorm1d(512, eps=0.001, momentum=0.1, affine=True)
 
-        if pretrained == 'casia-webface':
-            cached_file = './classification_models/20180408-102900-casia-webface.pt'
-        elif pretrained == 'vggface2':
-            cached_file = './classification_models/20180402-114759-vggface2.pt'
-        state_dict = torch.load(cached_file)
-        state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k}
-        self.load_state_dict(state_dict, strict=False)
+        # if pretrained == 'casia-webface':
+        #     cached_file = './classification_models/20180408-102900-casia-webface.pt'
+        # elif pretrained == 'vggface2':
+        #     cached_file = './classification_models/20180402-114759-vggface2.pt'
+        # state_dict = torch.load(cached_file)
+        # state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k}
+        # self.load_state_dict(state_dict, strict=False)
         self.logits = nn.Linear(512, self.num_classes)
 
         self.device = torch.device('cpu')

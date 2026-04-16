@@ -7,4 +7,6 @@
 
 - document long-tailed_surrogate_training line 701, 0.15 > int bug in report
 
-- implement datasets properly for surrogate testing
+- move get_generator to util / dedicated file
+
+- move attack output / all output to hydra timestamped 'outputs' experiment folder

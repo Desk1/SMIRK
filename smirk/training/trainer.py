@@ -32,6 +32,7 @@ class SurrogateTrainer:
     def __init__(
         self,
         model: nn.Module,
+        optimizer: torch.optim.Optimizer,
         device: torch.device,
         train_loader: DataLoader,
         test_loader: Optional[DataLoader],
@@ -45,6 +46,7 @@ class SurrogateTrainer:
 
     ):
         self.model = model
+        self.optimizer = optimizer
         self.device = device
         self.train_loader = train_loader
         self.test_loader = test_loader
@@ -56,18 +58,15 @@ class SurrogateTrainer:
         self.lambda_diversity = lambda_diversity
         self.lambda_ce = lambda_ce
 
-        self.optimizer = self.build_optimizer()
-
     def fit(self) -> nn.Module:
         """Run the full training loop"""
         best_acc = 0.0
-        epochs = self.cfg.epochs
  
-        for epoch in range(epochs):
-            log.info(f"Epoch {epoch+1} / {epochs}",)
+        for epoch in range(self.epochs):
+            #log.info(f"Epoch {epoch+1} / {self.epochs}",)
             self.train_epoch(epoch)
  
-            if self.test_loader is not None and (epoch % 25 == 0 or epoch == epochs - 1):
+            if self.test_loader is not None and (epoch % 25 == 0 or epoch == self.epochs - 1):
                 acc_top1, _ = self.test_epoch(epoch)
                 if acc_top1 > best_acc:
                     best_acc = acc_top1
@@ -168,8 +167,3 @@ class SurrogateTrainer:
 
     def on_epoch_end(self, epoch: int):
         pass
-
-    # optimizer
-    def build_optimizer(self):
-        paramlist = [{'params': x} for x in self.model.modified_layer_parameters]
-        return torch.optim.Adam(paramlist, lr=0.001)

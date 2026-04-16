@@ -1,8 +1,7 @@
 import torch
 
 
-def build_weight_k(all_logits):
-    beta = 0.9
+def build_weight_k(all_logits, beta):
     
     topk_indices = torch.topk(all_logits, k=10, dim=1)[1]
     
