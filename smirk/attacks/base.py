@@ -37,9 +37,17 @@ class BaseAttack(ABC):
             learning_rate: float
     ):
         self.target_model = target_model
+        self.target_model_spec = target_model_spec
+        self.test_model = test_model
+        self.test_model_spec = test_model_spec
+
         self.generator = generator
         self.writer = writer
         self.device = device
+
+        self.population = population
+        self.epochs = epochs
+        self.learning_rate = learning_rate
 
     def generate_images(self, w: torch.Tensor):
         imgs = self.generator(w.to(self.device))

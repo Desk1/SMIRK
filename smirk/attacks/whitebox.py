@@ -22,7 +22,7 @@ class MirrorWhiteboxAttack(BaseAttack):
         self.L = elite.value.unsqueeze(0).clone().to(self.device)
         self.L.requires_grad = True
 
-        self.optimizer = optim.Adam([self.L, ], lr=args.lr, betas=[0.9, 0.999], eps=1e-8)
+        self.optimizer = optim.Adam([self.L, ], lr=self.learning_rate, betas=[0.9, 0.999], eps=1e-8)
 
         self.criterion = nn.CrossEntropyLoss()
     
@@ -40,6 +40,8 @@ class MirrorWhiteboxAttack(BaseAttack):
             self.generator.zero_grad()
 
             assert img.ndim == 4
+
+            self.target_model.eval()
             outputs = self.target_model(normalize(img*255., self.target_model_spec.name))
 
             if self.target_model_spec.name == 'sphere20a':
@@ -90,7 +92,7 @@ class SMILEWhiteboxAttack(BaseAttack):
         self.L = elite.value.unsqueeze(0).clone().to(self.device)
         self.L.requires_grad = True
 
-        self.optimizer = optim.Adam([self.L, ], lr=args.lr, betas=[0.9, 0.999], eps=1e-8)
+        self.optimizer = optim.Adam([self.L, ], lr=self.learning_rate, betas=[0.9, 0.999], eps=1e-8)
 
         self.criterion = nn.CrossEntropyLoss()
 
@@ -123,8 +125,8 @@ class SMILEWhiteboxAttack(BaseAttack):
             self.generator.zero_grad()
 
             assert img.ndim == 4
-            outputs = self.target_model(normalize(img*255., self.target_model_spec.name))
 
+            self.target_model.eval()
             if self.target_model_spec.name == 'inception_v3':
                 outputs, _, _, _ = self.target_model(normalize(img*255., self.target_model_spec.name), 0)
             else:
@@ -151,7 +153,7 @@ class SMILEWhiteboxAttack(BaseAttack):
 
                 if epoch % 10 == 0 or epoch == self.epochs-1:
                     self.writer.add_scalar('Target Score', loss.item(), epoch+1)
-                    self.writer.add_scalar('Evaluation Score', logits_softmax.item(), self.epoch+1)
+                    self.writer.add_scalar('Evaluation Score', logits_softmax.item(), epoch+1)
                     self.writer.add_scalar('Rank of label', rank_of_label.item(), epoch+1)
 
                     self.writer.add_image('Generated Image', img1.squeeze(), global_step=epoch)

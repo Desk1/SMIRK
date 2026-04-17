@@ -15,6 +15,7 @@ __pycache__/
 .pytest_cache
 Dockerfile
 
+/attacks
 surrogate_model_checkpoints
 outputs
 weights

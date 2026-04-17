@@ -6,13 +6,12 @@ defaults:
 - blackbox_sample_query: inception_resnetv1_vggface2
 - surrogate_training: inception_resnetv1_casia
 - attack_execution: SMILE_default
+- _self_
 
 device: "cuda"
 seed: 666
 
-
-
-# override specific values
+# override specific values e.g
 
 # sampling:
 #   output_dir: "new_samples"

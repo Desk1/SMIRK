@@ -37,6 +37,7 @@ class VectorizedPopulation:
 
             return all_w_mins, all_w_maxs
 
+        all_ws = all_ws[:population_size]
         self.all_w_mins, self.all_w_maxs = compute_p_bounds(all_ws, p_std_ce)
 
         all_logits = all_logits[:population_size]

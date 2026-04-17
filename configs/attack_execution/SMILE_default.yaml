@@ -1,5 +1,7 @@
 attack_mode: "SMILE"
-population_size: 2500
+population_size: 500
 epochs: 100
 learning_rate: 0.2
 output_dir: "attacks"
+
+targets: [8]
