@@ -1,4 +1,7 @@
-attack_mode: "SMILE"
+defaults:
+- whitebox_attack: SMILE
+- blackbox_attack: SMILE
+
 population_size: 500
 epochs: 100
 learning_rate: 0.2

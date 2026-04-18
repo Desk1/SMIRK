@@ -52,10 +52,3 @@ class BaseAttack(ABC):
     def generate_images(self, w: torch.Tensor):
         imgs = self.generator(w.to(self.device))
         return imgs
-
-    @abstractmethod
-    def run(self, target_label: int) -> AttackResult:
-        pass
-
-    def evaluate(self, result: AttackResult) -> AttackMetrics:
-        pass
