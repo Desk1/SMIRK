@@ -68,6 +68,7 @@ class SMILEBlackboxAttack(BaseAttack):
             generated_image = img_0
         )
 
+        T = 1
         for r in tqdm(range(self.budget)):
             ng_data = [self.optimizer.ask() for _ in range(T)]
 
