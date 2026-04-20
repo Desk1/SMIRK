@@ -26,9 +26,11 @@ class SMILEBlackboxAttack(BaseAttack):
         if elite_vector is None:
             raise RuntimeError(f"Failed to load elite starting point")
 
-        elite_vector.value = elite_vector.value.squeeze()
-        self.L = elite_vector.value.cpu().numpy()
+        elite_vector = elite_vector.squeeze()
+        self.L = elite_vector.cpu().numpy()
         self.elite = elite_vector
+
+        self.budget = budget
 
         parametrization = ng.p.Array(init=self.L).set_mutation(sigma=1)
         self.optimizer = ng.optimizers.registry[optimizer_strategy](parametrization=parametrization, budget=budget)
@@ -39,10 +41,11 @@ class SMILEBlackboxAttack(BaseAttack):
 
             assert img.ndim == 4
 
-            if self.target_model_spec.name == 'sphere20a':
-                pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name))[0], dim=1)
-            else:
-                pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name)), dim=1)
+            with torch.no_grad():
+                if self.target_model_spec.name == 'sphere20a':
+                    pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name))[0], dim=1)
+                else:
+                    pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name)), dim=1)
 
             score = pred[:, target_label]
             return score 
@@ -50,8 +53,8 @@ class SMILEBlackboxAttack(BaseAttack):
     def run(self, target_label: int) -> Dict[str, AttackResult]:
         results = {}
 
-        score_0 = self.compute_fitness(self.elite.value.cuda().unsqueeze(0))
-        img_0 = self.generate_images(self.elite.value.cuda().unsqueeze(0))
+        score_0 = self.compute_fitness(self.elite.unsqueeze(0), target_label) # 
+        img_0 = self.generate_images(self.elite.unsqueeze(0)) #
         outputs_0 = self.test_model(normalize(crop_and_resize(img_0, self.test_model_spec.name, self.test_model_spec.resolution)*255., self.test_model_spec.name))
         if self.test_model_spec.name == 'sphere20a':
             outputs_0 = outputs_0[0]
@@ -63,7 +66,7 @@ class SMILEBlackboxAttack(BaseAttack):
         self.writer.add_scalar('Rank of label', rank_of_label_0.item(), 0)
         
         results["original"] = AttackResult(
-            latent_vector = self.elite.value.cpu().clone(),
+            latent_vector = self.elite.cpu().clone(),
             fitness_score = logits_softmax_0.item(),
             generated_image = img_0
         )
@@ -76,13 +79,13 @@ class SMILEBlackboxAttack(BaseAttack):
                 clipped_ng_data = self.population.clip_array(ng_data[index].value)
                 ng_data[index].value[:] = clipped_ng_data
             
-            score = [self.compute_fitness(torch.Tensor(ng_data[i].value).type(torch.float32).cuda().unsqueeze(0)) for i in range(T)]
+            score = [self.compute_fitness(torch.Tensor(ng_data[i].value).type(torch.float32).unsqueeze(0), target_label) for i in range(T)] #
 
             for z, l in zip(ng_data, score):
                 self.optimizer.tell(z, l.item()*(-1.))
         
             recommendation = self.optimizer.provide_recommendation()
-            recommendation = torch.Tensor(recommendation.value).type(torch.float32).cuda()
+            recommendation = torch.Tensor(recommendation.value).type(torch.float32) #
 
             recommendation = recommendation.unsqueeze(0)
             img = self.generate_images(recommendation, raw_img=True)

@@ -1,0 +1,6 @@
+attack_mode: "SMILE"
+population_size: 500
+epochs: 10
+learning_rate: 0.2
+budget: 2500
+optimizer_strategy: "NGOpt"

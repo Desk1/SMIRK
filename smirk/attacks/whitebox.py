@@ -115,6 +115,7 @@ class MirrorWhiteboxAttack(BaseAttack):
     
     def run(self, target_label: int) -> AttackResult:
         TARGET = torch.LongTensor([target_label]).to(self.device)
+        self.target_model.eval()
 
         for epoch in tqdm(range(self.epochs + 1)):
             img = crop_and_resize(
@@ -128,7 +129,6 @@ class MirrorWhiteboxAttack(BaseAttack):
 
             assert img.ndim == 4
 
-            self.target_model.eval()
             outputs = self.target_model(normalize(img*255., self.target_model_spec.name))
 
             if self.target_model_spec.name == 'sphere20a':

@@ -67,6 +67,7 @@ def get_test_model_name(target_model_name: str):
             )
             return 'resnet50'
         
+        
 def run_whitebox_attack(
     all_ws_file,
     all_logits_file,
@@ -90,7 +91,7 @@ def run_whitebox_attack(
         population = VectorizedPopulation(
             all_ws = torch.load(all_ws_file, map_location=device),
             all_logits = torch.load(all_logits_file, map_location=device),
-            population_size = config.attack_execution.population_size,
+            population_size = config.attack_execution.whitebox_attack.population_size,
             target_label = target_label
         )
     
@@ -103,8 +104,8 @@ def run_whitebox_attack(
             writer = writer,
             device = device,
             population = population,
-            epochs = config.attack_execution.epochs,
-            learning_rate = config.attack_execution.learning_rate
+            epochs = config.attack_execution.whitebox_attack.epochs,
+            learning_rate = config.attack_execution.whitebox_attack.learning_rate
         )
 
         try:
@@ -141,12 +142,12 @@ def run_blackbox_attack(
         log.info(f"attacking target: {target_label}")
 
         # load elite starting point from whitebox attack
-        elite = whitebox_attack_results[target_label]
+        elite = whitebox_attack_results[target_label].latent_vector
 
         population = VectorizedPopulation(
             all_ws = torch.load(all_ws_file, map_location=device),
             all_logits = torch.load(all_logits_file, map_location=device),
-            population_size = config.attack_execution.population_size,
+            population_size = config.attack_execution.blackbox_attack.population_size,
             target_label = target_label
         )
     
@@ -159,18 +160,14 @@ def run_blackbox_attack(
             writer = writer,
             device = device,
             population = population,
-            epochs = config.attack_execution.epochs,
-            learning_rate = config.attack_execution.learning_rate,
-            elite_vector = elite
+            epochs = config.attack_execution.blackbox_attack.epochs,
+            learning_rate = config.attack_execution.blackbox_attack.learning_rate,
+            elite_vector = elite,
+            budget = config.attack_execution.blackbox_attack.budget,
+            optimizer_strategy = config.attack_execution.blackbox_attack.optimizer_strategy
         )
 
-        try:
-            result = SMILE.run(target_label)
-        except Exception as e:
-            log.error(
-                f"Error during blackbox attack against target {target_label}:\n{e}"
-            )
-            result = None
+        result = SMILE.run(target_label)
 
         results[target_label] = result
 
@@ -269,12 +266,16 @@ def main(config: DictConfig):
         whitebox_attack_results=whitebox_results
     )
 
-    for r in blackbox_results:
-        log.info(f"target {r}:")
-        log.info(blackbox_results[r])
+    for target in blackbox_results:
+        log.info(f"target {target}:")
+        log.info(blackbox_results[target])
+
+        save_dir = output_dir / f"{target}"
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        for r in blackbox_results[target]:
+            torch.save(blackbox_results[target][r], f"{r}.pt")
 
     
-    
-
 if __name__ == "__main__":
     main()
