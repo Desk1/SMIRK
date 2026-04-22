@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 from dataclasses import dataclass
-from abc import ABC, abstractmethod
+from typing import Dict
+from abc import ABC
 
 from smirk.attacks.population import VectorizedPopulation
 from smirk.models.registry import ModelSpec
@@ -48,6 +49,8 @@ class BaseAttack(ABC):
         self.population = population
         self.epochs = epochs
         self.learning_rate = learning_rate
+
+        self.results: Dict[str, AttackResult]  = {} # label -> AttackResult
 
     def generate_images(self, w: torch.Tensor):
         imgs = self.generator(w.to(self.device))

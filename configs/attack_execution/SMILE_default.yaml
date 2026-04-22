@@ -4,3 +4,4 @@ defaults:
 
 output_dir: "attacks"
 targets: [8]
+load_elite_from_file: true

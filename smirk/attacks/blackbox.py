@@ -41,17 +41,17 @@ class SMILEBlackboxAttack(BaseAttack):
 
             assert img.ndim == 4
 
-            with torch.no_grad():
-                if self.target_model_spec.name == 'sphere20a':
-                    pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name))[0], dim=1)
-                else:
-                    pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name)), dim=1)
+            if self.target_model_spec.name == 'sphere20a':
+                pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name))[0], dim=1)
+            else:
+                pred = F.log_softmax(self.target_model(normalize(img*255., self.target_model_spec.name)), dim=1)
 
             score = pred[:, target_label]
             return score 
 
-    def run(self, target_label: int) -> Dict[str, AttackResult]:
-        results = {}
+    def run(self, target_label: int):
+        self.target_model.eval()
+        self.test_model.eval()
 
         score_0 = self.compute_fitness(self.elite.unsqueeze(0), target_label) # 
         img_0 = self.generate_images(self.elite.unsqueeze(0)) #
@@ -65,7 +65,7 @@ class SMILEBlackboxAttack(BaseAttack):
         self.writer.add_scalar('Evaluation Score', logits_softmax_0.item(), 0)
         self.writer.add_scalar('Rank of label', rank_of_label_0.item(), 0)
         
-        results["original"] = AttackResult(
+        self.results["original"] = AttackResult(
             latent_vector = self.elite.cpu().clone(),
             fitness_score = logits_softmax_0.item(),
             generated_image = img_0
@@ -88,7 +88,7 @@ class SMILEBlackboxAttack(BaseAttack):
             recommendation = torch.Tensor(recommendation.value).type(torch.float32) #
 
             recommendation = recommendation.unsqueeze(0)
-            img = self.generate_images(recommendation, raw_img=True)
+            img = self.generate_images(recommendation)
 
             outputs = self.test_model(normalize(crop_and_resize(img, self.test_model_spec.name, self.test_model_spec.resolution)*255., self.test_model_spec.name))
             if self.test_model_spec.name == 'sphere20a':
@@ -98,7 +98,7 @@ class SMILEBlackboxAttack(BaseAttack):
             # intermediate checkpoints
             if r % 500 == 0:
                 save_w = Sample(recommendation.detach().clone(), logits_softmax.item())
-                results[str(r)] = AttackResult(
+                self.results[str(r)] = AttackResult(
                     latent_vector = recommendation.detach().clone(),
                     fitness_score = logits_softmax.item(),
                     generated_image = img
@@ -112,12 +112,10 @@ class SMILEBlackboxAttack(BaseAttack):
                 self.writer.add_scalar('Rank of label', rank_of_label.item(), r+1)
                 self.writer.add_image('Generated Image', img.squeeze(), global_step=r)
             
-        results["final"] = AttackResult(
+        self.results["final"] = AttackResult(
             latent_vector = recommendation.detach().clone(),
             fitness_score = logits_softmax.item(),
             generated_image = img
         )
-
-        return results
 
 

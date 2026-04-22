@@ -65,8 +65,7 @@ def get_test_model_name(target_model_name: str):
             log.warning(
                 f"No test model assigned for {target_model_name}, using default (resnet50)"
             )
-            return 'resnet50'
-        
+            return 'resnet50'   
         
 def run_whitebox_attack(
     all_ws_file,
@@ -95,7 +94,7 @@ def run_whitebox_attack(
             target_label = target_label
         )
     
-        SMILE = SMILEWhiteboxAttack(
+        attack = SMILEWhiteboxAttack(
             target_model = surrogate_model,
             target_model_spec = surrogate_model_spec,
             test_model = test_model,
@@ -108,17 +107,28 @@ def run_whitebox_attack(
             learning_rate = config.attack_execution.whitebox_attack.learning_rate
         )
 
-        try:
-            result = SMILE.run(target_label)
-        except Exception as e:
-            log.error(
-                f"Error during whitebox attack against target {target_label}:\n{e}"
-            )
-            result = None
+        attack.run(target_label)
 
-        results[target_label] = result
+        results[target_label] = attack.results
 
     return results
+
+def load_elite_vectors(elite_dir: Path, targets: List[int]):
+    results = {}
+
+    for t in targets:
+        results[t] = {}
+        elite_path = elite_dir / f"target_{t}/elite.pt"
+
+        if elite_path.exists():
+            results[t]["elite"] = torch.load(elite_path)
+        else:
+            raise FileNotFoundError(
+                f"Could not find elite vector for target {t} in {elite_dir}"
+            )
+    
+    return results
+
 
 def run_blackbox_attack(
     all_ws_file,
@@ -142,7 +152,7 @@ def run_blackbox_attack(
         log.info(f"attacking target: {target_label}")
 
         # load elite starting point from whitebox attack
-        elite = whitebox_attack_results[target_label].latent_vector
+        elite = whitebox_attack_results[target_label]["elite"].latent_vector
 
         population = VectorizedPopulation(
             all_ws = torch.load(all_ws_file, map_location=device),
@@ -151,7 +161,7 @@ def run_blackbox_attack(
             target_label = target_label
         )
     
-        SMILE = SMILEBlackboxAttack(
+        attack = SMILEBlackboxAttack(
             target_model = target_model,
             target_model_spec = target_model_spec,
             test_model = test_model,
@@ -167,9 +177,9 @@ def run_blackbox_attack(
             optimizer_strategy = config.attack_execution.blackbox_attack.optimizer_strategy
         )
 
-        result = SMILE.run(target_label)
+        attack.run(target_label)
 
-        results[target_label] = result
+        results[target_label] = attack.results
 
     return results
 
@@ -239,19 +249,34 @@ def main(config: DictConfig):
             "Ensure generate blackbox attack data script has been ran for this config"
         )
     
-    whitebox_results = run_whitebox_attack(
-        all_ws_file,
-        all_logits_file,
-        surrogate_model,
-        surrogate_model_spec,
-        test_model,
-        test_model_spec,
-        generator,
-        writer,
-        device,
-        config
-    )
+    # build whitebox attack results
+    elite_dir = output_dir / "whitebox"
+    if config.attack_execution.load_elite_from_file and elite_dir.exists():
+        whitebox_results = load_elite_vectors(elite_dir, config.attack_execution.targets)
+    else:
+        whitebox_results = run_whitebox_attack(
+            all_ws_file,
+            all_logits_file,
+            surrogate_model,
+            surrogate_model_spec,
+            test_model,
+            test_model_spec,
+            generator,
+            writer,
+            device,
+            config
+        )
+    
+        # save whitebox results
+        for target in whitebox_results:
+            save_dir = output_dir / f"whitebox/target_{target}"
+            save_dir.mkdir(parents=True, exist_ok=True)
 
+            for r in whitebox_results[target]:
+                torch.save(whitebox_results[target][r], f"{save_dir}/{r}.pt")
+
+
+    # build blackbox attack results
     blackbox_results = run_blackbox_attack(
         all_ws_file,
         all_logits_file,
@@ -266,15 +291,16 @@ def main(config: DictConfig):
         whitebox_attack_results=whitebox_results
     )
 
+    # save blackbox results
     for target in blackbox_results:
         log.info(f"target {target}:")
         log.info(blackbox_results[target])
 
-        save_dir = output_dir / f"{target}"
+        save_dir = output_dir / f"blackbox/target_{target}"
         save_dir.mkdir(parents=True, exist_ok=True)
 
         for r in blackbox_results[target]:
-            torch.save(blackbox_results[target][r], f"{r}.pt")
+            torch.save(blackbox_results[target][r], f"{save_dir}/{r}.pt")
 
     
 if __name__ == "__main__":

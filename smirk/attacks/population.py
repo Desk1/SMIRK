@@ -52,7 +52,7 @@ class VectorizedPopulation:
         return torch.max(torch.min(w, self.all_w_maxs), self.all_w_mins)
     
     def clip_array(self, inputs):
-        clipped = np.clip(inputs, self.all_w_mins.cpu().numpy()[0], self.all_w_maxs.cpu().numpy()[0])
+        clipped = np.clip(inputs, self.all_w_mins.cpu().detach().numpy()[0], self.all_w_maxs.cpu().detach().numpy()[0])
         return clipped
 
     def find_elite(self, index=0):

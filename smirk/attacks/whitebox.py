@@ -41,7 +41,7 @@ class SMILEWhiteboxAttack(BaseAttack):
 
         return lr
     
-    def run(self, target_label: int) -> AttackResult:
+    def run(self, target_label: int):
         TARGET = torch.LongTensor([target_label]).to(self.device)
 
         for epoch in tqdm(range(self.epochs + 1)):
@@ -89,7 +89,7 @@ class SMILEWhiteboxAttack(BaseAttack):
 
                     self.writer.add_image('Generated Image', img1.squeeze(), global_step=epoch)
 
-        return AttackResult(
+        self.results["elite"] = AttackResult(
             latent_vector = self.L.detach().clone(),
             fitness_score = logits_softmax.item(),
             generated_image = img1.squeeze()
