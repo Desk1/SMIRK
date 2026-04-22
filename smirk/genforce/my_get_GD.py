@@ -75,11 +75,11 @@ def main(device, model_name, num, batch_size, use_w_space=True, use_discri=True,
     url = model_config.pop('url')  # URL to download model if needed.
 
     # Get work directory and job name.
-    if args.save_dir:
-        work_dir = args.save_dir
-    else:
-        work_dir = os.path.join('work_dirs', 'synthesis')
-    os.makedirs(work_dir, exist_ok=True)
+    # if args.save_dir:
+    #     work_dir = args.save_dir
+    # else:
+    #     work_dir = os.path.join('work_dirs', 'synthesis')
+    # os.makedirs(work_dir, exist_ok=True)
 
     # Build generation and get synthesis kwargs.
     print(f'Building generator for model `{args.model_name}` ...')

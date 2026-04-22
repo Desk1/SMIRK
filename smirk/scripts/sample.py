@@ -32,23 +32,9 @@ from omegaconf import DictConfig
 from smirk.utils.files import get_path, get_sampling_directory
 from smirk.genforce import my_get_GD
 from smirk.data.sampler import Sampler
+from smirk.data.generator import get_generator
 
 log = logging.getLogger(__name__)
-
-def get_generator(cfg: DictConfig, device: torch.device):
-    generator, _ = my_get_GD.main(
-        device,
-        cfg.model.genforce_model,
-        cfg.batch_size,
-        cfg.batch_size,
-        use_w_space=cfg.latent_space.use_w_space,
-        use_discri=False,
-        repeat_w=cfg.latent_space.repeat_w,
-        use_z_plus_space=cfg.latent_space.use_z_plus_space,
-        trunc_psi=cfg.latent_space.trunc_psi,
-        trunc_layers=cfg.latent_space.trunc_layers,
-    )
-    return generator
 
 # use_z_plus_space requires use_w_space=true, repeat_w=false
 def validate_latent_config(cfg: DictConfig):

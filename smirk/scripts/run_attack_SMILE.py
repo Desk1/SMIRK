@@ -14,23 +14,9 @@ from smirk.attacks.base import AttackResult
 from smirk.attacks.whitebox import SMILEWhiteboxAttack
 from smirk.attacks.blackbox import SMILEBlackboxAttack
 from smirk.attacks.population import VectorizedPopulation
+from smirk.data.generator import get_generator
 
 log = logging.getLogger(__name__)
-
-def get_generator(cfg: DictConfig, device: torch.device):
-    generator, _ = my_get_GD.main(
-        device,
-        cfg.model.genforce_model,
-        cfg.batch_size,
-        cfg.batch_size,
-        use_w_space=cfg.latent_space.use_w_space,
-        use_discri=False,
-        repeat_w=cfg.latent_space.repeat_w,
-        use_z_plus_space=cfg.latent_space.use_z_plus_space,
-        trunc_psi=cfg.latent_space.trunc_psi,
-        trunc_layers=cfg.latent_space.trunc_layers,
-    )
-    return generator
 
 def get_test_model_name(target_model_name: str):
     """
