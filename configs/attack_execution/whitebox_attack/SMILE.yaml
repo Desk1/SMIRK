@@ -1,4 +1,4 @@
 attack_mode: "SMILE"
-population_size: 500
-epochs: 10
+population_size: 2500 # sample size * batch size
+epochs: 200
 learning_rate: 0.2

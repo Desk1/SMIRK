@@ -17,5 +17,5 @@ Dockerfile
 
 /attacks
 surrogate_model_checkpoints
-outputs
+/output
 weights

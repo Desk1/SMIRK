@@ -15,6 +15,8 @@ from .models import build_generator, build_discriminator
 from .utils.misc import bool_parser
 from .utils.visualizer import HtmlPageVisualizer
 
+from smirk.utils.files import get_path
+
 
 def postprocess(images):
     """change the range from [-1, 1] to [0., 1.]"""
@@ -101,8 +103,9 @@ def main(device, model_name, num, batch_size, use_w_space=True, use_discri=True,
         discriminator = None
 
     # Load pre-trained weights.
-    os.makedirs('checkpoints', exist_ok=True)
-    checkpoint_path = os.path.join('checkpoints', args.model_name + '.pth')
+    checkpoint_dir = get_path("smirk/genforce/checkpoints")
+    checkpoint_dir.mkdir(exist_ok=True)
+    checkpoint_path = str(checkpoint_dir / f"{args.model_name}.pth")
     # print(checkpoint_path)
     print(f'Loading checkpoint from `{checkpoint_path}` ...')
     if not os.path.exists(checkpoint_path):

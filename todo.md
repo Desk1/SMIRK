@@ -8,3 +8,7 @@
 - document long-tailed_surrogate_training line 701, 0.15 > int bug in report
 
 - move attack output / all output to hydra timestamped 'outputs' experiment folder
+
+- build evaluation interface -SKIP
+
+- implement metrics

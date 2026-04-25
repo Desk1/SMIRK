@@ -71,7 +71,7 @@ def run_whitebox_attack(
     results: Dict[int, AttackResult] = {} # target_label : result
 
     for target_label in config.attack_execution.targets:
-        log.info(f"attacking target: {target_label}")
+        log.info(f"Generating elite starting vector for target: {target_label}")
 
         population = VectorizedPopulation(
             all_ws = torch.load(all_ws_file, map_location=device),
@@ -110,7 +110,7 @@ def load_elite_vectors(elite_dir: Path, targets: List[int]):
             results[t]["elite"] = torch.load(elite_path)
         else:
             raise FileNotFoundError(
-                f"Could not find elite vector for target {t} in {elite_dir}"
+                f"Could not find elite vector for target {t} in {elite_dir}. Check elite loading point is correctly configured."
             )
     
     return results
@@ -135,7 +135,7 @@ def run_blackbox_attack(
     results: Dict[int, AttackResult] = {} # target_label : result
 
     for target_label in config.attack_execution.targets:
-        log.info(f"attacking target: {target_label}")
+        log.info(f"Executing blackbox attack on target: {target_label}")
 
         # load elite starting point from whitebox attack
         elite = whitebox_attack_results[target_label]["elite"].latent_vector
@@ -208,15 +208,12 @@ def main(config: DictConfig):
     target_model = get_model(config.blackbox_sample_query.arch_name_target, device)
     target_model_spec = get_spec(config.blackbox_sample_query.arch_name_target)
 
-    # todo: setup forward hooks for test model
-
     # GAN generator
     generator = get_generator(config.sampling, device)
 
     # output
     output_dir = get_attack_execution_directory(config)
     output_dir.mkdir(parents=True, exist_ok=True)
-    writer = SummaryWriter(log_dir=str(output_dir))
 
     # load sampling + blackbox attack data
     sample_dir = get_sampling_directory(config)
@@ -237,8 +234,10 @@ def main(config: DictConfig):
     
     # build whitebox attack results
     elite_dir = output_dir / "whitebox"
+    writer = SummaryWriter(log_dir=str(elite_dir))
     if config.attack_execution.load_elite_from_file and elite_dir.exists():
-        whitebox_results = load_elite_vectors(elite_dir, config.attack_execution.targets)
+        log.info(f"loading elite vector from {elite_dir}")
+        whitebox_results = load_elite_vectors(Path(config.attack_execution.elite_dir), config.attack_execution.targets)
     else:
         whitebox_results = run_whitebox_attack(
             all_ws_file,
@@ -261,8 +260,12 @@ def main(config: DictConfig):
             for r in whitebox_results[target]:
                 torch.save(whitebox_results[target][r], f"{save_dir}/{r}.pt")
 
+        writer.close()
+
 
     # build blackbox attack results
+    blackbox_dir = output_dir / "blackbox"
+    writer = SummaryWriter(log_dir=str(blackbox_dir))
     blackbox_results = run_blackbox_attack(
         all_ws_file,
         all_logits_file,
@@ -279,14 +282,14 @@ def main(config: DictConfig):
 
     # save blackbox results
     for target in blackbox_results:
-        log.info(f"target {target}:")
-        log.info(blackbox_results[target])
-
-        save_dir = output_dir / f"blackbox/target_{target}"
+        save_dir = blackbox_dir / f"target_{target}"
         save_dir.mkdir(parents=True, exist_ok=True)
 
         for r in blackbox_results[target]:
             torch.save(blackbox_results[target][r], f"{save_dir}/{r}.pt")
+    writer.close()
+
+    log.info(f"Attack successful. Results saved to {output_dir}")
 
     
 if __name__ == "__main__":

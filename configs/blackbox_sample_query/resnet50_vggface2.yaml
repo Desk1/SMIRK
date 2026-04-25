@@ -1,6 +1,6 @@
 arch_name: "resnet50"
 target_dataset: "vggface2"
-output_dir: "blackbox_attack_data"
+output_dir: "output/blackbox_attack_data"
 remove_intermediate: true
 merge_only: false
 inference_only: false

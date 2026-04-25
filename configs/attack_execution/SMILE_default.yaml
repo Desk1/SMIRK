@@ -2,6 +2,7 @@ defaults:
 - whitebox_attack: SMILE
 - blackbox_attack: SMILE
 
-output_dir: "attacks"
+output_dir: "output/${now:%Y-%m-%d}/${now:%H-%M-%S}/attacks"
 targets: [8]
-load_elite_from_file: true
+load_elite_from_file: false
+elite_dir: ""

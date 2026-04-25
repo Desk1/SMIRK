@@ -133,6 +133,7 @@ def main(config: DictConfig):
     # trainer
     trainer = CheckpointingSurrogateTrainer(
         model = model,
+        optimizer = optimizer,
         device = device,
         train_loader = train_loader,
         test_loader = test_loader,
@@ -149,7 +150,12 @@ def main(config: DictConfig):
         model = trainer.fit()
     finally:
         writer.close()
-        torch.save(model.state_dict(), output_dir / "final_model.pt")
+
+        # save final as best model if not testing
+        if config.surrogate_training.test_surrogate:
+            torch.save(model.state_dict(), output_dir / "final_model.pt")
+        else:
+            torch.save(model.state_dict(), output_dir / "best_model.pt")
         
         # save manifest with surrogate model metadata
         manifest = {

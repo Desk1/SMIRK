@@ -7,7 +7,7 @@ from omegaconf import OmegaConf
 from smirk.data.dataset import QueryDataset, make_transform, build_query_dataset
 from smirk.data.sampler import Sampler
 from smirk.scripts.sample import validate_latent_config
-from smirk.scripts.generate_blackbox_attack_data import run_merge
+from smirk.scripts.query_target_model import run_merge
 from smirk.genforce import my_get_GD
 
 
