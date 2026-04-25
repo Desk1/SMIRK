@@ -14,7 +14,7 @@ seed: 666
 # output dir
 hydra:
   run:
-    dir: output/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    dir: output/logs/${now:%Y-%m-%d}/${now:%H-%M-%S}
 
 # override specific values 
 # sampling:

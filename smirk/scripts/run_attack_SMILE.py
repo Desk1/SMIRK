@@ -9,6 +9,7 @@ from typing import Dict
 import smirk.models
 from smirk.models.registry import get_model, get_expert_model, get_spec
 from smirk.utils.files import *
+from smirk.utils.models import get_test_model_name
 from smirk.genforce import my_get_GD
 from smirk.attacks.base import AttackResult
 from smirk.attacks.whitebox import SMILEWhiteboxAttack
@@ -18,40 +19,6 @@ from smirk.data.generator import get_generator
 
 log = logging.getLogger(__name__)
 
-def get_test_model_name(target_model_name: str):
-    """
-    Map of suitable test models for given target models
-    """
-    match target_model_name:
-        case 'vgg16bn':
-            return 'vgg16'
-        case 'vgg16':
-            return 'vgg16bn'
-        case 'resnet50':
-            return 'inception_resnetv1_vggface2'
-        case 'inception_resnetv1_vggface2':
-            return 'resnet50'
-        case 'mobilenet_v2':
-            return 'resnet50'
-        case 'efficientnet_b0':
-            return 'resnet50'
-        case 'inception_v3':
-            return 'resnet50'
-        case 'swin_transformer':
-            return 'resnet50'
-        case 'vision_transformer':
-            return 'resnet50'
-        case 'inception_resnetv1_casia':
-            return 'efficientnet_b0_casia'
-        case 'efficientnet_b0_casia':
-            return 'inception_resnetv1_casia'
-        case 'sphere20a':
-            return 'inception_resnetv1_casia'
-        case _:
-            log.warning(
-                f"No test model assigned for {target_model_name}, using default (resnet50)"
-            )
-            return 'resnet50'   
         
 def run_whitebox_attack(
     all_ws_file,
@@ -289,7 +256,7 @@ def main(config: DictConfig):
             torch.save(blackbox_results[target][r], f"{save_dir}/{r}.pt")
     writer.close()
 
-    log.info(f"Attack successful. Results saved to {output_dir}")
+    log.info(f"Attack successful. Output saved to {output_dir}")
 
     
 if __name__ == "__main__":
