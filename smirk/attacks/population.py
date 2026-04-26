@@ -29,8 +29,8 @@ class VectorizedPopulation:
             all_ps = invert_lrelu(all_ws)
             all_p_means = torch.mean(all_ps, dim=0, keepdim=True)
             all_p_stds = torch.std(all_ps, dim=0, keepdim=True, unbiased=False)
-            all_p_mins = all_p_means - p_std_ce * all_p_stds
-            all_p_maxs = all_p_means + p_std_ce * all_p_stds
+            all_p_mins = all_p_means - p_std_ce * all_p_stds * 1.7
+            all_p_maxs = all_p_means + p_std_ce * all_p_stds * 1.7
 
             all_w_mins = lrelu(all_p_mins)
             all_w_maxs = lrelu(all_p_maxs)
