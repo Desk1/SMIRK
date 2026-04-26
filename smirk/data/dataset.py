@@ -94,8 +94,8 @@ def make_test_transform(
         return x * 255.0
 
     transformlist = [
-        scale255,
         transforms.PILToTensor(),
+        scale255,
         transforms.Resize(resize_resolution)
     ]
 
