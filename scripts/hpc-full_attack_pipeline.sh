@@ -2,11 +2,8 @@
 #SBATCH --job-name=MI_attack
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=k.jacob.22@abdn.ac.uk
-#SBATCH --partition=gpu
-#SBATCH --nodes=1
-#SBATCH --gres=gpu:1
-#SBATCH --nodelist=gpu01
-#SBATCH --ntasks-per-node=1
+#SBATCH --partition=compute
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=0
 #SBATCH --time=24:00:00
