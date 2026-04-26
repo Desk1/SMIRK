@@ -1,0 +1,11 @@
+arch_name_surrogate: "inception_v3"
+query_num: 2500
+batch_size: 128
+epochs: 200
+test_surrogate: true
+output_dir: "output/surrogate_model_checkpoints"
+
+num_experts: 3
+beta: 0.9
+lambda_diversity: 10
+lambda_ce: 0.15
