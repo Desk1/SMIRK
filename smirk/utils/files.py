@@ -54,7 +54,7 @@ def get_surrogate_training_directory(cfg: DictConfig) -> Path:
 
 def get_attack_execution_directory(cfg: DictConfig) -> Path:
     dirname = (
-        f"{cfg.attack_execution.output_dir}"
+        f"{cfg.attack_execution.output_dir}/"
         f"{cfg.surrogate_training.arch_name_surrogate} -> {cfg.blackbox_sample_query.arch_name_target}/"
         f"{cfg.attack_execution.whitebox_attack.attack_mode}+{cfg.attack_execution.blackbox_attack.attack_mode}"
     )
