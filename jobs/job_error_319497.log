@@ -1,0 +1,78 @@
+/home/u03kj22/.bashrc: line 29: unalias: squeue: not found
+Sampling:   0%|          | 0/25 [00:00<?, ?it/s]Sampling:   0%|          | 0/25 [00:06<?, ?it/s]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/sample.py", line 57, in main
+    sampler.generate_samples(output_dir)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/data/sampler.py", line 48, in generate_samples
+    img_gen = self.generator(latent_in)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/my_get_GD.py", line 158, in __call__
+    return self.g_function(code)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/my_get_GD.py", line 141, in fake_generator
+    images = generator(code, **synthesis_kwargs, use_w_space=use_w_space)['image']
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/models/stylegan_generator.py", line 195, in forward
+    synthesis_results = self.synthesis(wp, lod, randomize_noise)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/models/stylegan_generator.py", line 516, in forward
+    x, style = self.__getattr__(f'layer{2 * block_idx}')(
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/models/stylegan_generator.py", line 823, in forward
+    x = self.normalize(x)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/genforce/models/stylegan_generator.py", line 560, in forward
+    torch.mean(x ** 2, dim=[2, 3], keepdim=True) + self.eps)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/_tensor.py", line 40, in wrapped
+    return f(*args, **kwargs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.56 GiB. GPU 0 has a total capacity of 4.75 GiB of which 194.00 MiB is free. Including non-PyTorch memory, this process has 4.54 GiB memory in use. Of the allocated memory 4.02 GiB is allocated by PyTorch, and 427.09 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/query_target_model.py", line 132, in main
+    run_inference(arch_name, resolution, sample_dir, output_dir, device)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/query_target_model.py", line 67, in run_inference
+    img_files = get_sample_images(sample_dir)
+  File "/scratch/users/u03kj22/SMIRK/smirk/utils/files.py", line 82, in get_sample_images
+    raise FileNotFoundError(
+FileNotFoundError: No sample manifest found at /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/manifest.json. Run smirk/scripts/sample.py to generate a for this config first
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/train_surrogate.py", line 41, in main
+    raise FileNotFoundError(
+FileNotFoundError: /scratch/users/u03kj22/SMIRK/output/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_25/all_logits.pt could not be found. run smirk/scripts/generate_blackbox_attack_data.py for this config first
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/run_attack_SMILE.py", line 192, in main
+    raise FileNotFoundError(
+FileNotFoundError: Could not find sampling data at /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/all_ws.pt. Ensure sampling script has been ran for this config
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
