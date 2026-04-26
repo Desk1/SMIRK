@@ -1,0 +1,232 @@
+[2026-04-26 12:33:07,759][__main__][INFO] - Using device: cpu
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+['/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_10_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_11_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_12_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_13_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_14_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_15_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_16_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_17_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_18_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_19_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_1_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_20_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_21_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_22_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_23_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_24_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_25_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_2_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_3_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_4_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_5_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_6_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_7_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_8_latent.pt', '/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25/sample_9_latent.pt']
+[2026-04-26 12:36:00,381][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25
+[2026-04-26 12:36:24,038][__main__][INFO] - Using device: cpu
+[2026-04-26 12:36:41,913][__main__][INFO] - Finished querying inception_resnetv1_vggface2 to /scratch/users/u03kj22/SMIRK/output/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_25
+[2026-04-26 12:37:31,308][__main__][INFO] - Using device: cpu
+[2026-04-26 12:37:36,919][smirk.training.trainer][INFO] - Epoch 0 [0/2500]  KL: 376.784363  CE: 73.804321  Diversity: 16.464180
+[2026-04-26 12:37:54,930][smirk.training.trainer][INFO] - Epoch 1 [0/2500]  KL: 195.203461  CE: 56.366657  Diversity: 11.671539
+[2026-04-26 12:38:12,604][smirk.training.trainer][INFO] - Epoch 2 [0/2500]  KL: 138.367279  CE: 48.585545  Diversity: 11.179682
+[2026-04-26 12:38:29,411][smirk.training.trainer][INFO] - Epoch 3 [0/2500]  KL: 100.250107  CE: 42.392410  Diversity: 13.666636
+[2026-04-26 12:38:46,146][smirk.training.trainer][INFO] - Epoch 4 [0/2500]  KL: 94.672470  CE: 39.685009  Diversity: 10.734052
+[2026-04-26 12:39:04,237][smirk.training.trainer][INFO] - Epoch 5 [0/2500]  KL: 78.839249  CE: 37.084801  Diversity: 14.645538
+[2026-04-26 12:39:21,914][smirk.training.trainer][INFO] - Epoch 6 [0/2500]  KL: 71.511162  CE: 32.489464  Diversity: 10.347874
+[2026-04-26 12:39:39,537][smirk.training.trainer][INFO] - Epoch 7 [0/2500]  KL: 80.208893  CE: 34.770287  Diversity: 12.735775
+[2026-04-26 12:39:56,921][smirk.training.trainer][INFO] - Epoch 8 [0/2500]  KL: 69.127762  CE: 31.212317  Diversity: 10.624983
+[2026-04-26 12:40:13,806][smirk.training.trainer][INFO] - Epoch 9 [0/2500]  KL: 69.338943  CE: 32.203354  Diversity: 10.969214
+[2026-04-26 12:40:30,420][smirk.training.trainer][INFO] - Epoch 10 [0/2500]  KL: 58.671196  CE: 27.634752  Diversity: 11.442442
+[2026-04-26 12:40:47,240][smirk.training.trainer][INFO] - Epoch 11 [0/2500]  KL: 70.016182  CE: 33.069912  Diversity: 12.034719
+[2026-04-26 12:41:04,025][smirk.training.trainer][INFO] - Epoch 12 [0/2500]  KL: 60.778297  CE: 29.064569  Diversity: 9.998066
+[2026-04-26 12:41:20,952][smirk.training.trainer][INFO] - Epoch 13 [0/2500]  KL: 61.123257  CE: 29.418901  Diversity: 8.621276
+[2026-04-26 12:41:38,124][smirk.training.trainer][INFO] - Epoch 14 [0/2500]  KL: 56.570488  CE: 28.527811  Diversity: 8.630099
+[2026-04-26 12:41:54,795][smirk.training.trainer][INFO] - Epoch 15 [0/2500]  KL: 61.118599  CE: 28.835217  Diversity: 7.096334
+[2026-04-26 12:42:11,475][smirk.training.trainer][INFO] - Epoch 16 [0/2500]  KL: 65.557541  CE: 32.946045  Diversity: 9.027702
+[2026-04-26 12:42:28,963][smirk.training.trainer][INFO] - Epoch 17 [0/2500]  KL: 56.508926  CE: 27.245707  Diversity: 7.024659
+[2026-04-26 12:42:45,477][smirk.training.trainer][INFO] - Epoch 18 [0/2500]  KL: 63.045692  CE: 30.901499  Diversity: 6.907643
+[2026-04-26 12:43:02,016][smirk.training.trainer][INFO] - Epoch 19 [0/2500]  KL: 54.411694  CE: 26.493801  Diversity: 7.968274
+[2026-04-26 12:43:19,230][smirk.training.trainer][INFO] - Epoch 20 [0/2500]  KL: 51.655563  CE: 27.701178  Diversity: 6.256173
+[2026-04-26 12:43:36,056][smirk.training.trainer][INFO] - Epoch 21 [0/2500]  KL: 58.664909  CE: 30.511419  Diversity: 6.497953
+[2026-04-26 12:43:53,368][smirk.training.trainer][INFO] - Epoch 22 [0/2500]  KL: 51.395096  CE: 27.283552  Diversity: 7.035086
+[2026-04-26 12:44:10,562][smirk.training.trainer][INFO] - Epoch 23 [0/2500]  KL: 52.946671  CE: 28.443314  Diversity: 6.439704
+[2026-04-26 12:44:28,283][smirk.training.trainer][INFO] - Epoch 24 [0/2500]  KL: 51.465931  CE: 27.598566  Diversity: 5.565076
+[2026-04-26 12:44:44,653][smirk.training.trainer][INFO] - Epoch 25 [0/2500]  KL: 52.759117  CE: 28.640656  Diversity: 6.376948
+[2026-04-26 12:45:01,230][smirk.training.trainer][INFO] - Epoch 26 [0/2500]  KL: 55.733871  CE: 28.816357  Diversity: 5.998094
+[2026-04-26 12:45:18,349][smirk.training.trainer][INFO] - Epoch 27 [0/2500]  KL: 50.222347  CE: 28.241163  Diversity: 5.625763
+[2026-04-26 12:45:34,983][smirk.training.trainer][INFO] - Epoch 28 [0/2500]  KL: 51.434387  CE: 27.945194  Diversity: 5.206479
+[2026-04-26 12:45:51,999][smirk.training.trainer][INFO] - Epoch 29 [0/2500]  KL: 47.315815  CE: 27.086729  Diversity: 6.042823
+[2026-04-26 12:46:09,283][smirk.training.trainer][INFO] - Epoch 30 [0/2500]  KL: 48.217430  CE: 26.822741  Diversity: 7.908520
+[2026-04-26 12:46:26,241][smirk.training.trainer][INFO] - Epoch 31 [0/2500]  KL: 48.794384  CE: 27.553398  Diversity: 6.015500
+[2026-04-26 12:46:42,962][smirk.training.trainer][INFO] - Epoch 32 [0/2500]  KL: 50.710838  CE: 27.612284  Diversity: 5.384219
+[2026-04-26 12:47:00,378][smirk.training.trainer][INFO] - Epoch 33 [0/2500]  KL: 49.826424  CE: 27.815542  Diversity: 6.171659
+[2026-04-26 12:47:18,004][smirk.training.trainer][INFO] - Epoch 34 [0/2500]  KL: 51.792713  CE: 30.160488  Diversity: 4.863308
+[2026-04-26 12:47:34,668][smirk.training.trainer][INFO] - Epoch 35 [0/2500]  KL: 44.274677  CE: 27.934752  Diversity: 6.281386
+[2026-04-26 12:47:52,492][smirk.training.trainer][INFO] - Epoch 36 [0/2500]  KL: 46.040001  CE: 26.393431  Diversity: 5.762897
+[2026-04-26 12:48:09,691][smirk.training.trainer][INFO] - Epoch 37 [0/2500]  KL: 48.842896  CE: 29.003668  Diversity: 6.698248
+[2026-04-26 12:48:26,658][smirk.training.trainer][INFO] - Epoch 38 [0/2500]  KL: 45.045811  CE: 26.500710  Diversity: 6.151903
+[2026-04-26 12:48:43,793][smirk.training.trainer][INFO] - Epoch 39 [0/2500]  KL: 50.644325  CE: 29.980066  Diversity: 5.275885
+[2026-04-26 12:49:01,036][smirk.training.trainer][INFO] - Epoch 40 [0/2500]  KL: 45.502110  CE: 27.866079  Diversity: 5.016366
+[2026-04-26 12:49:20,040][smirk.training.trainer][INFO] - Epoch 41 [0/2500]  KL: 41.037510  CE: 26.147411  Diversity: 5.781064
+[2026-04-26 12:49:37,481][smirk.training.trainer][INFO] - Epoch 42 [0/2500]  KL: 43.582634  CE: 28.079912  Diversity: 5.090287
+[2026-04-26 12:49:53,937][smirk.training.trainer][INFO] - Epoch 43 [0/2500]  KL: 54.101345  CE: 32.209587  Diversity: 3.986950
+[2026-04-26 12:50:10,373][smirk.training.trainer][INFO] - Epoch 44 [0/2500]  KL: 39.949390  CE: 24.773708  Diversity: 4.555455
+[2026-04-26 12:50:27,130][smirk.training.trainer][INFO] - Epoch 45 [0/2500]  KL: 42.038940  CE: 25.289778  Diversity: 4.348778
+[2026-04-26 12:50:44,070][smirk.training.trainer][INFO] - Epoch 46 [0/2500]  KL: 44.635941  CE: 26.013498  Diversity: 5.973818
+[2026-04-26 12:51:00,625][smirk.training.trainer][INFO] - Epoch 47 [0/2500]  KL: 47.866879  CE: 27.416147  Diversity: 5.145169
+[2026-04-26 12:51:17,878][smirk.training.trainer][INFO] - Epoch 48 [0/2500]  KL: 47.751556  CE: 29.717964  Diversity: 4.805398
+[2026-04-26 12:51:34,853][smirk.training.trainer][INFO] - Epoch 49 [0/2500]  KL: 47.710987  CE: 29.219357  Diversity: 6.910121
+[2026-04-26 12:51:52,263][smirk.training.trainer][INFO] - Epoch 50 [0/2500]  KL: 47.198158  CE: 28.533258  Diversity: 4.746778
+[2026-04-26 12:52:09,126][smirk.training.trainer][INFO] - Epoch 51 [0/2500]  KL: 46.309242  CE: 28.530966  Diversity: 6.422967
+[2026-04-26 12:52:25,951][smirk.training.trainer][INFO] - Epoch 52 [0/2500]  KL: 43.521080  CE: 28.175676  Diversity: 5.553216
+[2026-04-26 12:52:42,835][smirk.training.trainer][INFO] - Epoch 53 [0/2500]  KL: 42.744484  CE: 28.613037  Diversity: 3.531956
+[2026-04-26 12:52:59,246][smirk.training.trainer][INFO] - Epoch 54 [0/2500]  KL: 43.953754  CE: 27.646801  Diversity: 5.228032
+[2026-04-26 12:53:15,725][smirk.training.trainer][INFO] - Epoch 55 [0/2500]  KL: 43.540516  CE: 28.000559  Diversity: 7.248564
+[2026-04-26 12:53:32,412][smirk.training.trainer][INFO] - Epoch 56 [0/2500]  KL: 42.430042  CE: 29.079523  Diversity: 4.910634
+[2026-04-26 12:53:49,390][smirk.training.trainer][INFO] - Epoch 57 [0/2500]  KL: 44.488789  CE: 29.230547  Diversity: 4.371496
+[2026-04-26 12:54:06,425][smirk.training.trainer][INFO] - Epoch 58 [0/2500]  KL: 44.240162  CE: 29.347475  Diversity: 5.617268
+[2026-04-26 12:54:24,790][smirk.training.trainer][INFO] - Epoch 59 [0/2500]  KL: 40.690613  CE: 26.577579  Diversity: 4.948525
+[2026-04-26 12:54:41,921][smirk.training.trainer][INFO] - Epoch 60 [0/2500]  KL: 43.925350  CE: 28.385506  Diversity: 3.719563
+[2026-04-26 12:54:58,408][smirk.training.trainer][INFO] - Epoch 61 [0/2500]  KL: 41.931164  CE: 27.068443  Diversity: 3.609665
+[2026-04-26 12:55:15,518][smirk.training.trainer][INFO] - Epoch 62 [0/2500]  KL: 40.067341  CE: 26.109474  Diversity: 4.112056
+[2026-04-26 12:55:32,166][smirk.training.trainer][INFO] - Epoch 63 [0/2500]  KL: 44.957104  CE: 28.614878  Diversity: 3.922327
+[2026-04-26 12:55:49,131][smirk.training.trainer][INFO] - Epoch 64 [0/2500]  KL: 39.636406  CE: 26.778959  Diversity: 4.499881
+[2026-04-26 12:56:06,251][smirk.training.trainer][INFO] - Epoch 65 [0/2500]  KL: 39.390686  CE: 26.244202  Diversity: 3.637397
+[2026-04-26 12:56:23,417][smirk.training.trainer][INFO] - Epoch 66 [0/2500]  KL: 41.868916  CE: 26.627205  Diversity: 4.104519
+[2026-04-26 12:56:40,303][smirk.training.trainer][INFO] - Epoch 67 [0/2500]  KL: 43.013565  CE: 27.637476  Diversity: 3.651840
+[2026-04-26 12:56:56,996][smirk.training.trainer][INFO] - Epoch 68 [0/2500]  KL: 41.212982  CE: 27.889242  Diversity: 3.908564
+[2026-04-26 12:57:13,924][smirk.training.trainer][INFO] - Epoch 69 [0/2500]  KL: 47.705025  CE: 29.230953  Diversity: 3.415241
+[2026-04-26 12:57:30,897][smirk.training.trainer][INFO] - Epoch 70 [0/2500]  KL: 38.515110  CE: 25.956520  Diversity: 3.787264
+[2026-04-26 12:57:47,543][smirk.training.trainer][INFO] - Epoch 71 [0/2500]  KL: 40.849396  CE: 27.067146  Diversity: 3.258637
+[2026-04-26 12:58:04,036][smirk.training.trainer][INFO] - Epoch 72 [0/2500]  KL: 41.146770  CE: 27.282528  Diversity: 3.144803
+[2026-04-26 12:58:20,456][smirk.training.trainer][INFO] - Epoch 73 [0/2500]  KL: 41.369316  CE: 26.842451  Diversity: 3.374631
+[2026-04-26 12:58:37,028][smirk.training.trainer][INFO] - Epoch 74 [0/2500]  KL: 44.781231  CE: 27.290352  Diversity: 3.030292
+[2026-04-26 12:58:53,565][smirk.training.trainer][INFO] - Epoch 75 [0/2500]  KL: 42.533035  CE: 27.347811  Diversity: 4.052509
+[2026-04-26 12:59:10,343][smirk.training.trainer][INFO] - Epoch 76 [0/2500]  KL: 40.406609  CE: 26.350790  Diversity: 2.877248
+[2026-04-26 12:59:28,805][smirk.training.trainer][INFO] - Epoch 77 [0/2500]  KL: 39.396282  CE: 27.273058  Diversity: 3.526742
+[2026-04-26 12:59:46,352][smirk.training.trainer][INFO] - Epoch 78 [0/2500]  KL: 40.796116  CE: 27.626734  Diversity: 3.735298
+[2026-04-26 13:00:03,213][smirk.training.trainer][INFO] - Epoch 79 [0/2500]  KL: 41.263153  CE: 27.980137  Diversity: 3.203104
+[2026-04-26 13:00:19,882][smirk.training.trainer][INFO] - Epoch 80 [0/2500]  KL: 43.903728  CE: 29.931799  Diversity: 3.863311
+[2026-04-26 13:00:36,635][smirk.training.trainer][INFO] - Epoch 81 [0/2500]  KL: 44.653503  CE: 29.246889  Diversity: 3.376151
+[2026-04-26 13:00:53,098][smirk.training.trainer][INFO] - Epoch 82 [0/2500]  KL: 36.247890  CE: 25.776873  Diversity: 3.565633
+[2026-04-26 13:01:10,064][smirk.training.trainer][INFO] - Epoch 83 [0/2500]  KL: 37.256035  CE: 27.492352  Diversity: 4.792338
+[2026-04-26 13:01:27,464][smirk.training.trainer][INFO] - Epoch 84 [0/2500]  KL: 37.606136  CE: 25.445415  Diversity: 3.906060
+[2026-04-26 13:01:44,797][smirk.training.trainer][INFO] - Epoch 85 [0/2500]  KL: 40.068214  CE: 26.919106  Diversity: 3.406639
+[2026-04-26 13:02:01,783][smirk.training.trainer][INFO] - Epoch 86 [0/2500]  KL: 43.067142  CE: 28.814989  Diversity: 3.445357
+[2026-04-26 13:02:18,332][smirk.training.trainer][INFO] - Epoch 87 [0/2500]  KL: 42.665588  CE: 29.274517  Diversity: 3.172725
+[2026-04-26 13:02:35,433][smirk.training.trainer][INFO] - Epoch 88 [0/2500]  KL: 40.923462  CE: 27.348280  Diversity: 3.178294
+[2026-04-26 13:02:52,454][smirk.training.trainer][INFO] - Epoch 89 [0/2500]  KL: 42.801117  CE: 28.949461  Diversity: 3.795582
+[2026-04-26 13:03:09,815][smirk.training.trainer][INFO] - Epoch 90 [0/2500]  KL: 42.324181  CE: 29.178089  Diversity: 3.320584
+[2026-04-26 13:03:27,005][smirk.training.trainer][INFO] - Epoch 91 [0/2500]  KL: 40.350151  CE: 26.345339  Diversity: 4.672108
+[2026-04-26 13:03:43,482][smirk.training.trainer][INFO] - Epoch 92 [0/2500]  KL: 41.555145  CE: 27.871279  Diversity: 3.010048
+[2026-04-26 13:04:00,210][smirk.training.trainer][INFO] - Epoch 93 [0/2500]  KL: 38.432327  CE: 26.638376  Diversity: 3.498005
+[2026-04-26 13:04:17,369][smirk.training.trainer][INFO] - Epoch 94 [0/2500]  KL: 36.515709  CE: 25.168653  Diversity: 3.919535
+[2026-04-26 13:04:35,134][smirk.training.trainer][INFO] - Epoch 95 [0/2500]  KL: 40.728294  CE: 28.359285  Diversity: 4.440850
+[2026-04-26 13:04:51,742][smirk.training.trainer][INFO] - Epoch 96 [0/2500]  KL: 37.917458  CE: 26.159601  Diversity: 4.882706
+[2026-04-26 13:05:08,467][smirk.training.trainer][INFO] - Epoch 97 [0/2500]  KL: 41.426632  CE: 28.689493  Diversity: 3.970490
+[2026-04-26 13:05:25,047][smirk.training.trainer][INFO] - Epoch 98 [0/2500]  KL: 38.990120  CE: 26.955851  Diversity: 3.262547
+[2026-04-26 13:05:42,080][smirk.training.trainer][INFO] - Epoch 99 [0/2500]  KL: 39.699451  CE: 27.288509  Diversity: 3.167207
+[2026-04-26 13:05:59,688][smirk.training.trainer][INFO] - Epoch 100 [0/2500]  KL: 41.303741  CE: 27.290506  Diversity: 2.664506
+[2026-04-26 13:06:17,579][smirk.training.trainer][INFO] - Epoch 101 [0/2500]  KL: 32.161209  CE: 24.609184  Diversity: 5.371803
+[2026-04-26 13:06:35,110][smirk.training.trainer][INFO] - Epoch 102 [0/2500]  KL: 40.236893  CE: 26.837839  Diversity: 3.747417
+[2026-04-26 13:06:51,869][smirk.training.trainer][INFO] - Epoch 103 [0/2500]  KL: 36.055641  CE: 25.650377  Diversity: 4.004101
+[2026-04-26 13:07:08,561][smirk.training.trainer][INFO] - Epoch 104 [0/2500]  KL: 39.180138  CE: 26.696980  Diversity: 3.766661
+[2026-04-26 13:07:25,109][smirk.training.trainer][INFO] - Epoch 105 [0/2500]  KL: 37.842445  CE: 27.030397  Diversity: 3.214472
+[2026-04-26 13:07:41,505][smirk.training.trainer][INFO] - Epoch 106 [0/2500]  KL: 42.706230  CE: 30.629354  Diversity: 2.829748
+[2026-04-26 13:07:58,166][smirk.training.trainer][INFO] - Epoch 107 [0/2500]  KL: 38.448963  CE: 27.060373  Diversity: 3.715996
+[2026-04-26 13:08:14,804][smirk.training.trainer][INFO] - Epoch 108 [0/2500]  KL: 36.485294  CE: 25.010309  Diversity: 4.022521
+[2026-04-26 13:08:32,030][smirk.training.trainer][INFO] - Epoch 109 [0/2500]  KL: 38.567577  CE: 26.904325  Diversity: 3.185272
+[2026-04-26 13:08:49,312][smirk.training.trainer][INFO] - Epoch 110 [0/2500]  KL: 38.136360  CE: 25.855114  Diversity: 2.838688
+[2026-04-26 13:09:06,799][smirk.training.trainer][INFO] - Epoch 111 [0/2500]  KL: 41.135105  CE: 28.201197  Diversity: 4.796356
+[2026-04-26 13:09:24,408][smirk.training.trainer][INFO] - Epoch 112 [0/2500]  KL: 38.745316  CE: 25.492695  Diversity: 3.442389
+[2026-04-26 13:09:41,230][smirk.training.trainer][INFO] - Epoch 113 [0/2500]  KL: 40.127716  CE: 28.495190  Diversity: 5.116042
+[2026-04-26 13:09:58,788][smirk.training.trainer][INFO] - Epoch 114 [0/2500]  KL: 36.671417  CE: 25.571257  Diversity: 4.908829
+[2026-04-26 13:10:16,482][smirk.training.trainer][INFO] - Epoch 115 [0/2500]  KL: 37.360283  CE: 27.382984  Diversity: 3.402421
+[2026-04-26 13:10:33,330][smirk.training.trainer][INFO] - Epoch 116 [0/2500]  KL: 39.310661  CE: 26.547689  Diversity: 3.409616
+[2026-04-26 13:10:50,433][smirk.training.trainer][INFO] - Epoch 117 [0/2500]  KL: 37.868172  CE: 26.037794  Diversity: 2.921513
+[2026-04-26 13:11:07,824][smirk.training.trainer][INFO] - Epoch 118 [0/2500]  KL: 35.712902  CE: 26.233240  Diversity: 3.938101
+[2026-04-26 13:11:24,966][smirk.training.trainer][INFO] - Epoch 119 [0/2500]  KL: 45.129246  CE: 30.855894  Diversity: 3.422098
+[2026-04-26 13:11:41,724][smirk.training.trainer][INFO] - Epoch 120 [0/2500]  KL: 37.700531  CE: 26.349155  Diversity: 3.386483
+[2026-04-26 13:11:58,550][smirk.training.trainer][INFO] - Epoch 121 [0/2500]  KL: 36.987888  CE: 26.719065  Diversity: 3.566359
+[2026-04-26 13:12:14,995][smirk.training.trainer][INFO] - Epoch 122 [0/2500]  KL: 39.643158  CE: 27.872351  Diversity: 3.342025
+[2026-04-26 13:12:31,993][smirk.training.trainer][INFO] - Epoch 123 [0/2500]  KL: 33.256165  CE: 24.465322  Diversity: 3.942784
+[2026-04-26 13:12:48,877][smirk.training.trainer][INFO] - Epoch 124 [0/2500]  KL: 37.738548  CE: 26.442347  Diversity: 4.112766
+[2026-04-26 13:13:05,960][smirk.training.trainer][INFO] - Epoch 125 [0/2500]  KL: 39.953014  CE: 28.050894  Diversity: 3.375856
+[2026-04-26 13:13:22,879][smirk.training.trainer][INFO] - Epoch 126 [0/2500]  KL: 37.191681  CE: 27.157820  Diversity: 3.755778
+[2026-04-26 13:13:40,081][smirk.training.trainer][INFO] - Epoch 127 [0/2500]  KL: 38.601017  CE: 28.138363  Diversity: 3.347695
+[2026-04-26 13:13:57,474][smirk.training.trainer][INFO] - Epoch 128 [0/2500]  KL: 38.033745  CE: 28.453838  Diversity: 3.630842
+[2026-04-26 13:14:15,381][smirk.training.trainer][INFO] - Epoch 129 [0/2500]  KL: 40.274239  CE: 29.572018  Diversity: 4.214240
+[2026-04-26 13:14:32,237][smirk.training.trainer][INFO] - Epoch 130 [0/2500]  KL: 34.833870  CE: 26.415049  Diversity: 4.878167
+[2026-04-26 13:14:50,533][smirk.training.trainer][INFO] - Epoch 131 [0/2500]  KL: 38.097404  CE: 27.664070  Diversity: 3.714168
+[2026-04-26 13:15:07,108][smirk.training.trainer][INFO] - Epoch 132 [0/2500]  KL: 36.535786  CE: 27.844446  Diversity: 4.389360
+[2026-04-26 13:15:23,539][smirk.training.trainer][INFO] - Epoch 133 [0/2500]  KL: 33.305557  CE: 25.545403  Diversity: 3.278834
+[2026-04-26 13:15:39,998][smirk.training.trainer][INFO] - Epoch 134 [0/2500]  KL: 36.413433  CE: 25.943411  Diversity: 3.441776
+[2026-04-26 13:15:56,586][smirk.training.trainer][INFO] - Epoch 135 [0/2500]  KL: 35.495773  CE: 26.064020  Diversity: 3.378351
+[2026-04-26 13:16:13,284][smirk.training.trainer][INFO] - Epoch 136 [0/2500]  KL: 36.082054  CE: 26.572527  Diversity: 2.933226
+[2026-04-26 13:16:30,348][smirk.training.trainer][INFO] - Epoch 137 [0/2500]  KL: 40.409386  CE: 29.396395  Diversity: 2.762203
+[2026-04-26 13:16:46,776][smirk.training.trainer][INFO] - Epoch 138 [0/2500]  KL: 40.944649  CE: 29.578335  Diversity: 3.065555
+[2026-04-26 13:17:03,457][smirk.training.trainer][INFO] - Epoch 139 [0/2500]  KL: 41.205051  CE: 30.408249  Diversity: 3.127761
+[2026-04-26 13:17:20,495][smirk.training.trainer][INFO] - Epoch 140 [0/2500]  KL: 36.164127  CE: 25.594572  Diversity: 3.043318
+[2026-04-26 13:17:38,641][smirk.training.trainer][INFO] - Epoch 141 [0/2500]  KL: 35.547089  CE: 25.982874  Diversity: 3.535524
+[2026-04-26 13:17:55,711][smirk.training.trainer][INFO] - Epoch 142 [0/2500]  KL: 38.376911  CE: 26.857620  Diversity: 3.237519
+[2026-04-26 13:18:12,827][smirk.training.trainer][INFO] - Epoch 143 [0/2500]  KL: 39.331829  CE: 26.460472  Diversity: 2.903400
+[2026-04-26 13:18:29,616][smirk.training.trainer][INFO] - Epoch 144 [0/2500]  KL: 43.140202  CE: 30.524599  Diversity: 2.697115
+[2026-04-26 13:18:47,589][smirk.training.trainer][INFO] - Epoch 145 [0/2500]  KL: 38.443401  CE: 27.772276  Diversity: 3.367550
+[2026-04-26 13:19:05,364][smirk.training.trainer][INFO] - Epoch 146 [0/2500]  KL: 39.156788  CE: 27.518484  Diversity: 2.902772
+[2026-04-26 13:19:22,962][smirk.training.trainer][INFO] - Epoch 147 [0/2500]  KL: 39.913589  CE: 27.493141  Diversity: 2.631773
+[2026-04-26 13:19:40,071][smirk.training.trainer][INFO] - Epoch 148 [0/2500]  KL: 35.882713  CE: 27.307934  Diversity: 2.914590
+[2026-04-26 13:19:57,086][smirk.training.trainer][INFO] - Epoch 149 [0/2500]  KL: 37.308331  CE: 26.193491  Diversity: 3.214949
+[2026-04-26 13:20:13,766][smirk.training.trainer][INFO] - Epoch 150 [0/2500]  KL: 36.531414  CE: 25.070673  Diversity: 2.250770
+[2026-04-26 13:20:30,572][smirk.training.trainer][INFO] - Epoch 151 [0/2500]  KL: 34.332485  CE: 26.046412  Diversity: 2.963046
+[2026-04-26 13:20:47,575][smirk.training.trainer][INFO] - Epoch 152 [0/2500]  KL: 40.102016  CE: 28.586859  Diversity: 2.649808
+[2026-04-26 13:21:04,470][smirk.training.trainer][INFO] - Epoch 153 [0/2500]  KL: 39.911434  CE: 29.482265  Diversity: 3.971000
+[2026-04-26 13:21:21,448][smirk.training.trainer][INFO] - Epoch 154 [0/2500]  KL: 34.160122  CE: 26.399672  Diversity: 3.073512
+[2026-04-26 13:21:38,115][smirk.training.trainer][INFO] - Epoch 155 [0/2500]  KL: 34.294960  CE: 24.465738  Diversity: 3.108344
+[2026-04-26 13:21:55,085][smirk.training.trainer][INFO] - Epoch 156 [0/2500]  KL: 36.102730  CE: 26.262939  Diversity: 7.029982
+[2026-04-26 13:22:12,551][smirk.training.trainer][INFO] - Epoch 157 [0/2500]  KL: 39.554832  CE: 27.686392  Diversity: 3.078673
+[2026-04-26 13:22:31,463][smirk.training.trainer][INFO] - Epoch 158 [0/2500]  KL: 38.605057  CE: 27.326387  Diversity: 3.017993
+[2026-04-26 13:22:48,802][smirk.training.trainer][INFO] - Epoch 159 [0/2500]  KL: 36.358665  CE: 25.351933  Diversity: 4.220901
+[2026-04-26 13:23:05,431][smirk.training.trainer][INFO] - Epoch 160 [0/2500]  KL: 36.283791  CE: 25.834267  Diversity: 3.510651
+[2026-04-26 13:23:22,031][smirk.training.trainer][INFO] - Epoch 161 [0/2500]  KL: 33.941742  CE: 24.581032  Diversity: 2.801802
+[2026-04-26 13:23:38,841][smirk.training.trainer][INFO] - Epoch 162 [0/2500]  KL: 37.523113  CE: 27.753389  Diversity: 2.709127
+[2026-04-26 13:23:56,664][smirk.training.trainer][INFO] - Epoch 163 [0/2500]  KL: 40.308929  CE: 28.751350  Diversity: 3.580758
+[2026-04-26 13:24:15,339][smirk.training.trainer][INFO] - Epoch 164 [0/2500]  KL: 38.242344  CE: 28.052065  Diversity: 3.744065
+[2026-04-26 13:24:32,197][smirk.training.trainer][INFO] - Epoch 165 [0/2500]  KL: 38.966366  CE: 27.236307  Diversity: 3.549652
+[2026-04-26 13:24:48,949][smirk.training.trainer][INFO] - Epoch 166 [0/2500]  KL: 37.053970  CE: 28.199003  Diversity: 3.842243
+[2026-04-26 13:25:06,001][smirk.training.trainer][INFO] - Epoch 167 [0/2500]  KL: 35.306076  CE: 26.350405  Diversity: 3.142255
+[2026-04-26 13:25:23,000][smirk.training.trainer][INFO] - Epoch 168 [0/2500]  KL: 36.050896  CE: 26.791267  Diversity: 2.615238
+[2026-04-26 13:25:40,123][smirk.training.trainer][INFO] - Epoch 169 [0/2500]  KL: 36.263187  CE: 28.323092  Diversity: 3.088154
+[2026-04-26 13:25:57,025][smirk.training.trainer][INFO] - Epoch 170 [0/2500]  KL: 33.404629  CE: 24.534767  Diversity: 3.745309
+[2026-04-26 13:26:14,476][smirk.training.trainer][INFO] - Epoch 171 [0/2500]  KL: 34.281399  CE: 26.113995  Diversity: 2.633693
+[2026-04-26 13:26:31,534][smirk.training.trainer][INFO] - Epoch 172 [0/2500]  KL: 34.658741  CE: 25.132286  Diversity: 4.383625
+[2026-04-26 13:26:49,406][smirk.training.trainer][INFO] - Epoch 173 [0/2500]  KL: 35.091694  CE: 24.583424  Diversity: 3.882101
+[2026-04-26 13:27:07,237][smirk.training.trainer][INFO] - Epoch 174 [0/2500]  KL: 35.188969  CE: 27.175364  Diversity: 4.888504
+[2026-04-26 13:27:24,079][smirk.training.trainer][INFO] - Epoch 175 [0/2500]  KL: 37.787636  CE: 27.062689  Diversity: 3.803778
+[2026-04-26 13:27:41,075][smirk.training.trainer][INFO] - Epoch 176 [0/2500]  KL: 37.676910  CE: 31.008821  Diversity: 4.946391
+[2026-04-26 13:27:57,784][smirk.training.trainer][INFO] - Epoch 177 [0/2500]  KL: 34.596100  CE: 25.760790  Diversity: 3.000489
+[2026-04-26 13:28:14,642][smirk.training.trainer][INFO] - Epoch 178 [0/2500]  KL: 34.439938  CE: 26.154375  Diversity: 2.418988
+[2026-04-26 13:28:32,189][smirk.training.trainer][INFO] - Epoch 179 [0/2500]  KL: 33.521145  CE: 25.185778  Diversity: 3.119050
+[2026-04-26 13:28:48,815][smirk.training.trainer][INFO] - Epoch 180 [0/2500]  KL: 38.462631  CE: 27.412247  Diversity: 3.367801
+[2026-04-26 13:29:05,418][smirk.training.trainer][INFO] - Epoch 181 [0/2500]  KL: 38.625870  CE: 29.443979  Diversity: 3.238254
+[2026-04-26 13:29:23,483][smirk.training.trainer][INFO] - Epoch 182 [0/2500]  KL: 37.316662  CE: 26.328857  Diversity: 3.352685
+[2026-04-26 13:29:39,848][smirk.training.trainer][INFO] - Epoch 183 [0/2500]  KL: 37.481720  CE: 28.034325  Diversity: 2.600117
+[2026-04-26 13:29:56,470][smirk.training.trainer][INFO] - Epoch 184 [0/2500]  KL: 32.870621  CE: 25.037146  Diversity: 2.903131
+[2026-04-26 13:30:12,928][smirk.training.trainer][INFO] - Epoch 185 [0/2500]  KL: 34.483032  CE: 26.968670  Diversity: 3.844831
+[2026-04-26 13:30:29,416][smirk.training.trainer][INFO] - Epoch 186 [0/2500]  KL: 36.779034  CE: 26.174189  Diversity: 2.983786
+[2026-04-26 13:30:45,841][smirk.training.trainer][INFO] - Epoch 187 [0/2500]  KL: 34.817993  CE: 27.975903  Diversity: 2.598350
+[2026-04-26 13:31:02,381][smirk.training.trainer][INFO] - Epoch 188 [0/2500]  KL: 34.970036  CE: 26.305712  Diversity: 3.350101
+[2026-04-26 13:31:19,296][smirk.training.trainer][INFO] - Epoch 189 [0/2500]  KL: 43.016159  CE: 30.815836  Diversity: 2.711002
+[2026-04-26 13:31:36,157][smirk.training.trainer][INFO] - Epoch 190 [0/2500]  KL: 43.220505  CE: 29.468552  Diversity: 2.948399
+[2026-04-26 13:31:52,542][smirk.training.trainer][INFO] - Epoch 191 [0/2500]  KL: 39.217369  CE: 28.916731  Diversity: 2.950797
+[2026-04-26 13:32:10,270][smirk.training.trainer][INFO] - Epoch 192 [0/2500]  KL: 33.760345  CE: 25.047802  Diversity: 3.524313
+[2026-04-26 13:32:27,003][smirk.training.trainer][INFO] - Epoch 193 [0/2500]  KL: 34.675903  CE: 26.148729  Diversity: 2.372554
+[2026-04-26 13:32:43,589][smirk.training.trainer][INFO] - Epoch 194 [0/2500]  KL: 37.980484  CE: 29.094759  Diversity: 2.779727
+[2026-04-26 13:33:00,687][smirk.training.trainer][INFO] - Epoch 195 [0/2500]  KL: 32.953506  CE: 26.212900  Diversity: 2.913246
+[2026-04-26 13:33:17,740][smirk.training.trainer][INFO] - Epoch 196 [0/2500]  KL: 35.917717  CE: 26.822828  Diversity: 2.694961
+[2026-04-26 13:33:34,334][smirk.training.trainer][INFO] - Epoch 197 [0/2500]  KL: 37.964180  CE: 26.451010  Diversity: 2.779464
+[2026-04-26 13:33:50,986][smirk.training.trainer][INFO] - Epoch 198 [0/2500]  KL: 37.010071  CE: 26.387197  Diversity: 2.587531
+[2026-04-26 13:34:07,567][smirk.training.trainer][INFO] - Epoch 199 [0/2500]  KL: 34.199844  CE: 26.592932  Diversity: 2.531719
+[2026-04-26 13:34:25,457][__main__][INFO] - Training complete. Checkpoints and manifest saved to /scratch/users/u03kj22/SMIRK/output/surrogate_model_checkpoints/inception_resnetv1_casia
+[2026-04-26 13:35:32,851][__main__][INFO] - Using device: cpu
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+[2026-04-26 13:35:37,602][__main__][INFO] - Generating elite starting vector for target: 8
+[2026-04-26 13:42:20,094][__main__][INFO] - Executing blackbox attack on target: 8
+[2026-04-26 14:22:27,895][__main__][INFO] - Attack successful. Output saved to /scratch/users/u03kj22/SMIRK/output/attacks/inception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE
+[2026-04-26 14:23:30,763][__main__][INFO] - Using device: cpu
+[2026-04-26 14:23:31,230][__main__][INFO] - Processing target 8
+[2026-04-26 14:23:36,160][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.423148155212402
+[2026-04-26 14:23:36,516][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.546424865722656
+[2026-04-26 14:23:36,922][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.560468673706055
+[2026-04-26 14:23:37,295][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.602128982543945
+[2026-04-26 14:23:37,616][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.449263572692871
+[2026-04-26 14:23:37,949][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.640838623046875
+[2026-04-26 14:23:38,280][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.423148155212402
+[2026-04-26 14:23:38,284][__main__][INFO] - Evaluation results saved to /scratch/users/u03kj22/SMIRK/output/attacks/inception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE/evaluation_results.csv
+[2026-04-26 14:23:38,285][__main__][INFO] - Summary: 0/7 successful attacks (ASR: 0.00%)
