@@ -1,0 +1,21 @@
+[2026-04-26 10:03:03,066][__main__][INFO] - Using device: cpu
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+['/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1/sample_1_latent.pt']
+[2026-04-26 10:03:10,645][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1
+[2026-04-26 10:03:29,357][__main__][INFO] - Using device: cpu
+[2026-04-26 10:03:31,723][__main__][INFO] - Finished querying inception_resnetv1_vggface2 to /scratch/users/u03kj22/SMIRK/output/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_1
+[2026-04-26 10:03:56,889][__main__][INFO] - Using device: cpu
+[2026-04-26 10:04:00,186][smirk.training.trainer][INFO] - Epoch 0 [0/100]  KL: 877.480103  CE: 169.460632  Diversity: 16.258663
+[2026-04-26 10:04:00,506][__main__][INFO] - Training complete. Checkpoints and manifest saved to /scratch/users/u03kj22/SMIRK/output/surrogate_model_checkpoints/inception_resnetv1_casia
+[2026-04-26 10:04:27,565][__main__][INFO] - Using device: cpu
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+[2026-04-26 10:04:30,314][__main__][INFO] - Generating elite starting vector for target: 8
+[2026-04-26 10:04:36,256][__main__][INFO] - Executing blackbox attack on target: 8
