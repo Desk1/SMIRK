@@ -1,0 +1,49 @@
+Sampling:   0%|          | 0/1 [00:00<?, ?it/s]Sampling: 100%|██████████| 1/1 [00:06<00:00,  6.78s/it]Sampling: 100%|██████████| 1/1 [00:06<00:00,  6.78s/it]
+Merging:   0%|          | 0/1 [00:00<?, ?it/s]Merging: 100%|██████████| 1/1 [00:00<00:00, 66.85it/s]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/query_target_model.py", line 132, in main
+    run_inference(arch_name, resolution, sample_dir, output_dir, device)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/query_target_model.py", line 69, in run_inference
+    model = get_model(arch_name, device)
+  File "/scratch/users/u03kj22/SMIRK/smirk/models/registry.py", line 115, in get_model
+    weights = get_weights(spec, device)
+  File "/scratch/users/u03kj22/SMIRK/smirk/models/registry.py", line 158, in get_weights
+    raise FileNotFoundError(
+FileNotFoundError: Model inception_resnetv1_vggface2 does not have a weights file at /scratch/users/u03kj22/SMIRK/smirk/models/weights/20180402-114759-vggface2.pt 
+Set a valid weights_path in smirk/models/backbones/
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/train_surrogate.py", line 41, in main
+    raise FileNotFoundError(
+FileNotFoundError: /scratch/users/u03kj22/SMIRK/output/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_1/all_logits.pt could not be found. run smirk/scripts/generate_blackbox_attack_data.py for this config first
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/run_attack_SMILE.py", line 164, in main
+    raise FileNotFoundError(
+FileNotFoundError: Could not find surrogate manifest file at /scratch/users/u03kj22/SMIRK/output/surrogate_model_checkpoints/inception_resnetv1_casia/manifest.json. Ensure surrogate training script has been ran for this config
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=EfficientNet_B0_Weights.IMAGENET1K_V1`. You can also use `weights=EfficientNet_B0_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /home/u03kj22/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s] 27%|██▋       | 5.50M/20.5M [00:00<00:00, 57.7MB/s] 95%|█████████▍| 19.4M/20.5M [00:00<00:00, 110MB/s] 100%|██████████| 20.5M/20.5M [00:00<00:00, 103MB/s]
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/evaluate_results.py", line 66, in main
+    target_dirs = sorted([d for d in blackbox_dir.iterdir() if d.is_dir() and d.name.startswith("target_")])
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/evaluate_results.py", line 66, in <listcomp>
+    target_dirs = sorted([d for d in blackbox_dir.iterdir() if d.is_dir() and d.name.startswith("target_")])
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/pathlib.py", line 1017, in iterdir
+    for name in self._accessor.listdir(self):
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/users/u03kj22/SMIRK/output/attacksinception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE/blackbox'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,12 @@
+[2026-04-26 09:55:04,025][__main__][INFO] - Using device: cpu
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+['/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1/sample_1_latent.pt']
+[2026-04-26 09:55:11,570][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1
+[2026-04-26 09:55:30,638][__main__][INFO] - Using device: cpu
+[2026-04-26 09:56:17,093][__main__][INFO] - Using device: cpu
+[2026-04-26 09:56:48,260][__main__][INFO] - Using device: cpu
+[2026-04-26 09:57:13,863][__main__][INFO] - Using device: cpu
