@@ -4,6 +4,6 @@ defaults:
 
 output_dir: "output/samples"
 batch_size: 100
-size: 25
+size: 1
 latent_dim: 512
 resolution: 256

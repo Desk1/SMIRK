@@ -1,6 +1,6 @@
 attack_mode: "SMILE"
-population_size: 2500 # sample size * batch size
-epochs: 200
+population_size: 100 # sample size * batch size
+epochs: 1
 learning_rate: 0.2
 budget: 2500
 optimizer_strategy: "NGOpt"
