@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=0
-#SBATCH --time=0:20:00
+#SBATCH --time=1:30:00
 
 #SBATCH --output=jobs/job_output_%j.log
 #SBATCH --error=jobs/job_error_%j.log  
