@@ -1,0 +1,4 @@
+[2026-04-25 17:54:44,265][__main__][INFO] - Using device: cpu
+[2026-04-25 17:54:45,274][__main__][INFO] - Generating elite starting vector for target: 8
+[2026-04-25 17:54:47,181][__main__][INFO] - Executing blackbox attack on target: 8
+[2026-04-25 17:54:48,245][__main__][INFO] - Attack successful. Results saved to /home/ken/projects/Thesis/SMIRK/output/attacks
