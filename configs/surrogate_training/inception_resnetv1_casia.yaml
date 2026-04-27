@@ -1,7 +1,7 @@
 arch_name_surrogate: "inception_resnetv1_casia"
 query_num: 2500
 batch_size: 128
-epochs: 600
+epochs: 300
 test_surrogate: true
 output_dir: "output/surrogate_model_checkpoints"
 
