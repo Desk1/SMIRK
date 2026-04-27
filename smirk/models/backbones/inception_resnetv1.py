@@ -24,7 +24,9 @@ def load_inception_resnetv1_vggface2_E(spec, num_experts, num_classification, de
         state_dict = get_weights(spec, device)
 
         if state_dict:
-            model.load_state_dict(state_dict)
+            # Exclude per-expert layers and last_bn from loaded state_dict
+            state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k and 'last_linear' not in k and 'last_bn' not in k}
+            model.load_state_dict(state_dict, strict=False)
 
     # replace layers
     model.logits = nn.ModuleList(
@@ -37,6 +39,8 @@ def load_inception_resnetv1_vggface2_E(spec, num_experts, num_classification, de
     # selectively enable gradients
     for param in model.parameters():
         param.requires_grad = False
+    for param in model.last_bn.parameters():
+        param.requires_grad = True
     for param in model.last_linear.parameters():
         param.requires_grad = True
     for param in model.logits.parameters():
@@ -44,6 +48,7 @@ def load_inception_resnetv1_vggface2_E(spec, num_experts, num_classification, de
 
     # store parameters for modified layers (for building surrogate optimizer)
     model.modified_layer_parameters = [
+        model.last_bn.parameters(),
         model.last_linear.parameters(),
         model.logits.parameters()
     ]
@@ -64,10 +69,11 @@ def load_inception_resnetv1_casia_E(spec, num_experts, num_classification, devic
         state_dict = get_weights(spec, device)
 
         if state_dict:
-            state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k}
+            state_dict = {k: v for k, v in state_dict.items() if 'logits' not in k and 'last_bn' not in k}
             model.load_state_dict(state_dict, strict=False)
 
-    # replace layers
+    # replace layers (last_linear and logits are already ModuleList in the class definition)
+    # only need to replace logits with the correct num_classification
     model.logits = nn.ModuleList(
         [nn.Linear(512, num_classification) for _ in range(num_experts)]
     )

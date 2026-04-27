@@ -368,7 +368,11 @@ class InceptionResnetV1_4finetune_E(nn.Module):
         self.avgpool_1a = nn.AdaptiveAvgPool2d(1)
         self.dropout = nn.Dropout(dropout_prob)
         self.last_linear = nn.Linear(1792, 512, bias=False)
-        self.last_bn = nn.BatchNorm1d(512, eps=0.001, momentum=0.1, affine=True)
+        # Per-expert BatchNorm layers - one for each expert to prevent entanglement
+        self.last_bn = nn.ModuleList([
+            nn.BatchNorm1d(512, eps=0.001, momentum=0.1, affine=True) 
+            for _ in range(num_experts)
+        ])
 
         # if pretrained == 'casia-webface':
         #     cached_file = './classification_models/20180408-102900-casia-webface.pt'
@@ -411,16 +415,8 @@ class InceptionResnetV1_4finetune_E(nn.Module):
         outs = []
         for ind in range(self.num_experts):
             classifier = self.last_linear[ind](x.view(x.shape[0], -1))
-            classifier = self.last_bn(classifier)
+            classifier = self.last_bn[ind](classifier)  # Use per-expert BatchNorm
             classifier = self.logits[ind](classifier)
             outs.append(classifier)
         x = torch.stack(outs, dim=1).mean(dim=1)
         return x, outs
-
-        x = self.last_linear(x.view(x.shape[0], -1))
-        x = self.last_bn(x)
-        if self.classify:
-            x = self.logits(x)
-        else:
-            x = F.normalize(x, p=2, dim=1)
-        return x

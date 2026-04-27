@@ -16,14 +16,20 @@ def load_resnet50_E(spec, num_experts, num_classification, device, load_weights)
         state_dict = get_weights(spec, device)
 
         if state_dict:
-            model.load_state_dict(state_dict)
+            # Exclude per-expert layers from loaded state_dict
+            state_dict = {k: v for k, v in state_dict.items() if 'conv5_3_1x1_increase' not in k and 'classifier' not in k}
+            model.load_state_dict(state_dict, strict=False)
 
-    # replace layers
+    # replace layers with per-expert versions to prevent BatchNorm entanglement
     model.classifier = nn.ModuleList(
         [nn.Conv2d(2048, num_classification, kernel_size=[1, 1], stride=(1, 1)) for _ in range(num_experts)]
     )
     model.conv5_3_1x1_increase = nn.ModuleList(
         [nn.Conv2d(512, 2048, kernel_size=[1, 1], stride=(1, 1), bias=False) for _ in range(num_experts)]
+    )
+    # Make BatchNorm per-expert as well to prevent entanglement
+    model.conv5_3_1x1_increase_bn = nn.ModuleList(
+        [nn.BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True) for _ in range(num_experts)]
     )
 
     # selectively enable gradients
@@ -31,12 +37,15 @@ def load_resnet50_E(spec, num_experts, num_classification, device, load_weights)
         param.requires_grad = False
     for param in model.conv5_3_1x1_increase.parameters():
         param.requires_grad = True
+    for param in model.conv5_3_1x1_increase_bn.parameters():
+        param.requires_grad = True
     for param in model.classifier.parameters():
         param.requires_grad = True
 
     # store parameters for modified layers (for building surrogate optimizer)
     model.modified_layer_parameters = [
         model.conv5_3_1x1_increase.parameters(),
+        model.conv5_3_1x1_increase_bn.parameters(),
         model.classifier.parameters()
     ]
 

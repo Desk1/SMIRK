@@ -688,7 +688,7 @@ class Resnet50_scratch_dag_E(nn.Module):
         outs = []
         for ind in range(self.num_experts):
             conv5_3_1x1_increase = self.conv5_3_1x1_increase[ind](conv5_3_3x3_bnxx)
-            conv5_3_1x1_increase_bn = self.conv5_3_1x1_increase_bn(conv5_3_1x1_increase)
+            conv5_3_1x1_increase_bn = self.conv5_3_1x1_increase_bn[ind](conv5_3_1x1_increase)  # Use per-expert BatchNorm
             conv5_3 = torch.add(conv5_2x, 1, conv5_3_1x1_increase_bn)
             conv5_3x = self.conv5_3_relu(conv5_3)
             pool5_7x7_s1 = self.pool5_7x7_s1(conv5_3x)
