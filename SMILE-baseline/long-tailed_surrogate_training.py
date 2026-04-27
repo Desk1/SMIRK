@@ -260,7 +260,7 @@ def main(args):
                                     args.target_dataset,
                                     args.arch_name_target,
                                     args.dataset,
-                                    "_0.7_8_25"
+                                    "_0.7_8_25/"
                                     'all_logits.pt')
     all_logits = torch.load(all_logits_file).to(device)
     all_logits = all_logits[:args.query_num]
