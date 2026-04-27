@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/long-tailed_surrogate_training.py", line 713, in <module>
+    main(args)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/long-tailed_surrogate_training.py", line 264, in main
+    all_logits = torch.load(all_logits_file).to(device)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 998, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 445, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 426, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/users/u03kj22/SMIRK/SMILE-baseline/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/celeba_partial256/all_logits.pt'
