@@ -1,0 +1,68 @@
+[2026-04-27 12:55:59,044][__main__][INFO] - Using device: cuda
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+[2026-04-27 12:56:05,228][__main__][INFO] - Generating elite starting vector for target: 1
+[2026-04-27 12:56:24,179][__main__][INFO] - Generating elite starting vector for target: 2
+[2026-04-27 12:56:41,008][__main__][INFO] - Generating elite starting vector for target: 3
+[2026-04-27 12:56:57,196][__main__][INFO] - Generating elite starting vector for target: 4
+[2026-04-27 12:57:14,545][__main__][INFO] - Generating elite starting vector for target: 5
+[2026-04-27 12:57:30,457][__main__][INFO] - Executing blackbox attack on target: 1
+[2026-04-27 12:59:40,397][__main__][INFO] - Executing blackbox attack on target: 2
+[2026-04-27 13:01:51,431][__main__][INFO] - Executing blackbox attack on target: 3
+[2026-04-27 13:04:03,433][__main__][INFO] - Executing blackbox attack on target: 4
+[2026-04-27 13:06:13,285][__main__][INFO] - Executing blackbox attack on target: 5
+[2026-04-27 13:08:25,088][__main__][INFO] - Attack successful. Output saved to /scratch/users/u03kj22/SMIRK/output/attacks/inception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE
+[2026-04-27 13:08:58,293][__main__][INFO] - Using device: cuda
+[2026-04-27 13:08:59,176][__main__][INFO] - Processing target 1
+[2026-04-27 13:09:01,079][__main__][INFO] -   0.pt: ASR=False, fitness_score=-1315.537109375
+[2026-04-27 13:09:01,096][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-11.863700866699219
+[2026-04-27 13:09:01,111][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-11.863700866699219
+[2026-04-27 13:09:01,127][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-11.863700866699219
+[2026-04-27 13:09:01,141][__main__][INFO] -   500.pt: ASR=False, fitness_score=-26.078393936157227
+[2026-04-27 13:09:01,156][__main__][INFO] -   final.pt: ASR=False, fitness_score=-11.863700866699219
+[2026-04-27 13:09:01,171][__main__][INFO] -   original.pt: ASR=False, fitness_score=-1315.537109375
+[2026-04-27 13:09:01,173][__main__][INFO] - Processing target 2
+[2026-04-27 13:09:01,188][__main__][INFO] -   0.pt: ASR=False, fitness_score=-19.34502410888672
+[2026-04-27 13:09:01,202][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-302.3418884277344
+[2026-04-27 13:09:01,216][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-302.3418884277344
+[2026-04-27 13:09:01,231][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-302.3418884277344
+[2026-04-27 13:09:01,246][__main__][INFO] -   500.pt: ASR=False, fitness_score=-103.49442291259766
+[2026-04-27 13:09:01,260][__main__][INFO] -   final.pt: ASR=False, fitness_score=-302.3418884277344
+[2026-04-27 13:09:01,275][__main__][INFO] -   original.pt: ASR=False, fitness_score=-19.34502410888672
+[2026-04-27 13:09:01,276][__main__][INFO] - Processing target 3
+[2026-04-27 13:09:01,290][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.664539337158203
+[2026-04-27 13:09:01,305][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-2546.988037109375
+[2026-04-27 13:09:01,320][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-2546.988037109375
+[2026-04-27 13:09:01,335][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-2546.988037109375
+[2026-04-27 13:09:01,349][__main__][INFO] -   500.pt: ASR=False, fitness_score=-2546.988037109375
+[2026-04-27 13:09:01,364][__main__][INFO] -   final.pt: ASR=False, fitness_score=-2546.988037109375
+[2026-04-27 13:09:01,378][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.664539337158203
+[2026-04-27 13:09:01,380][__main__][INFO] - Processing target 4
+[2026-04-27 13:09:01,395][__main__][INFO] -   0.pt: ASR=False, fitness_score=-7291.66943359375
+[2026-04-27 13:09:01,409][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-2825.972900390625
+[2026-04-27 13:09:01,424][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-2825.972900390625
+[2026-04-27 13:09:01,438][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-2825.972900390625
+[2026-04-27 13:09:01,453][__main__][INFO] -   500.pt: ASR=False, fitness_score=-8882.9150390625
+[2026-04-27 13:09:01,467][__main__][INFO] -   final.pt: ASR=False, fitness_score=-2825.972900390625
+[2026-04-27 13:09:01,481][__main__][INFO] -   original.pt: ASR=False, fitness_score=-7291.66943359375
+[2026-04-27 13:09:01,483][__main__][INFO] - Processing target 5
+[2026-04-27 13:09:01,498][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.181098937988281
+[2026-04-27 13:09:01,512][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-106.26713562011719
+[2026-04-27 13:09:01,527][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-106.26713562011719
+[2026-04-27 13:09:01,541][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-106.26713562011719
+[2026-04-27 13:09:01,556][__main__][INFO] -   500.pt: ASR=False, fitness_score=-106.26713562011719
+[2026-04-27 13:09:01,570][__main__][INFO] -   final.pt: ASR=False, fitness_score=-106.26713562011719
+[2026-04-27 13:09:01,584][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.181098937988281
+[2026-04-27 13:09:01,585][__main__][INFO] - Processing target 8
+[2026-04-27 13:09:01,600][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.060744285583496
+[2026-04-27 13:09:01,614][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.282137870788574
+[2026-04-27 13:09:01,628][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.282137870788574
+[2026-04-27 13:09:01,641][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.282137870788574
+[2026-04-27 13:09:01,655][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.282889366149902
+[2026-04-27 13:09:01,669][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.282137870788574
+[2026-04-27 13:09:01,683][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.060744285583496
+[2026-04-27 13:09:01,686][__main__][INFO] - Evaluation results saved to /scratch/users/u03kj22/SMIRK/output/attacks/inception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE/evaluation_results.csv
+[2026-04-27 13:09:01,688][__main__][INFO] - Summary: 0/42 successful attacks (ASR: 0.00%)
