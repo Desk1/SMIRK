@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/long-tailed_surrogate_training.py", line 709, in <module>
+    main(args)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/long-tailed_surrogate_training.py", line 272, in main
+    print('img_files[0].shape: ', img_files[0].shape)
+IndexError: list index out of range
