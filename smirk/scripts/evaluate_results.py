@@ -11,6 +11,7 @@ from smirk.models.registry import get_model, get_spec
 from smirk.utils.files import get_path, get_attack_execution_directory, get_surrogate_training_directory
 from smirk.utils.models import get_test_model_name
 from smirk.evaluation.metrics import ASR
+from smirk.scripts.generate_report import generate_report
 
 log = logging.getLogger(__name__)
 
@@ -123,13 +124,18 @@ def main(config: DictConfig):
             writer.writerows(evaluation_results)
         
         log.info(f"Evaluation results saved to {csv_path}")
-        
+
         # Print summary statistics
         total_results = len(evaluation_results)
         successful_attacks = sum(1 for r in evaluation_results if r["asr"] == 1)
         asr_rate = successful_attacks / total_results if total_results > 0 else 0
-        
+
         log.info(f"Summary: {successful_attacks}/{total_results} successful attacks (ASR: {asr_rate:.2%})")
+
+        # Generate HTML report
+        output_dir = get_path("output")
+        report_path = generate_report(output_dir)
+        log.info(f"HTML report: file://{report_path}")
     else:
         log.warning("No evaluation results computed")
 
