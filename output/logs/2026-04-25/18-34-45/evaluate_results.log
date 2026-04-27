@@ -1,7 +1,0 @@
-[2026-04-25 18:34:45,587][__main__][INFO] - Using device: cpu
-[2026-04-25 18:34:45,768][__main__][INFO] - Processing target 8
-[2026-04-25 18:34:45,873][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.28660774230957
-[2026-04-25 18:34:45,894][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.28660774230957
-[2026-04-25 18:34:45,917][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.28660774230957
-[2026-04-25 18:34:45,918][__main__][INFO] - Evaluation results saved to /home/ken/projects/Thesis/SMIRK/output/attacks/evaluation_results.csv
-[2026-04-25 18:34:45,918][__main__][INFO] - Summary: 0/3 successful attacks (ASR: 0.00%)

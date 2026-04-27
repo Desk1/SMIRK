@@ -15,10 +15,7 @@ __pycache__/
 .pytest_cache
 Dockerfile
 
-
+/attacks
 surrogate_model_checkpoints
+/output
 weights
-
-output/blackbox_attack_data
-output/samples
-output/surrogate_model_checkpoints
