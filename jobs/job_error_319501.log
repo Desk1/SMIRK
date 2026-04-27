@@ -1,0 +1,39 @@
+Train epoch 0:   0%|          | 0/20 [00:00<?, ?it/s]                                                     Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/train_surrogate.py", line 150, in main
+    model = trainer.fit()
+  File "/scratch/users/u03kj22/SMIRK/smirk/training/trainer.py", line 67, in fit
+    self.train_epoch(epoch)
+  File "/scratch/users/u03kj22/SMIRK/smirk/training/trainer.py", line 94, in train_epoch
+    loss, kl_loss, ce_loss, div_loss = calculate_loss(
+  File "/scratch/users/u03kj22/SMIRK/smirk/training/losses.py", line 21, in calculate_loss
+    output, expert_outputs, aux_ouput, aux_expert_outputs = model(data, 1)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/models/definitions/inceptionv3_4finetune.py", line 130, in forward
+    tmp = self.AuxLogits[ind](x)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/users/u03kj22/SMIRK/smirk/models/backbones/inception_v3.py", line 34, in forward
+    x = self.conv1(x)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Calculated padded input size per channel: (1 x 1). Kernel size: (5 x 5). Kernel size can't be greater than actual input size
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
