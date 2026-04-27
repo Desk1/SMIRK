@@ -250,6 +250,7 @@ def test(model, test_loader, device, epoch, writer):
 
     return accuracy_top1, accuracy_top5
 
+
 def main(args):
     device = torch.device(args.device if torch.cuda.is_available() else 'cpu')
 
