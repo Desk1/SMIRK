@@ -4,7 +4,7 @@
 defaults:
 - sampling: celeba_5
 - blackbox_sample_query: inception_resnetv1_vggface2
-- surrogate_training: inception_v3
+- surrogate_training: inception_resnetv1_casia
 - attack_execution: SMILE_default
 - _self_
 
