@@ -1,0 +1,9 @@
+[2026-04-27 12:43:33,588][__main__][INFO] - Using device: cuda
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+[2026-04-27 12:43:39,369][__main__][INFO] - Generating elite starting vector for target: 8
+[2026-04-27 12:43:58,872][__main__][INFO] - Executing blackbox attack on target: 8
+[2026-04-27 12:46:09,066][__main__][INFO] - Attack successful. Output saved to /scratch/users/u03kj22/SMIRK/output/attacks/inception_resnetv1_casia -> inception_resnetv1_vggface2/SMILE+SMILE
