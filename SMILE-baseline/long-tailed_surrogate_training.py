@@ -256,11 +256,7 @@ def main(args):
 
     _base = os.path.dirname(os.path.abspath(__file__))
 
-    all_logits_file = os.path.join(_base, 'blackbox_attack_data',
-                                    args.target_dataset,
-                                    args.arch_name_target,
-                                    args.dataset + "_0.7_8_25/",
-                                    'all_logits.pt')
+    all_logits_file = os.path.join(_base, "blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_25/all_logits.pt")
     all_logits = torch.load(all_logits_file).to(device)
     all_logits = all_logits[:args.query_num]
     print('all_logits.shape: ', all_logits.shape)
