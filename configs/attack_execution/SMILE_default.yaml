@@ -3,6 +3,6 @@ defaults:
 - blackbox_attack: SMILE
 
 output_dir: "output/attacks"
-targets: [8]
+targets: [1,2,3,4,5]
 load_elite_from_file: false
 elite_dir: ""

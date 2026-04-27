@@ -21,4 +21,4 @@ conda activate SMIRK-HPC
 # run scripts
 python -m smirk.scripts.run_attack_SMILE
 
-python -m smirk.scripts.evaluate_results.py
+python -m smirk.scripts.evaluate_results
