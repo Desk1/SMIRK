@@ -247,7 +247,7 @@ def test(model, test_loader, device, epoch, writer):
 def main(args):
     device = torch.device(args.device if torch.cuda.is_available() else 'cpu')
 
-    all_logits_file = os.path.join('./blackbox_attack_data',
+    all_logits_file = os.path.join('./SMILE-baseline/blackbox_attack_data',
                                     args.target_dataset,
                                     args.arch_name_target,
                                     args.dataset,
@@ -257,9 +257,9 @@ def main(args):
     print('all_logits.shape: ', all_logits.shape)
 
     if args.dataset == 'celeba_partial256':
-        img_dir = './samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25'
+        img_dir = './SMILE-baseline/samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25'
     elif args.dataset == 'ffhq':
-        img_dir = './samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25'
+        img_dir = './SMILE-baseline/samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25'
 
     img_files_path = sorted(glob.glob(os.path.join(img_dir, 'sample_*_img.pt')))
     img_files = [torch.load(x).to(device) for x in img_files_path[:int(args.query_num / 100.0)]]
@@ -445,7 +445,7 @@ def main(args):
 
     if right == 'vggface2':
         if args.arch_name_finetune == 'resnet50':
-            model_4finetune = resnet50_scratch_dag.resnet50_scratch_dag_E('./classification_models/resnet50_scratch_dag.pth', args.num_experts)#.to(device)
+            model_4finetune = resnet50_scratch_dag.resnet50_scratch_dag_E('./SMILE-baseline/classification_models/resnet50_scratch_dag.pth', args.num_experts)#.to(device)
             model_4finetune.classifier = nn.ModuleList([nn.Conv2d(2048, num_classification, kernel_size=[1, 1], stride=(1, 1)) for _ in range(args.num_experts)])
             model_4finetune.conv5_3_1x1_increase = nn.ModuleList([nn.Conv2d(512, 2048, kernel_size=[1, 1], stride=(1, 1), bias=False) for _ in range(args.num_experts)])
             for param in model_4finetune.parameters():
