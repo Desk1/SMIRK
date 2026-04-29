@@ -11,7 +11,7 @@ from smirk.models.registry import get_model, get_spec
 from smirk.utils.files import get_path, get_attack_execution_directory, get_surrogate_training_directory
 from smirk.utils.models import get_test_model_name
 from smirk.evaluation.metrics import ASR
-from smirk.scripts.generate_report import generate_report
+from smirk.scripts.generate_report import generate_report, build_label_to_folder
 
 log = logging.getLogger(__name__)
 
@@ -133,8 +133,11 @@ def main(config: DictConfig):
         log.info(f"Summary: {successful_attacks}/{total_results} successful attacks (ASR: {asr_rate:.2%})")
 
         # Generate HTML report
-        output_dir = get_path("output")
-        report_path = generate_report(output_dir)
+        output_dir = get_attack_execution_directory(config)
+        target_dataset = config.blackbox_sample_query.target_dataset
+        dataset_train_dir = get_path("datasets") / target_dataset / "train"
+        label_to_folder = build_label_to_folder(dataset_train_dir) if dataset_train_dir.exists() else None
+        report_path = generate_report(output_dir, dataset_train_dir if dataset_train_dir.exists() else None, label_to_folder)
         log.info(f"HTML report: file://{report_path}")
     else:
         log.warning("No evaluation results computed")

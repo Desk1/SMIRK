@@ -2,38 +2,26 @@
 """
 Generate a self-contained HTML evaluation report from SMIRK attack results.
 
-Usage:
+Usage (standalone, reads hydra config):
     python smirk/scripts/generate_report.py
-    python smirk/scripts/generate_report.py --output-dir /path/to/output
 
-Reads from ./output (or --output-dir) and writes output/attacks/report.html.
 No model loading required — reads pre-computed .pt files and evaluation_results.csv.
 """
 
-import argparse
 import base64
-import csv
 import io
+import csv
 import sys
 from datetime import datetime
 from pathlib import Path
 
+import hydra
 import torch
+from omegaconf import DictConfig
 from PIL import Image
 
-
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
-
-_HERE = Path(__file__).resolve()
-_REPO_ROOT = _HERE.parent.parent.parent
-
-
-def _resolve_output_dir(cli_arg: str | None) -> Path:
-    if cli_arg:
-        return Path(cli_arg).resolve()
-    return _REPO_ROOT / "output"
+import smirk.models  # ensure model registry is populated
+from smirk.utils.files import get_path, get_attack_execution_directory
 
 
 # ---------------------------------------------------------------------------
@@ -48,6 +36,40 @@ def _tensor_to_png_b64(img: torch.Tensor) -> str:
     buf = io.BytesIO()
     Image.fromarray(arr).save(buf, format="PNG")
     return base64.b64encode(buf.getvalue()).decode()
+
+
+def _file_to_png_b64(path: Path) -> str | None:
+    """Load an image file and return it as a base64 PNG string."""
+    try:
+        buf = io.BytesIO()
+        Image.open(path).convert("RGB").save(buf, format="PNG")
+        return base64.b64encode(buf.getvalue()).decode()
+    except Exception:
+        return None
+
+
+# ---------------------------------------------------------------------------
+# Dataset helpers
+# ---------------------------------------------------------------------------
+
+def build_label_to_folder(dataset_train_dir: Path) -> dict[int, str]:
+    """Map integer label → folder name using ImageFolder's alphabetical ordering."""
+    if not dataset_train_dir.exists():
+        return {}
+    folders = sorted(p.name for p in dataset_train_dir.iterdir() if p.is_dir())
+    return {i: name for i, name in enumerate(folders)}
+
+
+def load_target_image_b64(dataset_train_dir: Path, folder_name: str) -> str | None:
+    """Return base64 PNG of the first image found in dataset_train_dir/folder_name."""
+    folder = dataset_train_dir / folder_name
+    if not folder.exists():
+        return None
+    for pattern in ("*.jpg", "*.jpeg", "*.png"):
+        imgs = sorted(folder.glob(pattern))
+        if imgs:
+            return _file_to_png_b64(imgs[0])
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -73,7 +95,12 @@ _STAGE_LABELS = {
 }
 
 
-def _load_targets(output_dir: Path, csv_results: dict) -> list[dict]:
+def _load_targets(
+    output_dir: Path,
+    csv_results: dict,
+    dataset_train_dir: Path | None = None,
+    label_to_folder: dict | None = None,
+) -> list[dict]:
     blackbox_dir = output_dir / "attacks" / "blackbox"
     whitebox_dir = output_dir / "attacks" / "whitebox"
 
@@ -86,6 +113,14 @@ def _load_targets(output_dir: Path, csv_results: dict) -> list[dict]:
             continue
 
         label = int(target_dir.name.split("_")[1])
+
+        # Original target image from the dataset
+        folder_name = None
+        original_b64 = None
+        if dataset_train_dir and label_to_folder:
+            folder_name = label_to_folder.get(label)
+            if folder_name:
+                original_b64 = load_target_image_b64(dataset_train_dir, folder_name)
 
         # White-box elite from the whitebox output dir
         wb_path = whitebox_dir / f"target_{label}" / "elite.pt"
@@ -113,7 +148,13 @@ def _load_targets(output_dir: Path, csv_results: dict) -> list[dict]:
                 "image_b64":     _tensor_to_png_b64(d.generated_image),
             })
 
-        targets.append({"label": label, "whitebox_elite": wb, "stages": stages})
+        targets.append({
+            "label":         label,
+            "folder_name":   folder_name,
+            "original_b64":  original_b64,
+            "whitebox_elite": wb,
+            "stages":        stages,
+        })
 
     return targets
 
@@ -167,7 +208,7 @@ header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; }
 header .subtitle { opacity: 0.6; font-size: 0.88rem; margin-top: 0.3rem; }
 
 /* ---- Layout ---- */
-.container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+.container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; }
 h2.section-heading {
   font-size: 0.75rem;
   font-weight: 700;
@@ -221,6 +262,13 @@ h2.section-heading {
   border-bottom: 2px solid #eef0f6;
   color: #0f3460;
 }
+.target-section h3 .folder-tag {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: #888;
+  font-family: 'Courier New', monospace;
+  margin-left: 0.5rem;
+}
 
 /* ---- Image grid ---- */
 .stages-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
@@ -232,12 +280,18 @@ h2.section-heading {
   display: block;
   background: #f0f0f0;
 }
+.stage-card.original img {
+  border: 2px solid #0f3460;
+}
 .stage-label {
   font-size: 0.80rem;
   font-weight: 600;
   color: #333;
   margin-top: 0.6rem;
   text-align: center;
+}
+.stage-label.original-label {
+  color: #0f3460;
 }
 .stage-meta {
   margin-top: 0.35rem;
@@ -264,7 +318,7 @@ h2.section-heading {
 .badge-success { background: #d1fae5; color: #065f46; }
 .badge-fail    { background: #fee2e2; color: #991b1b; }
 
-/* ---- Divider between wb and bb ---- */
+/* ---- Divider between sections ---- */
 .divider {
   width: 1px;
   background: #e4e7f0;
@@ -355,7 +409,22 @@ def _render_html(summary: dict, targets: list, csv_results: dict) -> str:
     # ---- Per-target sections ----
     target_sections = []
     for t in targets:
+        folder_tag = ""
+        if t.get("folder_name"):
+            folder_tag = f'<span class="folder-tag">({t["folder_name"]})</span>'
+
         cards = ""
+
+        # Original dataset image (leftmost, highlighted)
+        if t.get("original_b64"):
+            cards += f"""
+        <div class="stage-card original">
+          <img src="data:image/png;base64,{t['original_b64']}" alt="Original Target">
+          <div class="stage-label original-label">Original Target</div>
+        </div>
+        <div class="divider"></div>"""
+
+        # White-box elite
         if t["whitebox_elite"]:
             wb = t["whitebox_elite"]
             cards += f"""
@@ -376,7 +445,7 @@ def _render_html(summary: dict, targets: list, csv_results: dict) -> str:
 
         target_sections.append(f"""
       <div class="target-section">
-        <h3>Target Class {t['label']}</h3>
+        <h3>Target Class {t['label']}{folder_tag}</h3>
         <div class="stages-grid">{cards}
         </div>
       </div>""")
@@ -439,10 +508,14 @@ def _render_html(summary: dict, targets: list, csv_results: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Entry point
+# Public API (also called from evaluate_results.py)
 # ---------------------------------------------------------------------------
 
-def generate_report(output_dir: Path) -> Path:
+def generate_report(
+    output_dir: Path,
+    dataset_train_dir: Path | None = None,
+    label_to_folder: dict | None = None,
+) -> Path:
     csv_path = output_dir / "attacks" / "evaluation_results.csv"
     report_path = output_dir / "attacks" / "report.html"
 
@@ -450,7 +523,7 @@ def generate_report(output_dir: Path) -> Path:
     csv_results = _load_csv(csv_path)
 
     print(f"[report] Loading attack results from {output_dir / 'attacks'}")
-    targets = _load_targets(output_dir, csv_results)
+    targets = _load_targets(output_dir, csv_results, dataset_train_dir, label_to_folder)
 
     if not targets:
         print("[report] No attack results found — nothing to render.", file=sys.stderr)
@@ -467,13 +540,25 @@ def generate_report(output_dir: Path) -> Path:
     return report_path
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate HTML evaluation report for SMIRK results.")
-    parser.add_argument("--output-dir", default=None, help="Path to the output directory (default: ./output)")
-    args = parser.parse_args()
+# ---------------------------------------------------------------------------
+# Entry point (hydra)
+# ---------------------------------------------------------------------------
 
-    output_dir = _resolve_output_dir(args.output_dir)
-    generate_report(output_dir)
+@hydra.main(config_path=str(get_path("configs")), config_name="config", version_base=None)
+def main(config: DictConfig):
+    output_dir = get_attack_execution_directory(config)
+    target_dataset = config.blackbox_sample_query.target_dataset
+    dataset_train_dir = get_path("datasets") / target_dataset / "train"
+
+    if not dataset_train_dir.exists():
+        print(f"[report] Warning: dataset directory not found at {dataset_train_dir}; original images will be omitted.")
+        dataset_train_dir = None
+        label_to_folder = None
+    else:
+        label_to_folder = build_label_to_folder(dataset_train_dir)
+        print(f"[report] Dataset: {target_dataset}  |  {len(label_to_folder)} classes found")
+
+    generate_report(output_dir, dataset_train_dir, label_to_folder)
 
 
 if __name__ == "__main__":
