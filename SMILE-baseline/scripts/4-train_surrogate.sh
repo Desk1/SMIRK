@@ -19,4 +19,4 @@
 conda activate SMIRK-HPC
 
 # run py script
-PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python long-tailed_surrogate_training.py --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --epoch 500 --batch_size 128 --query_num 2500 
+PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python long-tailed_surrogate_training.py --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --epoch 750 --batch_size 128 --query_num 2500 
