@@ -18,6 +18,8 @@
 conda activate SMIRK-HPC
 
 # run py script
-PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_whitebox_attacks.py --attack_mode ours-w --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target 1 --epochs 400 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --num_experts 3 --EorOG SMILE --population_size 2500
-PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_blackbox_attacks.py --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target 1 --budget 2500 --population_size 2500 --epochs 400 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --lr 0.2 --x 1.7
-
+for target in {1..10}
+do
+    PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_whitebox_attacks.py --attack_mode ours-w --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target $target --epochs 400 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --num_experts 3 --EorOG SMILE --population_size 2500
+    PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_blackbox_attacks.py --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target $target --budget 2500 --population_size 2500 --epochs 400 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --lr 0.2 --x 1.7
+done
