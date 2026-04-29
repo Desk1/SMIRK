@@ -133,7 +133,7 @@ def main(config: DictConfig):
         log.info(f"Summary: {successful_attacks}/{total_results} successful attacks (ASR: {asr_rate:.2%})")
 
         # Generate HTML report
-        output_dir = get_attack_execution_directory(config)
+        output_dir = get_path("output")
         target_dataset = config.blackbox_sample_query.target_dataset
         dataset_train_dir = get_path("datasets") / target_dataset / "train"
         label_to_folder = build_label_to_folder(dataset_train_dir) if dataset_train_dir.exists() else None
