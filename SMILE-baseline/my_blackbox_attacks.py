@@ -171,9 +171,9 @@ def init_population(args):
     find args.n images with highest confidence
     """
     if args.dataset == 'celeba_partial256':
-        all_ws_pt_file = './SMILE-baseline/samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
     elif args.dataset == 'ffhq':
-        all_ws_pt_file = './SMILE-baseline/samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
 
     # compute bound in p space
     invert_lrelu = nn.LeakyReLU(negative_slope=5.)
@@ -209,7 +209,7 @@ def init_population(args):
         w = lrelu(p)
         return w
 
-    all_logits_file = os.path.join('./SMILE-baseline/blackbox_attack_data',
+    all_logits_file = os.path.join('./blackbox_attack_data',
                                     args.target_dataset,
                                     args.arch_name_target,
                                     args.dataset,
@@ -232,9 +232,9 @@ def init_population_mirror_b(args):
     find args.n images with highest confidence
     """
     if args.dataset == 'celeba_partial256':
-        all_ws_pt_file = './SMILE-baseline/samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25/stylegan_celeba_partial256_all_ws.pt'
     elif args.dataset == 'ffhq':
-        all_ws_pt_file = './SMILE-baseline/samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
+        all_ws_pt_file = './samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25/stylegan_ffhq256_all_ws.pt'
 
     # compute bound in p space
     invert_lrelu = nn.LeakyReLU(negative_slope=5.)
@@ -270,7 +270,7 @@ def init_population_mirror_b(args):
         w = lrelu(p)
         return w
 
-    all_logits_file = os.path.join('./SMILE-baseline/blackbox_attack_data',
+    all_logits_file = os.path.join('./blackbox_attack_data',
                                     args.target_dataset,
                                     args.arch_name_target,
                                     args.dataset,
@@ -377,7 +377,7 @@ def my_attack_surrogate_model(args, generator, generate_images_func):
     print(f"{args.target}")
     population = init_population(args)
 
-    pre_path1 = './SMILE-baseline/white_attack/' + 'ours-w'
+    pre_path1 = './white_attack/' + 'ours-w'
     pre_path2 = args.EorOG + '-' + args.arch_name_target + '-' + args.dataset + '-' +  str(args.population_size) + '-' + str(args.epochs) + '-' + str(args.lr)+ '-' + str(args.arch_name_finetune) + '-' + str(args.finetune_mode) + '-' + str(args.num_experts)
     elite_path = os.path.join(pre_path1, pre_path2,'LOGS', str(args.target), str(args.index), 'final_w.pt')
 
@@ -609,7 +609,7 @@ def find_closest_latent(vec, latent_dir):
 
 def compute_conf(args, exp_name, net, arch_name, resolution, targets, imgs):
     try:
-        label_logits_dict = torch.load(os.path.join('./SMILE-baseline/centroid_data', arch_name, 'test/centroid_logits.pt'))
+        label_logits_dict = torch.load(os.path.join('./centroid_data', arch_name, 'test/centroid_logits.pt'))
     except FileNotFoundError:
         print('Note: centroid_logits.pt is not found')
         label_logits_dict = None
@@ -697,9 +697,9 @@ def compute_conf(args, exp_name, net, arch_name, resolution, targets, imgs):
     print(f'topk acc: {topk_correct_cnt}/{total_cnt} = {topk_correct_cnt/total_cnt:.4f}')
     print(test_true_list)
 
-    formatted_exp_name = exp_name.replace('./SMILE-baseline/', '')
+    formatted_exp_name = exp_name.replace('./', '')
 
-    path = './SMILE-baseline/tmp/' + formatted_exp_name + '.txt'
+    path = './tmp/' + formatted_exp_name + '.txt'
     os.makedirs(os.path.dirname(path[:-1]), exist_ok=True)
 
     with open(path, 'w') as f:
@@ -750,7 +750,7 @@ def add_conf_to_tensors_custom(tensors, confs, testornot, test_true_list=None, c
 def add_conf_to_tensor_custom(tensor, conf, color, highlight, testornot):
     """ Note: in-place modification on tensor
     """
-    CONF_MASKS = torch.load('./SMILE-baseline/conf_mask.pt')
+    CONF_MASKS = torch.load('./conf_mask.pt')
     assert tensor.ndim == 3 and tensor.shape[0] == 3, 'tensor shape should be 3xHxW'
     mask = CONF_MASKS[conf]
     if testornot == True:
@@ -860,7 +860,7 @@ def main(args):
             return score 
         args.compute_fitness_func = compute_fitness_func
 
-        path_exp = './SMILE-baseline/blackbox_attack/' + args.attack_mode
+        path_exp = './blackbox_attack/' + args.attack_mode
         if args.attack_mode == 'ours-current_maximum':
             exp_name_tmp = args.arch_name_target + '-' + args.dataset + '-' + args.strategy + '-' + str(args.budget) + '-' + str(args.population_size) # 根据attack mode创建
         elif args.attack_mode == 'ours-optimal_fit':
@@ -932,10 +932,10 @@ def main(args):
                 test_true_list, target_conf_test = compute_conf(args, args.exp_name, test_net, args.test_arch_name, args.test_resolution, targets, imgs)
 
                 imgs, imgs_origanal = add_conf_to_tensors_custom(imgs, target_conf_test, test_true_list=test_true_list, testornot=True)
-                create_folder('./SMILE-baseline/tmp')
-                formatted_exp_name = args.exp_name.replace('./SMILE-baseline/', '')
-                path_png = './SMILE-baseline/tmp/' + formatted_exp_name + '.png'
-                path_png_og = './SMILE-baseline/tmp/' + formatted_exp_name + '_og.png'
+                create_folder('./tmp')
+                formatted_exp_name = args.exp_name.replace('./', '')
+                path_png = './tmp/' + formatted_exp_name + '.png'
+                path_png_og = './tmp/' + formatted_exp_name + '_og.png'
                 vutils.save_image(imgs, path_png, nrow=1)
                 vutils.save_image(imgs_origanal, path_png_og, nrow=1)
 
@@ -1003,10 +1003,10 @@ def main(args):
                 test_true_list, target_conf_test = compute_conf(args, args.exp_name, test_net, args.test_arch_name, args.test_resolution, targets, imgs)
 
                 imgs, imgs_origanal = add_conf_to_tensors_custom(imgs, target_conf_test, test_true_list=test_true_list, testornot=True)
-                create_folder('./SMILE-baseline/tmp')
-                formatted_exp_name = args.exp_name.replace('./SMILE-baseline/', '')
-                path_png = './SMILE-baseline/tmp/' + formatted_exp_name + '.png'
-                path_png_og = './SMILE-baseline/tmp/' + formatted_exp_name + '_og.png'
+                create_folder('./tmp')
+                formatted_exp_name = args.exp_name.replace('./', '')
+                path_png = './tmp/' + formatted_exp_name + '.png'
+                path_png_og = './tmp/' + formatted_exp_name + '_og.png'
                 vutils.save_image(imgs, path_png, nrow=1)
                 vutils.save_image(imgs_origanal, path_png_og, nrow=1)
                 
@@ -1031,13 +1031,13 @@ def main(args):
         G = Generator(args.z_dim)
         G = nn.DataParallel(G).to(args.device)
         if args.dataset == 'celeba_RLBMI':
-            ckp_G = torch.load('./SMILE-baseline/checkpoints/celeba_G.tar')['state_dict']
+            ckp_G = torch.load('./checkpoints/celeba_G.tar')['state_dict']
         elif args.dataset == 'ffhq_RLBMI':
-            ckp_G = torch.load('./SMILE-baseline/checkpoints/ffhq_G.tar')['state_dict']
+            ckp_G = torch.load('./checkpoints/ffhq_G.tar')['state_dict']
         load_my_state_dict(G, ckp_G)
         G.eval()
 
-        path_exp = './SMILE-baseline/blackbox_attack/' + args.attack_mode
+        path_exp = './blackbox_attack/' + args.attack_mode
         exp_name_tmp = args.arch_name_target + '-' + args.dataset + '-' + str(args.max_episodes)
         args.exp_name = os.path.join(path_exp, exp_name_tmp)
         create_folder(args.exp_name)
@@ -1101,10 +1101,10 @@ def main(args):
 
             imgs = resize_img(imgs, 256)
             imgs, imgs_origanal = add_conf_to_tensors_custom(imgs, target_conf_test, test_true_list=test_true_list, testornot=True)
-            create_folder('./SMILE-baseline/tmp')
-            formatted_exp_name = args.exp_name.replace('./SMILE-baseline/', '')
-            path_png = './SMILE-baseline/tmp/' + formatted_exp_name + '.png'
-            path_png_og = './SMILE-baseline/tmp/' + formatted_exp_name + '_og.png'
+            create_folder('./tmp')
+            formatted_exp_name = args.exp_name.replace('./', '')
+            path_png = './tmp/' + formatted_exp_name + '.png'
+            path_png_og = './tmp/' + formatted_exp_name + '_og.png'
             vutils.save_image(imgs, path_png, nrow=1)
             vutils.save_image(imgs_origanal, path_png_og, nrow=1)
         
