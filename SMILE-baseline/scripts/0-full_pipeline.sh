@@ -27,7 +27,7 @@ conda activate SMIRK-HPC
 # PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_merge_all_tensors.py blackbox_attack_data/vggface2/inception_resnetv1_vggface2/celeba_partial256/ 
 
 # train surrogate
-# PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python long-tailed_surrogate_training.py --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --epoch 750 --batch_size 128 --query_num 2500 
+PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python long-tailed_surrogate_training.py --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --epoch 750 --batch_size 128 --query_num 2500 
 
 # run attacks
 for target in {1..10}
