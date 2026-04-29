@@ -1,10 +1,4 @@
 import os
-import sys
-
-_SMILE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-if _SMILE_DIR not in sys.path:
-    sys.path.insert(0, _SMILE_DIR)
-
 import glob
 import numpy as np
 import torch
@@ -250,21 +244,22 @@ def test(model, test_loader, device, epoch, writer):
 
     return accuracy_top1, accuracy_top5
 
-
 def main(args):
     device = torch.device(args.device if torch.cuda.is_available() else 'cpu')
 
-    _base = os.path.dirname(os.path.abspath(__file__))
-
-    all_logits_file = os.path.join(_base, "blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_25/all_logits.pt")
+    all_logits_file = os.path.join('./blackbox_attack_data',
+                                    args.target_dataset,
+                                    args.arch_name_target,
+                                    args.dataset,
+                                    'all_logits.pt')
     all_logits = torch.load(all_logits_file).to(device)
     all_logits = all_logits[:args.query_num]
     print('all_logits.shape: ', all_logits.shape)
 
     if args.dataset == 'celeba_partial256':
-        img_dir = os.path.join(_base, 'samples', 'stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25')
+        img_dir = './samples/stylegan_sample_z_stylegan_celeba_partial256_0.7_8_25'
     elif args.dataset == 'ffhq':
-        img_dir = os.path.join(_base, 'samples', 'stylegan_sample_z_stylegan_ffhq256_0.7_8_25')
+        img_dir = './samples/stylegan_sample_z_stylegan_ffhq256_0.7_8_25'
 
     img_files_path = sorted(glob.glob(os.path.join(img_dir, 'sample_*_img.pt')))
     img_files = [torch.load(x).to(device) for x in img_files_path[:int(args.query_num / 100.0)]]
@@ -660,8 +655,8 @@ def main(args):
             model_4finetune = model_4finetune.to(device)
             optimizer = torch.optim.Adam([{'params': model_4finetune.features[-1*args.num_experts:].parameters()},{'params': model_4finetune.classifier.parameters()}], lr=0.001)
             
-    writer = SummaryWriter(os.path.join(_base, f'runs_SMILE/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.query_num}_{args.num_experts}'))
-    save_path = os.path.join(_base, f'model_checkpoints_SMILE/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.query_num}_{args.num_experts}')
+    writer = SummaryWriter(f'runs_SMILE/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.query_num}_{args.num_experts}')
+    save_path = f'model_checkpoints_SMILE/{args.target_dataset}_{args.arch_name_target}_{args.arch_name_finetune}_{args.finetune_mode}_{args.dataset}_{args.query_num}_{args.num_experts}'
     os.makedirs(save_path, exist_ok=True)
 
     acc_beat = 0.00001

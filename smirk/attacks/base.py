@@ -15,12 +15,6 @@ class AttackResult:
     latent_vector: torch.Tensor
     fitness_score: float
     generated_image: torch.Tensor
-
-@dataclass  
-class AttackMetrics:
-    top1_acc: float
-    top5_acc: float
-    target_confidence: float
     
 
 class BaseAttack(ABC):

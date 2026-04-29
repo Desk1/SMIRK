@@ -18,6 +18,7 @@
 
 # activate environment
 conda activate SMIRK-HPC
+cd SMILE-baseline
 
 # run py script
 python my_sample_z_w_space.py &
