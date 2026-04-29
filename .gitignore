@@ -22,4 +22,4 @@ output/blackbox_attack_data
 output/samples
 output/surrogate_model_checkpoints
 
-events.out.tfevents.*
+*tfevents*
