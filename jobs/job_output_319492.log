@@ -1,9 +1,0 @@
-[2026-04-26 09:34:58,444][__main__][INFO] - Using device: cpu
-Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
-Building generator for model `stylegan_celeba_partial256` ...
-Finish building generator.
-Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
-Download complete
-Finish loading checkpoint.
-['/scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1/sample_1_latent.pt']
-[2026-04-26 09:35:18,584][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_1

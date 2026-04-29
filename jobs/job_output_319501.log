@@ -1,2 +1,0 @@
-[2026-04-26 21:08:26,645][__main__][INFO] - Using device: cpu
-[2026-04-26 21:10:05,848][__main__][INFO] - Training complete. Checkpoints and manifest saved to /scratch/users/u03kj22/SMIRK/output/surrogate_model_checkpoints/inception_v3

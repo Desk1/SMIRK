@@ -1,38 +1,0 @@
-Train epoch 0:   0%|          | 0/20 [00:00<?, ?it/s]Train epoch 0:   5%|▌         | 1/20 [00:03<01:09,  3.66s/it]Train epoch 0:  10%|█         | 2/20 [00:04<00:38,  2.13s/it]Train epoch 0:  15%|█▌        | 3/20 [00:05<00:27,  1.63s/it]Train epoch 0:  20%|██        | 4/20 [00:06<00:23,  1.45s/it]Train epoch 0:  25%|██▌       | 5/20 [00:07<00:18,  1.25s/it]Train epoch 0:  30%|███       | 6/20 [00:08<00:16,  1.14s/it]Train epoch 0:  35%|███▌      | 7/20 [00:09<00:13,  1.04s/it]Train epoch 0:  40%|████      | 8/20 [00:10<00:11,  1.02it/s]Train epoch 0:  45%|████▌     | 9/20 [00:11<00:10,  1.07it/s]Train epoch 0:  50%|█████     | 10/20 [00:12<00:09,  1.10it/s]Train epoch 0:  55%|█████▌    | 11/20 [00:12<00:08,  1.12it/s]Train epoch 0:  60%|██████    | 12/20 [00:13<00:07,  1.13it/s]Train epoch 0:  65%|██████▌   | 13/20 [00:14<00:06,  1.13it/s]Train epoch 0:  70%|███████   | 14/20 [00:15<00:05,  1.13it/s]Train epoch 0:  75%|███████▌  | 15/20 [00:16<00:04,  1.15it/s]Train epoch 0:  80%|████████  | 16/20 [00:17<00:03,  1.17it/s]Train epoch 0:  85%|████████▌ | 17/20 [00:18<00:02,  1.18it/s]Train epoch 0:  90%|█████████ | 18/20 [00:18<00:01,  1.17it/s]Train epoch 0:  95%|█████████▌| 19/20 [00:19<00:00,  1.17it/s]Train epoch 0: 100%|██████████| 20/20 [00:20<00:00,  1.37it/s]                                                              Test epoch 0:   0%|          | 0/246 [00:00<?, ?it/s]                                                     Error executing job with overrides: []
-Traceback (most recent call last):
-  File "/scratch/users/u03kj22/SMIRK/smirk/scripts/train_surrogate.py", line 150, in main
-    model = trainer.fit()
-  File "/scratch/users/u03kj22/SMIRK/smirk/training/trainer.py", line 70, in fit
-    acc_top1, _ = self.test_epoch(epoch)
-  File "/scratch/users/u03kj22/SMIRK/smirk/training/trainer.py", line 132, in test_epoch
-    for data, target in tqdm(self.test_loader, desc=f"Test epoch {epoch}", leave=False):
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
-    for obj in iterable:
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
-    data = self._next_data()
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
-    return self._process_data(data)
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
-    data.reraise()
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/_utils.py", line 722, in reraise
-    raise exception
-TypeError: Caught TypeError in DataLoader worker process 0.
-Original Traceback (most recent call last):
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
-    data = fetcher.fetch(index)
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
-    data = self.dataset.__getitems__(possibly_batched_index)
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 399, in __getitems__
-    return [self.dataset[self.indices[idx]] for idx in indices]
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/utils/data/dataset.py", line 399, in <listcomp>
-    return [self.dataset[self.indices[idx]] for idx in indices]
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 231, in __getitem__
-    sample = self.transform(sample)
-  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
-    img = t(img)
-  File "/scratch/users/u03kj22/SMIRK/smirk/data/dataset.py", line 94, in scale255
-    return x * 255.0
-TypeError: unsupported operand type(s) for *: 'Image' and 'float'
-
-
-Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
