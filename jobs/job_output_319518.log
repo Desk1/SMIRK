@@ -1,2 +1,0 @@
-all_logits.shape:  torch.Size([2500, 8631])
-len(img_files):  0
