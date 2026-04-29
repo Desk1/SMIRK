@@ -1,0 +1,1 @@
+Namespace(seed=666, no_cuda=False, arch_name='inception_resnetv1_vggface2', use_dropout=False, target_dataset='vggface2', dataset='celeba_partial256')
