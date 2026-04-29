@@ -19,4 +19,4 @@ conda activate SMIRK-HPC
 
 # eval
 targets=$(echo {1..10} | tr ' ' ',')
-python my_blackbox_attacks.py --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --test_target=$targets --budget 2500 --population_size 2500 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --epochs 400 --lr 0.2 --test_only
+PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_blackbox_attacks.py --attack_mode ours-surrogate_model --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --test_target=$targets --budget 2500 --population_size 2500 --finetune_mode 'vggface2->CASIA' --arch_name_finetune inception_resnetv1_casia --EorOG SMILE --epochs 400 --lr 0.2 --test_only
