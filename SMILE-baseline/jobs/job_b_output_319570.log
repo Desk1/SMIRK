@@ -1,0 +1,2361 @@
+all_logits.shape:  torch.Size([2500, 8631])
+len(img_files):  25
+img_files[0].shape:  torch.Size([100, 3, 256, 256])
+weight:  torch.Size([8631])
+tensor([0.3690, 0.5263, 0.3690,  ..., 0.2908, 0.5263, 0.1917], device='cuda:0')
+tensor(0.1000, device='cuda:0') tensor(1.0000, device='cuda:0')
+
+Epoch 1/750
+Train Epoch: 0 [0/2500 (0%)]	KL_Loss: 423.613373  CE_Loss: 82.530067  Diversity_Loss: 16.386894
+
+Test set: Average loss: 8.8532, Top-1 Accuracy: 138/31419 (0.44%), Top-5 Accuracy: 431/31419 (1.37%)
+
+Best ACC.
+
+Epoch 2/750
+Train Epoch: 1 [0/2500 (0%)]	KL_Loss: 171.143723  CE_Loss: 50.303295  Diversity_Loss: 18.186476
+
+Epoch 3/750
+Train Epoch: 2 [0/2500 (0%)]	KL_Loss: 110.268860  CE_Loss: 41.844261  Diversity_Loss: 14.985758
+
+Epoch 4/750
+Train Epoch: 3 [0/2500 (0%)]	KL_Loss: 68.202026  CE_Loss: 32.033421  Diversity_Loss: 15.237408
+
+Epoch 5/750
+Train Epoch: 4 [0/2500 (0%)]	KL_Loss: 77.687576  CE_Loss: 34.113319  Diversity_Loss: 8.982651
+
+Epoch 6/750
+Train Epoch: 5 [0/2500 (0%)]	KL_Loss: 64.057114  CE_Loss: 31.043968  Diversity_Loss: 14.626397
+
+Epoch 7/750
+Train Epoch: 6 [0/2500 (0%)]	KL_Loss: 69.693832  CE_Loss: 32.783165  Diversity_Loss: 17.133699
+
+Epoch 8/750
+Train Epoch: 7 [0/2500 (0%)]	KL_Loss: 70.924110  CE_Loss: 31.088274  Diversity_Loss: 7.589705
+
+Epoch 9/750
+Train Epoch: 8 [0/2500 (0%)]	KL_Loss: 65.177933  CE_Loss: 33.087479  Diversity_Loss: 8.219083
+
+Epoch 10/750
+Train Epoch: 9 [0/2500 (0%)]	KL_Loss: 53.591484  CE_Loss: 30.456625  Diversity_Loss: 7.351711
+
+Epoch 11/750
+Train Epoch: 10 [0/2500 (0%)]	KL_Loss: 60.551365  CE_Loss: 29.236790  Diversity_Loss: 6.025636
+
+Epoch 12/750
+Train Epoch: 11 [0/2500 (0%)]	KL_Loss: 52.825584  CE_Loss: 29.622730  Diversity_Loss: 7.194971
+
+Epoch 13/750
+Train Epoch: 12 [0/2500 (0%)]	KL_Loss: 49.470314  CE_Loss: 29.551847  Diversity_Loss: 5.799537
+
+Epoch 14/750
+Train Epoch: 13 [0/2500 (0%)]	KL_Loss: 49.104233  CE_Loss: 29.566389  Diversity_Loss: 5.223534
+
+Epoch 15/750
+Train Epoch: 14 [0/2500 (0%)]	KL_Loss: 48.869999  CE_Loss: 27.695120  Diversity_Loss: 4.606745
+
+Epoch 16/750
+Train Epoch: 15 [0/2500 (0%)]	KL_Loss: 42.207600  CE_Loss: 26.453230  Diversity_Loss: 4.514967
+
+Epoch 17/750
+Train Epoch: 16 [0/2500 (0%)]	KL_Loss: 41.203163  CE_Loss: 27.073818  Diversity_Loss: 7.530117
+
+Epoch 18/750
+Train Epoch: 17 [0/2500 (0%)]	KL_Loss: 37.847610  CE_Loss: 25.793463  Diversity_Loss: 5.352693
+
+Epoch 19/750
+Train Epoch: 18 [0/2500 (0%)]	KL_Loss: 35.076096  CE_Loss: 26.647234  Diversity_Loss: 7.341271
+
+Epoch 20/750
+Train Epoch: 19 [0/2500 (0%)]	KL_Loss: 40.724525  CE_Loss: 30.711384  Diversity_Loss: 6.380268
+
+Epoch 21/750
+Train Epoch: 20 [0/2500 (0%)]	KL_Loss: 38.271080  CE_Loss: 27.906712  Diversity_Loss: 7.199608
+
+Epoch 22/750
+Train Epoch: 21 [0/2500 (0%)]	KL_Loss: 34.711781  CE_Loss: 26.647667  Diversity_Loss: 5.915714
+
+Epoch 23/750
+Train Epoch: 22 [0/2500 (0%)]	KL_Loss: 33.990005  CE_Loss: 25.851973  Diversity_Loss: 6.698242
+
+Epoch 24/750
+Train Epoch: 23 [0/2500 (0%)]	KL_Loss: 36.854424  CE_Loss: 27.715773  Diversity_Loss: 5.462690
+
+Epoch 25/750
+Train Epoch: 24 [0/2500 (0%)]	KL_Loss: 33.706375  CE_Loss: 27.388117  Diversity_Loss: 7.004843
+
+Epoch 26/750
+Train Epoch: 25 [0/2500 (0%)]	KL_Loss: 35.212654  CE_Loss: 24.121292  Diversity_Loss: 4.443476
+
+Test set: Average loss: 7.0026, Top-1 Accuracy: 3479/31419 (11.07%), Top-5 Accuracy: 7442/31419 (23.69%)
+
+Best ACC.
+
+Epoch 27/750
+Train Epoch: 26 [0/2500 (0%)]	KL_Loss: 37.600300  CE_Loss: 27.869223  Diversity_Loss: 6.045896
+
+Epoch 28/750
+Train Epoch: 27 [0/2500 (0%)]	KL_Loss: 40.084244  CE_Loss: 31.252584  Diversity_Loss: 3.860301
+
+Epoch 29/750
+Train Epoch: 28 [0/2500 (0%)]	KL_Loss: 38.309761  CE_Loss: 25.602049  Diversity_Loss: 3.823525
+
+Epoch 30/750
+Train Epoch: 29 [0/2500 (0%)]	KL_Loss: 39.725468  CE_Loss: 30.730267  Diversity_Loss: 4.965389
+
+Epoch 31/750
+Train Epoch: 30 [0/2500 (0%)]	KL_Loss: 28.608425  CE_Loss: 23.019171  Diversity_Loss: 3.420910
+
+Epoch 32/750
+Train Epoch: 31 [0/2500 (0%)]	KL_Loss: 29.218323  CE_Loss: 23.891098  Diversity_Loss: 4.393816
+
+Epoch 33/750
+Train Epoch: 32 [0/2500 (0%)]	KL_Loss: 35.974121  CE_Loss: 26.060253  Diversity_Loss: 3.697422
+
+Epoch 34/750
+Train Epoch: 33 [0/2500 (0%)]	KL_Loss: 31.549095  CE_Loss: 25.629745  Diversity_Loss: 5.979205
+
+Epoch 35/750
+Train Epoch: 34 [0/2500 (0%)]	KL_Loss: 31.467907  CE_Loss: 26.783415  Diversity_Loss: 4.563978
+
+Epoch 36/750
+Train Epoch: 35 [0/2500 (0%)]	KL_Loss: 30.867907  CE_Loss: 26.583248  Diversity_Loss: 4.761255
+
+Epoch 37/750
+Train Epoch: 36 [0/2500 (0%)]	KL_Loss: 29.679800  CE_Loss: 26.059435  Diversity_Loss: 3.536546
+
+Epoch 38/750
+Train Epoch: 37 [0/2500 (0%)]	KL_Loss: 29.378529  CE_Loss: 25.157686  Diversity_Loss: 3.024731
+
+Epoch 39/750
+Train Epoch: 38 [0/2500 (0%)]	KL_Loss: 27.328712  CE_Loss: 24.919781  Diversity_Loss: 3.832104
+
+Epoch 40/750
+Train Epoch: 39 [0/2500 (0%)]	KL_Loss: 36.147682  CE_Loss: 29.937004  Diversity_Loss: 2.836723
+
+Epoch 41/750
+Train Epoch: 40 [0/2500 (0%)]	KL_Loss: 30.693514  CE_Loss: 26.705599  Diversity_Loss: 5.370645
+
+Epoch 42/750
+Train Epoch: 41 [0/2500 (0%)]	KL_Loss: 27.244286  CE_Loss: 24.536566  Diversity_Loss: 4.554005
+
+Epoch 43/750
+Train Epoch: 42 [0/2500 (0%)]	KL_Loss: 33.876961  CE_Loss: 28.637377  Diversity_Loss: 3.177896
+
+Epoch 44/750
+Train Epoch: 43 [0/2500 (0%)]	KL_Loss: 28.421202  CE_Loss: 24.982483  Diversity_Loss: 3.204001
+
+Epoch 45/750
+Train Epoch: 44 [0/2500 (0%)]	KL_Loss: 26.516659  CE_Loss: 23.629423  Diversity_Loss: 4.720877
+
+Epoch 46/750
+Train Epoch: 45 [0/2500 (0%)]	KL_Loss: 26.214045  CE_Loss: 25.098291  Diversity_Loss: 3.329813
+
+Epoch 47/750
+Train Epoch: 46 [0/2500 (0%)]	KL_Loss: 30.504627  CE_Loss: 26.399080  Diversity_Loss: 2.749754
+
+Epoch 48/750
+Train Epoch: 47 [0/2500 (0%)]	KL_Loss: 33.128143  CE_Loss: 28.181742  Diversity_Loss: 3.942814
+
+Epoch 49/750
+Train Epoch: 48 [0/2500 (0%)]	KL_Loss: 25.254116  CE_Loss: 24.932238  Diversity_Loss: 3.478405
+
+Epoch 50/750
+Train Epoch: 49 [0/2500 (0%)]	KL_Loss: 28.515511  CE_Loss: 28.018064  Diversity_Loss: 3.904029
+
+Epoch 51/750
+Train Epoch: 50 [0/2500 (0%)]	KL_Loss: 29.413940  CE_Loss: 27.703829  Diversity_Loss: 3.396461
+
+Test set: Average loss: 6.6948, Top-1 Accuracy: 4458/31419 (14.19%), Top-5 Accuracy: 9122/31419 (29.03%)
+
+Best ACC.
+
+Epoch 52/750
+Train Epoch: 51 [0/2500 (0%)]	KL_Loss: 23.623411  CE_Loss: 23.366884  Diversity_Loss: 4.451906
+
+Epoch 53/750
+Train Epoch: 52 [0/2500 (0%)]	KL_Loss: 27.732994  CE_Loss: 28.312048  Diversity_Loss: 3.752250
+
+Epoch 54/750
+Train Epoch: 53 [0/2500 (0%)]	KL_Loss: 22.896866  CE_Loss: 20.900421  Diversity_Loss: 2.305610
+
+Epoch 55/750
+Train Epoch: 54 [0/2500 (0%)]	KL_Loss: 25.880791  CE_Loss: 23.463430  Diversity_Loss: 2.559917
+
+Epoch 56/750
+Train Epoch: 55 [0/2500 (0%)]	KL_Loss: 24.658358  CE_Loss: 26.534565  Diversity_Loss: 7.621352
+
+Epoch 57/750
+Train Epoch: 56 [0/2500 (0%)]	KL_Loss: 24.751135  CE_Loss: 23.916338  Diversity_Loss: 4.678431
+
+Epoch 58/750
+Train Epoch: 57 [0/2500 (0%)]	KL_Loss: 29.737646  CE_Loss: 28.788971  Diversity_Loss: 5.011444
+
+Epoch 59/750
+Train Epoch: 58 [0/2500 (0%)]	KL_Loss: 30.014576  CE_Loss: 26.172382  Diversity_Loss: 3.758445
+
+Epoch 60/750
+Train Epoch: 59 [0/2500 (0%)]	KL_Loss: 33.679138  CE_Loss: 26.300154  Diversity_Loss: 1.981055
+
+Epoch 61/750
+Train Epoch: 60 [0/2500 (0%)]	KL_Loss: 26.347019  CE_Loss: 26.367907  Diversity_Loss: 9.540347
+
+Epoch 62/750
+Train Epoch: 61 [0/2500 (0%)]	KL_Loss: 26.178543  CE_Loss: 26.115585  Diversity_Loss: 5.272365
+
+Epoch 63/750
+Train Epoch: 62 [0/2500 (0%)]	KL_Loss: 27.673752  CE_Loss: 24.777302  Diversity_Loss: 3.142045
+
+Epoch 64/750
+Train Epoch: 63 [0/2500 (0%)]	KL_Loss: 34.982643  CE_Loss: 27.149508  Diversity_Loss: 4.238116
+
+Epoch 65/750
+Train Epoch: 64 [0/2500 (0%)]	KL_Loss: 26.827587  CE_Loss: 24.473719  Diversity_Loss: 6.265887
+
+Epoch 66/750
+Train Epoch: 65 [0/2500 (0%)]	KL_Loss: 32.815338  CE_Loss: 26.518131  Diversity_Loss: 2.713667
+
+Epoch 67/750
+Train Epoch: 66 [0/2500 (0%)]	KL_Loss: 26.217510  CE_Loss: 23.757212  Diversity_Loss: 2.963759
+
+Epoch 68/750
+Train Epoch: 67 [0/2500 (0%)]	KL_Loss: 27.701773  CE_Loss: 28.882490  Diversity_Loss: 3.450863
+
+Epoch 69/750
+Train Epoch: 68 [0/2500 (0%)]	KL_Loss: 33.611473  CE_Loss: 27.316526  Diversity_Loss: 3.704023
+
+Epoch 70/750
+Train Epoch: 69 [0/2500 (0%)]	KL_Loss: 23.501614  CE_Loss: 24.294975  Diversity_Loss: 3.991693
+
+Epoch 71/750
+Train Epoch: 70 [0/2500 (0%)]	KL_Loss: 21.860371  CE_Loss: 26.703514  Diversity_Loss: 5.591393
+
+Epoch 72/750
+Train Epoch: 71 [0/2500 (0%)]	KL_Loss: 23.795963  CE_Loss: 26.057014  Diversity_Loss: 3.455927
+
+Epoch 73/750
+Train Epoch: 72 [0/2500 (0%)]	KL_Loss: 24.703306  CE_Loss: 30.422924  Diversity_Loss: 3.619436
+
+Epoch 74/750
+Train Epoch: 73 [0/2500 (0%)]	KL_Loss: 25.288658  CE_Loss: 25.444803  Diversity_Loss: 2.856753
+
+Epoch 75/750
+Train Epoch: 74 [0/2500 (0%)]	KL_Loss: 20.235071  CE_Loss: 25.053843  Diversity_Loss: 3.403892
+
+Epoch 76/750
+Train Epoch: 75 [0/2500 (0%)]	KL_Loss: 19.748138  CE_Loss: 26.024027  Diversity_Loss: 3.593783
+
+Test set: Average loss: 6.4604, Top-1 Accuracy: 5562/31419 (17.70%), Top-5 Accuracy: 10378/31419 (33.03%)
+
+Best ACC.
+
+Epoch 77/750
+Train Epoch: 76 [0/2500 (0%)]	KL_Loss: 20.129707  CE_Loss: 24.097477  Diversity_Loss: 2.595296
+
+Epoch 78/750
+Train Epoch: 77 [0/2500 (0%)]	KL_Loss: 29.610188  CE_Loss: 25.672621  Diversity_Loss: 2.946633
+
+Epoch 79/750
+Train Epoch: 78 [0/2500 (0%)]	KL_Loss: 21.820503  CE_Loss: 24.507513  Diversity_Loss: 4.459144
+
+Epoch 80/750
+Train Epoch: 79 [0/2500 (0%)]	KL_Loss: 21.003817  CE_Loss: 24.004986  Diversity_Loss: 2.861229
+
+Epoch 81/750
+Train Epoch: 80 [0/2500 (0%)]	KL_Loss: 25.644184  CE_Loss: 26.012344  Diversity_Loss: 2.598648
+
+Epoch 82/750
+Train Epoch: 81 [0/2500 (0%)]	KL_Loss: 20.319504  CE_Loss: 25.918480  Diversity_Loss: 4.986824
+
+Epoch 83/750
+Train Epoch: 82 [0/2500 (0%)]	KL_Loss: 22.617687  CE_Loss: 22.247667  Diversity_Loss: 2.572031
+
+Epoch 84/750
+Train Epoch: 83 [0/2500 (0%)]	KL_Loss: 22.606903  CE_Loss: 26.180302  Diversity_Loss: 2.311566
+
+Epoch 85/750
+Train Epoch: 84 [0/2500 (0%)]	KL_Loss: 25.096972  CE_Loss: 23.469690  Diversity_Loss: 2.139741
+
+Epoch 86/750
+Train Epoch: 85 [0/2500 (0%)]	KL_Loss: 21.143332  CE_Loss: 24.946165  Diversity_Loss: 2.895925
+
+Epoch 87/750
+Train Epoch: 86 [0/2500 (0%)]	KL_Loss: 21.780100  CE_Loss: 23.645376  Diversity_Loss: 3.274773
+
+Epoch 88/750
+Train Epoch: 87 [0/2500 (0%)]	KL_Loss: 19.876865  CE_Loss: 23.638868  Diversity_Loss: 2.995210
+
+Epoch 89/750
+Train Epoch: 88 [0/2500 (0%)]	KL_Loss: 18.332516  CE_Loss: 23.167212  Diversity_Loss: 3.683029
+
+Epoch 90/750
+Train Epoch: 89 [0/2500 (0%)]	KL_Loss: 25.411095  CE_Loss: 27.658892  Diversity_Loss: 4.876430
+
+Epoch 91/750
+Train Epoch: 90 [0/2500 (0%)]	KL_Loss: 32.487751  CE_Loss: 25.332188  Diversity_Loss: 2.257270
+
+Epoch 92/750
+Train Epoch: 91 [0/2500 (0%)]	KL_Loss: 21.218098  CE_Loss: 23.702866  Diversity_Loss: 4.298826
+
+Epoch 93/750
+Train Epoch: 92 [0/2500 (0%)]	KL_Loss: 21.721046  CE_Loss: 25.829741  Diversity_Loss: 3.749442
+
+Epoch 94/750
+Train Epoch: 93 [0/2500 (0%)]	KL_Loss: 23.906902  CE_Loss: 29.817600  Diversity_Loss: 4.033089
+
+Epoch 95/750
+Train Epoch: 94 [0/2500 (0%)]	KL_Loss: 17.572565  CE_Loss: 23.808985  Diversity_Loss: 3.093556
+
+Epoch 96/750
+Train Epoch: 95 [0/2500 (0%)]	KL_Loss: 17.097488  CE_Loss: 22.875408  Diversity_Loss: 2.694638
+
+Epoch 97/750
+Train Epoch: 96 [0/2500 (0%)]	KL_Loss: 20.698872  CE_Loss: 26.376303  Diversity_Loss: 2.502012
+
+Epoch 98/750
+Train Epoch: 97 [0/2500 (0%)]	KL_Loss: 18.280035  CE_Loss: 24.740177  Diversity_Loss: 3.401466
+
+Epoch 99/750
+Train Epoch: 98 [0/2500 (0%)]	KL_Loss: 20.316126  CE_Loss: 27.156652  Diversity_Loss: 4.424810
+
+Epoch 100/750
+Train Epoch: 99 [0/2500 (0%)]	KL_Loss: 19.469852  CE_Loss: 24.957851  Diversity_Loss: 2.285046
+
+Epoch 101/750
+Train Epoch: 100 [0/2500 (0%)]	KL_Loss: 15.871392  CE_Loss: 23.945705  Diversity_Loss: 3.935711
+
+Test set: Average loss: 6.3918, Top-1 Accuracy: 5749/31419 (18.30%), Top-5 Accuracy: 10929/31419 (34.78%)
+
+Best ACC.
+
+Epoch 102/750
+Train Epoch: 101 [0/2500 (0%)]	KL_Loss: 16.678055  CE_Loss: 24.372133  Diversity_Loss: 3.471659
+
+Epoch 103/750
+Train Epoch: 102 [0/2500 (0%)]	KL_Loss: 18.625546  CE_Loss: 25.603666  Diversity_Loss: 3.163963
+
+Epoch 104/750
+Train Epoch: 103 [0/2500 (0%)]	KL_Loss: 16.685722  CE_Loss: 23.688072  Diversity_Loss: 2.816004
+
+Epoch 105/750
+Train Epoch: 104 [0/2500 (0%)]	KL_Loss: 17.742306  CE_Loss: 23.302856  Diversity_Loss: 3.636788
+
+Epoch 106/750
+Train Epoch: 105 [0/2500 (0%)]	KL_Loss: 22.088156  CE_Loss: 24.028767  Diversity_Loss: 1.987962
+
+Epoch 107/750
+Train Epoch: 106 [0/2500 (0%)]	KL_Loss: 17.670090  CE_Loss: 23.527868  Diversity_Loss: 4.009707
+
+Epoch 108/750
+Train Epoch: 107 [0/2500 (0%)]	KL_Loss: 16.597897  CE_Loss: 21.569693  Diversity_Loss: 2.553337
+
+Epoch 109/750
+Train Epoch: 108 [0/2500 (0%)]	KL_Loss: 21.477339  CE_Loss: 24.967813  Diversity_Loss: 4.753082
+
+Epoch 110/750
+Train Epoch: 109 [0/2500 (0%)]	KL_Loss: 20.746052  CE_Loss: 25.000910  Diversity_Loss: 4.185910
+
+Epoch 111/750
+Train Epoch: 110 [0/2500 (0%)]	KL_Loss: 21.941868  CE_Loss: 26.244753  Diversity_Loss: 2.595232
+
+Epoch 112/750
+Train Epoch: 111 [0/2500 (0%)]	KL_Loss: 19.703594  CE_Loss: 23.087877  Diversity_Loss: 2.566801
+
+Epoch 113/750
+Train Epoch: 112 [0/2500 (0%)]	KL_Loss: 17.296556  CE_Loss: 24.383465  Diversity_Loss: 2.150899
+
+Epoch 114/750
+Train Epoch: 113 [0/2500 (0%)]	KL_Loss: 15.928946  CE_Loss: 24.589859  Diversity_Loss: 3.920018
+
+Epoch 115/750
+Train Epoch: 114 [0/2500 (0%)]	KL_Loss: 15.968227  CE_Loss: 24.558510  Diversity_Loss: 4.684678
+
+Epoch 116/750
+Train Epoch: 115 [0/2500 (0%)]	KL_Loss: 17.582008  CE_Loss: 24.798424  Diversity_Loss: 2.684550
+
+Epoch 117/750
+Train Epoch: 116 [0/2500 (0%)]	KL_Loss: 17.718105  CE_Loss: 25.404036  Diversity_Loss: 3.692631
+
+Epoch 118/750
+Train Epoch: 117 [0/2500 (0%)]	KL_Loss: 16.704676  CE_Loss: 22.956909  Diversity_Loss: 3.706512
+
+Epoch 119/750
+Train Epoch: 118 [0/2500 (0%)]	KL_Loss: 18.538921  CE_Loss: 24.397688  Diversity_Loss: 2.272360
+
+Epoch 120/750
+Train Epoch: 119 [0/2500 (0%)]	KL_Loss: 17.823280  CE_Loss: 26.477209  Diversity_Loss: 3.637372
+
+Epoch 121/750
+Train Epoch: 120 [0/2500 (0%)]	KL_Loss: 16.685011  CE_Loss: 21.525944  Diversity_Loss: 2.801149
+
+Epoch 122/750
+Train Epoch: 121 [0/2500 (0%)]	KL_Loss: 18.709064  CE_Loss: 24.414423  Diversity_Loss: 5.152880
+
+Epoch 123/750
+Train Epoch: 122 [0/2500 (0%)]	KL_Loss: 18.288877  CE_Loss: 24.442801  Diversity_Loss: 3.086195
+
+Epoch 124/750
+Train Epoch: 123 [0/2500 (0%)]	KL_Loss: 18.652477  CE_Loss: 25.263617  Diversity_Loss: 3.020555
+
+Epoch 125/750
+Train Epoch: 124 [0/2500 (0%)]	KL_Loss: 16.840206  CE_Loss: 23.562189  Diversity_Loss: 3.544099
+
+Epoch 126/750
+Train Epoch: 125 [0/2500 (0%)]	KL_Loss: 16.041241  CE_Loss: 22.825783  Diversity_Loss: 3.051107
+
+Test set: Average loss: 6.4418, Top-1 Accuracy: 5768/31419 (18.36%), Top-5 Accuracy: 11358/31419 (36.15%)
+
+Best ACC.
+
+Epoch 127/750
+Train Epoch: 126 [0/2500 (0%)]	KL_Loss: 15.728262  CE_Loss: 22.687618  Diversity_Loss: 2.481286
+
+Epoch 128/750
+Train Epoch: 127 [0/2500 (0%)]	KL_Loss: 17.092064  CE_Loss: 23.554867  Diversity_Loss: 3.105510
+
+Epoch 129/750
+Train Epoch: 128 [0/2500 (0%)]	KL_Loss: 19.080910  CE_Loss: 21.790865  Diversity_Loss: 2.776845
+
+Epoch 130/750
+Train Epoch: 129 [0/2500 (0%)]	KL_Loss: 19.015629  CE_Loss: 24.817951  Diversity_Loss: 3.808985
+
+Epoch 131/750
+Train Epoch: 130 [0/2500 (0%)]	KL_Loss: 18.882032  CE_Loss: 24.426460  Diversity_Loss: 2.933444
+
+Epoch 132/750
+Train Epoch: 131 [0/2500 (0%)]	KL_Loss: 17.030025  CE_Loss: 24.895813  Diversity_Loss: 4.348298
+
+Epoch 133/750
+Train Epoch: 132 [0/2500 (0%)]	KL_Loss: 16.776562  CE_Loss: 23.004448  Diversity_Loss: 4.604687
+
+Epoch 134/750
+Train Epoch: 133 [0/2500 (0%)]	KL_Loss: 15.278687  CE_Loss: 23.539825  Diversity_Loss: 3.650784
+
+Epoch 135/750
+Train Epoch: 134 [0/2500 (0%)]	KL_Loss: 18.315065  CE_Loss: 27.641150  Diversity_Loss: 3.061440
+
+Epoch 136/750
+Train Epoch: 135 [0/2500 (0%)]	KL_Loss: 18.525532  CE_Loss: 25.007818  Diversity_Loss: 2.378671
+
+Epoch 137/750
+Train Epoch: 136 [0/2500 (0%)]	KL_Loss: 15.875696  CE_Loss: 23.353739  Diversity_Loss: 3.428118
+
+Epoch 138/750
+Train Epoch: 137 [0/2500 (0%)]	KL_Loss: 20.608353  CE_Loss: 25.704865  Diversity_Loss: 2.023844
+
+Epoch 139/750
+Train Epoch: 138 [0/2500 (0%)]	KL_Loss: 16.447525  CE_Loss: 22.714420  Diversity_Loss: 3.117743
+
+Epoch 140/750
+Train Epoch: 139 [0/2500 (0%)]	KL_Loss: 16.580688  CE_Loss: 22.183960  Diversity_Loss: 3.071389
+
+Epoch 141/750
+Train Epoch: 140 [0/2500 (0%)]	KL_Loss: 15.927048  CE_Loss: 23.244570  Diversity_Loss: 3.632747
+
+Epoch 142/750
+Train Epoch: 141 [0/2500 (0%)]	KL_Loss: 14.651674  CE_Loss: 22.887506  Diversity_Loss: 4.337263
+
+Epoch 143/750
+Train Epoch: 142 [0/2500 (0%)]	KL_Loss: 15.897905  CE_Loss: 23.657507  Diversity_Loss: 2.264083
+
+Epoch 144/750
+Train Epoch: 143 [0/2500 (0%)]	KL_Loss: 16.019903  CE_Loss: 26.609713  Diversity_Loss: 2.080689
+
+Epoch 145/750
+Train Epoch: 144 [0/2500 (0%)]	KL_Loss: 16.376917  CE_Loss: 24.878582  Diversity_Loss: 2.851621
+
+Epoch 146/750
+Train Epoch: 145 [0/2500 (0%)]	KL_Loss: 16.529396  CE_Loss: 26.610498  Diversity_Loss: 2.410089
+
+Epoch 147/750
+Train Epoch: 146 [0/2500 (0%)]	KL_Loss: 16.234818  CE_Loss: 24.961319  Diversity_Loss: 2.794717
+
+Epoch 148/750
+Train Epoch: 147 [0/2500 (0%)]	KL_Loss: 17.650433  CE_Loss: 22.310616  Diversity_Loss: 2.760546
+
+Epoch 149/750
+Train Epoch: 148 [0/2500 (0%)]	KL_Loss: 19.087687  CE_Loss: 26.837067  Diversity_Loss: 2.874008
+
+Epoch 150/750
+Train Epoch: 149 [0/2500 (0%)]	KL_Loss: 13.704973  CE_Loss: 22.651161  Diversity_Loss: 2.675004
+
+Epoch 151/750
+Train Epoch: 150 [0/2500 (0%)]	KL_Loss: 16.568239  CE_Loss: 25.770430  Diversity_Loss: 2.612383
+
+Test set: Average loss: 6.5180, Top-1 Accuracy: 6001/31419 (19.10%), Top-5 Accuracy: 11862/31419 (37.75%)
+
+Best ACC.
+
+Epoch 152/750
+Train Epoch: 151 [0/2500 (0%)]	KL_Loss: 15.848473  CE_Loss: 24.711884  Diversity_Loss: 2.168923
+
+Epoch 153/750
+Train Epoch: 152 [0/2500 (0%)]	KL_Loss: 17.607260  CE_Loss: 25.014492  Diversity_Loss: 3.004075
+
+Epoch 154/750
+Train Epoch: 153 [0/2500 (0%)]	KL_Loss: 17.180399  CE_Loss: 24.860085  Diversity_Loss: 3.039089
+
+Epoch 155/750
+Train Epoch: 154 [0/2500 (0%)]	KL_Loss: 14.742212  CE_Loss: 23.022467  Diversity_Loss: 4.549107
+
+Epoch 156/750
+Train Epoch: 155 [0/2500 (0%)]	KL_Loss: 16.858122  CE_Loss: 23.313730  Diversity_Loss: 4.027663
+
+Epoch 157/750
+Train Epoch: 156 [0/2500 (0%)]	KL_Loss: 19.948586  CE_Loss: 25.786180  Diversity_Loss: 2.414517
+
+Epoch 158/750
+Train Epoch: 157 [0/2500 (0%)]	KL_Loss: 21.693087  CE_Loss: 27.814571  Diversity_Loss: 4.819485
+
+Epoch 159/750
+Train Epoch: 158 [0/2500 (0%)]	KL_Loss: 15.551425  CE_Loss: 21.630066  Diversity_Loss: 2.488096
+
+Epoch 160/750
+Train Epoch: 159 [0/2500 (0%)]	KL_Loss: 18.518055  CE_Loss: 24.061333  Diversity_Loss: 2.033409
+
+Epoch 161/750
+Train Epoch: 160 [0/2500 (0%)]	KL_Loss: 16.040886  CE_Loss: 24.253826  Diversity_Loss: 3.137105
+
+Epoch 162/750
+Train Epoch: 161 [0/2500 (0%)]	KL_Loss: 19.844595  CE_Loss: 25.871908  Diversity_Loss: 2.206444
+
+Epoch 163/750
+Train Epoch: 162 [0/2500 (0%)]	KL_Loss: 16.539715  CE_Loss: 23.147928  Diversity_Loss: 4.512971
+
+Epoch 164/750
+Train Epoch: 163 [0/2500 (0%)]	KL_Loss: 18.704163  CE_Loss: 23.846596  Diversity_Loss: 2.229340
+
+Epoch 165/750
+Train Epoch: 164 [0/2500 (0%)]	KL_Loss: 16.843441  CE_Loss: 23.543350  Diversity_Loss: 3.347043
+
+Epoch 166/750
+Train Epoch: 165 [0/2500 (0%)]	KL_Loss: 14.778532  CE_Loss: 23.248339  Diversity_Loss: 7.774060
+
+Epoch 167/750
+Train Epoch: 166 [0/2500 (0%)]	KL_Loss: 16.900362  CE_Loss: 23.891895  Diversity_Loss: 3.286002
+
+Epoch 168/750
+Train Epoch: 167 [0/2500 (0%)]	KL_Loss: 17.044300  CE_Loss: 26.344206  Diversity_Loss: 2.885263
+
+Epoch 169/750
+Train Epoch: 168 [0/2500 (0%)]	KL_Loss: 23.842537  CE_Loss: 22.946358  Diversity_Loss: 1.633115
+
+Epoch 170/750
+Train Epoch: 169 [0/2500 (0%)]	KL_Loss: 16.318794  CE_Loss: 24.732496  Diversity_Loss: 3.630951
+
+Epoch 171/750
+Train Epoch: 170 [0/2500 (0%)]	KL_Loss: 15.577191  CE_Loss: 21.115013  Diversity_Loss: 2.148609
+
+Epoch 172/750
+Train Epoch: 171 [0/2500 (0%)]	KL_Loss: 15.541176  CE_Loss: 25.046591  Diversity_Loss: 3.238719
+
+Epoch 173/750
+Train Epoch: 172 [0/2500 (0%)]	KL_Loss: 13.880691  CE_Loss: 22.149799  Diversity_Loss: 2.482410
+
+Epoch 174/750
+Train Epoch: 173 [0/2500 (0%)]	KL_Loss: 16.404694  CE_Loss: 25.050714  Diversity_Loss: 2.192269
+
+Epoch 175/750
+Train Epoch: 174 [0/2500 (0%)]	KL_Loss: 14.292124  CE_Loss: 23.300341  Diversity_Loss: 3.120027
+
+Epoch 176/750
+Train Epoch: 175 [0/2500 (0%)]	KL_Loss: 14.364665  CE_Loss: 20.728981  Diversity_Loss: 1.783061
+
+Test set: Average loss: 6.3681, Top-1 Accuracy: 6200/31419 (19.73%), Top-5 Accuracy: 11674/31419 (37.16%)
+
+Best ACC.
+
+Epoch 177/750
+Train Epoch: 176 [0/2500 (0%)]	KL_Loss: 18.355658  CE_Loss: 23.554886  Diversity_Loss: 2.021016
+
+Epoch 178/750
+Train Epoch: 177 [0/2500 (0%)]	KL_Loss: 16.954624  CE_Loss: 24.020380  Diversity_Loss: 2.264055
+
+Epoch 179/750
+Train Epoch: 178 [0/2500 (0%)]	KL_Loss: 15.044733  CE_Loss: 22.603909  Diversity_Loss: 1.936296
+
+Epoch 180/750
+Train Epoch: 179 [0/2500 (0%)]	KL_Loss: 13.388914  CE_Loss: 20.714672  Diversity_Loss: 1.964926
+
+Epoch 181/750
+Train Epoch: 180 [0/2500 (0%)]	KL_Loss: 14.661274  CE_Loss: 22.546738  Diversity_Loss: 2.706702
+
+Epoch 182/750
+Train Epoch: 181 [0/2500 (0%)]	KL_Loss: 17.749149  CE_Loss: 26.441612  Diversity_Loss: 3.124727
+
+Epoch 183/750
+Train Epoch: 182 [0/2500 (0%)]	KL_Loss: 19.314457  CE_Loss: 24.702570  Diversity_Loss: 1.704127
+
+Epoch 184/750
+Train Epoch: 183 [0/2500 (0%)]	KL_Loss: 16.011787  CE_Loss: 21.578041  Diversity_Loss: 2.507090
+
+Epoch 185/750
+Train Epoch: 184 [0/2500 (0%)]	KL_Loss: 13.995243  CE_Loss: 22.809229  Diversity_Loss: 2.951475
+
+Epoch 186/750
+Train Epoch: 185 [0/2500 (0%)]	KL_Loss: 15.350790  CE_Loss: 22.624346  Diversity_Loss: 3.432076
+
+Epoch 187/750
+Train Epoch: 186 [0/2500 (0%)]	KL_Loss: 15.319622  CE_Loss: 23.636028  Diversity_Loss: 1.736940
+
+Epoch 188/750
+Train Epoch: 187 [0/2500 (0%)]	KL_Loss: 12.727682  CE_Loss: 22.673325  Diversity_Loss: 2.755784
+
+Epoch 189/750
+Train Epoch: 188 [0/2500 (0%)]	KL_Loss: 13.937674  CE_Loss: 23.906807  Diversity_Loss: 3.358653
+
+Epoch 190/750
+Train Epoch: 189 [0/2500 (0%)]	KL_Loss: 12.924443  CE_Loss: 22.115580  Diversity_Loss: 5.163111
+
+Epoch 191/750
+Train Epoch: 190 [0/2500 (0%)]	KL_Loss: 13.932571  CE_Loss: 23.613905  Diversity_Loss: 2.312922
+
+Epoch 192/750
+Train Epoch: 191 [0/2500 (0%)]	KL_Loss: 15.520440  CE_Loss: 23.847551  Diversity_Loss: 2.131991
+
+Epoch 193/750
+Train Epoch: 192 [0/2500 (0%)]	KL_Loss: 15.433983  CE_Loss: 23.580433  Diversity_Loss: 2.415291
+
+Epoch 194/750
+Train Epoch: 193 [0/2500 (0%)]	KL_Loss: 15.007698  CE_Loss: 22.410782  Diversity_Loss: 3.182180
+
+Epoch 195/750
+Train Epoch: 194 [0/2500 (0%)]	KL_Loss: 16.352787  CE_Loss: 21.872475  Diversity_Loss: 1.809666
+
+Epoch 196/750
+Train Epoch: 195 [0/2500 (0%)]	KL_Loss: 14.212865  CE_Loss: 23.270220  Diversity_Loss: 2.645686
+
+Epoch 197/750
+Train Epoch: 196 [0/2500 (0%)]	KL_Loss: 14.632933  CE_Loss: 23.467833  Diversity_Loss: 3.286100
+
+Epoch 198/750
+Train Epoch: 197 [0/2500 (0%)]	KL_Loss: 12.499234  CE_Loss: 24.669827  Diversity_Loss: 3.637239
+
+Epoch 199/750
+Train Epoch: 198 [0/2500 (0%)]	KL_Loss: 17.181686  CE_Loss: 24.239317  Diversity_Loss: 1.689759
+
+Epoch 200/750
+Train Epoch: 199 [0/2500 (0%)]	KL_Loss: 13.942122  CE_Loss: 21.568810  Diversity_Loss: 2.436881
+
+Test set: Average loss: 6.2227, Top-1 Accuracy: 6539/31419 (20.81%), Top-5 Accuracy: 12222/31419 (38.90%)
+
+Best ACC.
+
+Epoch 201/750
+Train Epoch: 200 [0/2500 (0%)]	KL_Loss: 14.636408  CE_Loss: 23.721594  Diversity_Loss: 2.389514
+
+Test set: Average loss: 6.0815, Top-1 Accuracy: 6740/31419 (21.45%), Top-5 Accuracy: 12361/31419 (39.34%)
+
+Best ACC.
+
+Epoch 202/750
+Train Epoch: 201 [0/2500 (0%)]	KL_Loss: 15.047381  CE_Loss: 22.777115  Diversity_Loss: 1.854715
+
+Epoch 203/750
+Train Epoch: 202 [0/2500 (0%)]	KL_Loss: 14.331729  CE_Loss: 23.246170  Diversity_Loss: 3.600073
+
+Epoch 204/750
+Train Epoch: 203 [0/2500 (0%)]	KL_Loss: 13.719173  CE_Loss: 22.446634  Diversity_Loss: 2.371536
+
+Epoch 205/750
+Train Epoch: 204 [0/2500 (0%)]	KL_Loss: 14.934350  CE_Loss: 25.720743  Diversity_Loss: 3.533671
+
+Epoch 206/750
+Train Epoch: 205 [0/2500 (0%)]	KL_Loss: 18.209663  CE_Loss: 24.808527  Diversity_Loss: 1.680530
+
+Epoch 207/750
+Train Epoch: 206 [0/2500 (0%)]	KL_Loss: 15.250076  CE_Loss: 22.088385  Diversity_Loss: 2.013555
+
+Epoch 208/750
+Train Epoch: 207 [0/2500 (0%)]	KL_Loss: 22.148319  CE_Loss: 26.053209  Diversity_Loss: 4.014921
+
+Epoch 209/750
+Train Epoch: 208 [0/2500 (0%)]	KL_Loss: 27.171288  CE_Loss: 27.519152  Diversity_Loss: 2.793812
+
+Epoch 210/750
+Train Epoch: 209 [0/2500 (0%)]	KL_Loss: 20.376377  CE_Loss: 24.633993  Diversity_Loss: 4.010354
+
+Epoch 211/750
+Train Epoch: 210 [0/2500 (0%)]	KL_Loss: 18.148003  CE_Loss: 24.371380  Diversity_Loss: 2.570778
+
+Epoch 212/750
+Train Epoch: 211 [0/2500 (0%)]	KL_Loss: 18.902338  CE_Loss: 24.397675  Diversity_Loss: 1.469660
+
+Epoch 213/750
+Train Epoch: 212 [0/2500 (0%)]	KL_Loss: 17.401089  CE_Loss: 23.664688  Diversity_Loss: 1.678121
+
+Epoch 214/750
+Train Epoch: 213 [0/2500 (0%)]	KL_Loss: 15.479353  CE_Loss: 23.976673  Diversity_Loss: 2.530133
+
+Epoch 215/750
+Train Epoch: 214 [0/2500 (0%)]	KL_Loss: 15.919748  CE_Loss: 23.513933  Diversity_Loss: 1.988395
+
+Epoch 216/750
+Train Epoch: 215 [0/2500 (0%)]	KL_Loss: 15.277941  CE_Loss: 24.901409  Diversity_Loss: 2.064383
+
+Epoch 217/750
+Train Epoch: 216 [0/2500 (0%)]	KL_Loss: 13.767107  CE_Loss: 24.761414  Diversity_Loss: 1.663267
+
+Epoch 218/750
+Train Epoch: 217 [0/2500 (0%)]	KL_Loss: 11.934326  CE_Loss: 21.027620  Diversity_Loss: 1.704107
+
+Epoch 219/750
+Train Epoch: 218 [0/2500 (0%)]	KL_Loss: 10.632011  CE_Loss: 21.458355  Diversity_Loss: 3.539795
+
+Epoch 220/750
+Train Epoch: 219 [0/2500 (0%)]	KL_Loss: 11.740671  CE_Loss: 22.150721  Diversity_Loss: 2.303318
+
+Epoch 221/750
+Train Epoch: 220 [0/2500 (0%)]	KL_Loss: 13.740752  CE_Loss: 25.031597  Diversity_Loss: 2.597743
+
+Epoch 222/750
+Train Epoch: 221 [0/2500 (0%)]	KL_Loss: 15.088593  CE_Loss: 22.607401  Diversity_Loss: 2.326252
+
+Epoch 223/750
+Train Epoch: 222 [0/2500 (0%)]	KL_Loss: 14.353156  CE_Loss: 24.614946  Diversity_Loss: 2.255749
+
+Epoch 224/750
+Train Epoch: 223 [0/2500 (0%)]	KL_Loss: 14.801595  CE_Loss: 23.492352  Diversity_Loss: 1.617352
+
+Epoch 225/750
+Train Epoch: 224 [0/2500 (0%)]	KL_Loss: 14.280495  CE_Loss: 22.145737  Diversity_Loss: 1.714455
+
+Epoch 226/750
+Train Epoch: 225 [0/2500 (0%)]	KL_Loss: 14.360613  CE_Loss: 21.625988  Diversity_Loss: 2.121980
+
+Test set: Average loss: 6.0463, Top-1 Accuracy: 6929/31419 (22.05%), Top-5 Accuracy: 12542/31419 (39.92%)
+
+Best ACC.
+
+Epoch 227/750
+Train Epoch: 226 [0/2500 (0%)]	KL_Loss: 13.905746  CE_Loss: 23.711277  Diversity_Loss: 1.584508
+
+Epoch 228/750
+Train Epoch: 227 [0/2500 (0%)]	KL_Loss: 13.830942  CE_Loss: 22.629032  Diversity_Loss: 1.481791
+
+Epoch 229/750
+Train Epoch: 228 [0/2500 (0%)]	KL_Loss: 14.004501  CE_Loss: 23.061832  Diversity_Loss: 1.779891
+
+Epoch 230/750
+Train Epoch: 229 [0/2500 (0%)]	KL_Loss: 13.101440  CE_Loss: 22.868904  Diversity_Loss: 1.987027
+
+Epoch 231/750
+Train Epoch: 230 [0/2500 (0%)]	KL_Loss: 15.156437  CE_Loss: 24.439289  Diversity_Loss: 1.612746
+
+Epoch 232/750
+Train Epoch: 231 [0/2500 (0%)]	KL_Loss: 13.887300  CE_Loss: 22.737274  Diversity_Loss: 2.122892
+
+Epoch 233/750
+Train Epoch: 232 [0/2500 (0%)]	KL_Loss: 13.608961  CE_Loss: 21.331450  Diversity_Loss: 2.995162
+
+Epoch 234/750
+Train Epoch: 233 [0/2500 (0%)]	KL_Loss: 14.336387  CE_Loss: 22.336119  Diversity_Loss: 1.710168
+
+Epoch 235/750
+Train Epoch: 234 [0/2500 (0%)]	KL_Loss: 11.932038  CE_Loss: 22.819469  Diversity_Loss: 2.182512
+
+Epoch 236/750
+Train Epoch: 235 [0/2500 (0%)]	KL_Loss: 15.294898  CE_Loss: 24.884119  Diversity_Loss: 1.286556
+
+Epoch 237/750
+Train Epoch: 236 [0/2500 (0%)]	KL_Loss: 11.489145  CE_Loss: 22.970413  Diversity_Loss: 3.237296
+
+Epoch 238/750
+Train Epoch: 237 [0/2500 (0%)]	KL_Loss: 12.349945  CE_Loss: 22.475817  Diversity_Loss: 2.562099
+
+Epoch 239/750
+Train Epoch: 238 [0/2500 (0%)]	KL_Loss: 13.838320  CE_Loss: 24.872673  Diversity_Loss: 2.394729
+
+Epoch 240/750
+Train Epoch: 239 [0/2500 (0%)]	KL_Loss: 12.718755  CE_Loss: 23.989254  Diversity_Loss: 2.235474
+
+Epoch 241/750
+Train Epoch: 240 [0/2500 (0%)]	KL_Loss: 13.159904  CE_Loss: 20.403894  Diversity_Loss: 2.117589
+
+Epoch 242/750
+Train Epoch: 241 [0/2500 (0%)]	KL_Loss: 12.960865  CE_Loss: 24.117775  Diversity_Loss: 1.743055
+
+Epoch 243/750
+Train Epoch: 242 [0/2500 (0%)]	KL_Loss: 12.677523  CE_Loss: 22.893215  Diversity_Loss: 1.731185
+
+Epoch 244/750
+Train Epoch: 243 [0/2500 (0%)]	KL_Loss: 11.130088  CE_Loss: 22.381834  Diversity_Loss: 2.346775
+
+Epoch 245/750
+Train Epoch: 244 [0/2500 (0%)]	KL_Loss: 12.952028  CE_Loss: 24.015474  Diversity_Loss: 1.830825
+
+Epoch 246/750
+Train Epoch: 245 [0/2500 (0%)]	KL_Loss: 14.399328  CE_Loss: 25.013550  Diversity_Loss: 1.997297
+
+Epoch 247/750
+Train Epoch: 246 [0/2500 (0%)]	KL_Loss: 12.422413  CE_Loss: 20.869087  Diversity_Loss: 1.741855
+
+Epoch 248/750
+Train Epoch: 247 [0/2500 (0%)]	KL_Loss: 12.564851  CE_Loss: 22.773426  Diversity_Loss: 1.884394
+
+Epoch 249/750
+Train Epoch: 248 [0/2500 (0%)]	KL_Loss: 13.367271  CE_Loss: 25.897871  Diversity_Loss: 2.131144
+
+Epoch 250/750
+Train Epoch: 249 [0/2500 (0%)]	KL_Loss: 11.347369  CE_Loss: 21.084948  Diversity_Loss: 2.889516
+
+Epoch 251/750
+Train Epoch: 250 [0/2500 (0%)]	KL_Loss: 11.367932  CE_Loss: 23.382452  Diversity_Loss: 2.472065
+
+Test set: Average loss: 6.8511, Top-1 Accuracy: 6299/31419 (20.05%), Top-5 Accuracy: 12684/31419 (40.37%)
+
+
+Epoch 252/750
+Train Epoch: 251 [0/2500 (0%)]	KL_Loss: 13.218863  CE_Loss: 24.735998  Diversity_Loss: 3.106238
+
+Epoch 253/750
+Train Epoch: 252 [0/2500 (0%)]	KL_Loss: 11.643648  CE_Loss: 23.670181  Diversity_Loss: 3.002859
+
+Epoch 254/750
+Train Epoch: 253 [0/2500 (0%)]	KL_Loss: 11.895605  CE_Loss: 23.009863  Diversity_Loss: 3.145085
+
+Epoch 255/750
+Train Epoch: 254 [0/2500 (0%)]	KL_Loss: 12.605056  CE_Loss: 22.470366  Diversity_Loss: 1.611231
+
+Epoch 256/750
+Train Epoch: 255 [0/2500 (0%)]	KL_Loss: 14.564913  CE_Loss: 24.531610  Diversity_Loss: 2.320656
+
+Epoch 257/750
+Train Epoch: 256 [0/2500 (0%)]	KL_Loss: 13.090075  CE_Loss: 23.462431  Diversity_Loss: 2.478642
+
+Epoch 258/750
+Train Epoch: 257 [0/2500 (0%)]	KL_Loss: 15.223948  CE_Loss: 24.294773  Diversity_Loss: 2.176664
+
+Epoch 259/750
+Train Epoch: 258 [0/2500 (0%)]	KL_Loss: 13.814034  CE_Loss: 21.078947  Diversity_Loss: 1.345589
+
+Epoch 260/750
+Train Epoch: 259 [0/2500 (0%)]	KL_Loss: 12.565216  CE_Loss: 22.467344  Diversity_Loss: 2.620512
+
+Epoch 261/750
+Train Epoch: 260 [0/2500 (0%)]	KL_Loss: 18.450600  CE_Loss: 22.837400  Diversity_Loss: 1.926145
+
+Epoch 262/750
+Train Epoch: 261 [0/2500 (0%)]	KL_Loss: 18.507261  CE_Loss: 23.874336  Diversity_Loss: 2.014146
+
+Epoch 263/750
+Train Epoch: 262 [0/2500 (0%)]	KL_Loss: 16.454483  CE_Loss: 23.632803  Diversity_Loss: 2.265760
+
+Epoch 264/750
+Train Epoch: 263 [0/2500 (0%)]	KL_Loss: 15.494270  CE_Loss: 23.018524  Diversity_Loss: 1.519408
+
+Epoch 265/750
+Train Epoch: 264 [0/2500 (0%)]	KL_Loss: 14.680730  CE_Loss: 25.915194  Diversity_Loss: 2.516229
+
+Epoch 266/750
+Train Epoch: 265 [0/2500 (0%)]	KL_Loss: 13.377085  CE_Loss: 24.873629  Diversity_Loss: 3.086185
+
+Epoch 267/750
+Train Epoch: 266 [0/2500 (0%)]	KL_Loss: 13.776561  CE_Loss: 20.028471  Diversity_Loss: 1.389566
+
+Epoch 268/750
+Train Epoch: 267 [0/2500 (0%)]	KL_Loss: 11.826750  CE_Loss: 23.965805  Diversity_Loss: 1.980833
+
+Epoch 269/750
+Train Epoch: 268 [0/2500 (0%)]	KL_Loss: 14.570848  CE_Loss: 23.861576  Diversity_Loss: 2.496924
+
+Epoch 270/750
+Train Epoch: 269 [0/2500 (0%)]	KL_Loss: 13.236154  CE_Loss: 22.999413  Diversity_Loss: 2.274298
+
+Epoch 271/750
+Train Epoch: 270 [0/2500 (0%)]	KL_Loss: 15.028330  CE_Loss: 24.659056  Diversity_Loss: 1.518297
+
+Epoch 272/750
+Train Epoch: 271 [0/2500 (0%)]	KL_Loss: 16.012133  CE_Loss: 24.465469  Diversity_Loss: 2.900380
+
+Epoch 273/750
+Train Epoch: 272 [0/2500 (0%)]	KL_Loss: 13.484016  CE_Loss: 21.399647  Diversity_Loss: 1.338797
+
+Epoch 274/750
+Train Epoch: 273 [0/2500 (0%)]	KL_Loss: 20.672325  CE_Loss: 25.173756  Diversity_Loss: 2.155176
+
+Epoch 275/750
+Train Epoch: 274 [0/2500 (0%)]	KL_Loss: 14.844050  CE_Loss: 23.927940  Diversity_Loss: 1.818638
+
+Epoch 276/750
+Train Epoch: 275 [0/2500 (0%)]	KL_Loss: 12.184452  CE_Loss: 21.632488  Diversity_Loss: 1.916073
+
+Test set: Average loss: 6.2104, Top-1 Accuracy: 6753/31419 (21.49%), Top-5 Accuracy: 12826/31419 (40.82%)
+
+
+Epoch 277/750
+Train Epoch: 276 [0/2500 (0%)]	KL_Loss: 13.693172  CE_Loss: 23.151688  Diversity_Loss: 1.894606
+
+Epoch 278/750
+Train Epoch: 277 [0/2500 (0%)]	KL_Loss: 12.335424  CE_Loss: 23.271410  Diversity_Loss: 2.180040
+
+Epoch 279/750
+Train Epoch: 278 [0/2500 (0%)]	KL_Loss: 11.520018  CE_Loss: 24.658783  Diversity_Loss: 5.436971
+
+Epoch 280/750
+Train Epoch: 279 [0/2500 (0%)]	KL_Loss: 15.920348  CE_Loss: 25.708748  Diversity_Loss: 1.378139
+
+Epoch 281/750
+Train Epoch: 280 [0/2500 (0%)]	KL_Loss: 11.408485  CE_Loss: 22.839195  Diversity_Loss: 3.513675
+
+Epoch 282/750
+Train Epoch: 281 [0/2500 (0%)]	KL_Loss: 18.736475  CE_Loss: 24.045656  Diversity_Loss: 1.495366
+
+Epoch 283/750
+Train Epoch: 282 [0/2500 (0%)]	KL_Loss: 11.931919  CE_Loss: 22.726521  Diversity_Loss: 2.415151
+
+Epoch 284/750
+Train Epoch: 283 [0/2500 (0%)]	KL_Loss: 10.998116  CE_Loss: 20.663338  Diversity_Loss: 2.031131
+
+Epoch 285/750
+Train Epoch: 284 [0/2500 (0%)]	KL_Loss: 12.818153  CE_Loss: 24.159239  Diversity_Loss: 2.909972
+
+Epoch 286/750
+Train Epoch: 285 [0/2500 (0%)]	KL_Loss: 10.547531  CE_Loss: 23.193680  Diversity_Loss: 3.465431
+
+Epoch 287/750
+Train Epoch: 286 [0/2500 (0%)]	KL_Loss: 13.305559  CE_Loss: 22.340122  Diversity_Loss: 1.633410
+
+Epoch 288/750
+Train Epoch: 287 [0/2500 (0%)]	KL_Loss: 19.956177  CE_Loss: 25.298265  Diversity_Loss: 2.413904
+
+Epoch 289/750
+Train Epoch: 288 [0/2500 (0%)]	KL_Loss: 18.560219  CE_Loss: 25.298569  Diversity_Loss: 2.549954
+
+Epoch 290/750
+Train Epoch: 289 [0/2500 (0%)]	KL_Loss: 16.803112  CE_Loss: 24.409426  Diversity_Loss: 1.732098
+
+Epoch 291/750
+Train Epoch: 290 [0/2500 (0%)]	KL_Loss: 12.455942  CE_Loss: 22.353365  Diversity_Loss: 2.221491
+
+Epoch 292/750
+Train Epoch: 291 [0/2500 (0%)]	KL_Loss: 11.503474  CE_Loss: 21.663927  Diversity_Loss: 2.302514
+
+Epoch 293/750
+Train Epoch: 292 [0/2500 (0%)]	KL_Loss: 12.878487  CE_Loss: 24.249037  Diversity_Loss: 2.125063
+
+Epoch 294/750
+Train Epoch: 293 [0/2500 (0%)]	KL_Loss: 10.986181  CE_Loss: 22.204830  Diversity_Loss: 2.424346
+
+Epoch 295/750
+Train Epoch: 294 [0/2500 (0%)]	KL_Loss: 11.556139  CE_Loss: 22.873257  Diversity_Loss: 1.953312
+
+Epoch 296/750
+Train Epoch: 295 [0/2500 (0%)]	KL_Loss: 11.292293  CE_Loss: 23.691074  Diversity_Loss: 2.652236
+
+Epoch 297/750
+Train Epoch: 296 [0/2500 (0%)]	KL_Loss: 13.154645  CE_Loss: 24.277126  Diversity_Loss: 1.192998
+
+Epoch 298/750
+Train Epoch: 297 [0/2500 (0%)]	KL_Loss: 12.078046  CE_Loss: 21.613375  Diversity_Loss: 1.637565
+
+Epoch 299/750
+Train Epoch: 298 [0/2500 (0%)]	KL_Loss: 11.365570  CE_Loss: 21.107098  Diversity_Loss: 1.751771
+
+Epoch 300/750
+Train Epoch: 299 [0/2500 (0%)]	KL_Loss: 12.870885  CE_Loss: 25.910437  Diversity_Loss: 2.353297
+
+Epoch 301/750
+Train Epoch: 300 [0/2500 (0%)]	KL_Loss: 12.580553  CE_Loss: 25.312588  Diversity_Loss: 2.346823
+
+Test set: Average loss: 6.2754, Top-1 Accuracy: 6857/31419 (21.82%), Top-5 Accuracy: 13038/31419 (41.50%)
+
+
+Epoch 302/750
+Train Epoch: 301 [0/2500 (0%)]	KL_Loss: 11.296647  CE_Loss: 22.092468  Diversity_Loss: 2.347994
+
+Epoch 303/750
+Train Epoch: 302 [0/2500 (0%)]	KL_Loss: 11.180016  CE_Loss: 23.638783  Diversity_Loss: 3.299942
+
+Epoch 304/750
+Train Epoch: 303 [0/2500 (0%)]	KL_Loss: 11.263670  CE_Loss: 23.502489  Diversity_Loss: 2.424368
+
+Epoch 305/750
+Train Epoch: 304 [0/2500 (0%)]	KL_Loss: 11.240447  CE_Loss: 21.682474  Diversity_Loss: 1.888751
+
+Epoch 306/750
+Train Epoch: 305 [0/2500 (0%)]	KL_Loss: 13.592395  CE_Loss: 25.698467  Diversity_Loss: 1.434069
+
+Epoch 307/750
+Train Epoch: 306 [0/2500 (0%)]	KL_Loss: 12.249129  CE_Loss: 24.050333  Diversity_Loss: 1.613885
+
+Epoch 308/750
+Train Epoch: 307 [0/2500 (0%)]	KL_Loss: 13.807358  CE_Loss: 24.577505  Diversity_Loss: 2.042330
+
+Epoch 309/750
+Train Epoch: 308 [0/2500 (0%)]	KL_Loss: 13.399647  CE_Loss: 23.304323  Diversity_Loss: 4.191194
+
+Epoch 310/750
+Train Epoch: 309 [0/2500 (0%)]	KL_Loss: 13.911450  CE_Loss: 23.235338  Diversity_Loss: 1.536374
+
+Epoch 311/750
+Train Epoch: 310 [0/2500 (0%)]	KL_Loss: 11.537646  CE_Loss: 22.689598  Diversity_Loss: 1.763643
+
+Epoch 312/750
+Train Epoch: 311 [0/2500 (0%)]	KL_Loss: 11.617330  CE_Loss: 24.018869  Diversity_Loss: 1.571314
+
+Epoch 313/750
+Train Epoch: 312 [0/2500 (0%)]	KL_Loss: 13.976979  CE_Loss: 23.734085  Diversity_Loss: 1.940828
+
+Epoch 314/750
+Train Epoch: 313 [0/2500 (0%)]	KL_Loss: 10.705127  CE_Loss: 19.824188  Diversity_Loss: 1.653325
+
+Epoch 315/750
+Train Epoch: 314 [0/2500 (0%)]	KL_Loss: 12.086588  CE_Loss: 23.829895  Diversity_Loss: 1.793535
+
+Epoch 316/750
+Train Epoch: 315 [0/2500 (0%)]	KL_Loss: 16.131393  CE_Loss: 24.998558  Diversity_Loss: 1.746640
+
+Epoch 317/750
+Train Epoch: 316 [0/2500 (0%)]	KL_Loss: 15.444143  CE_Loss: 26.109156  Diversity_Loss: 1.550173
+
+Epoch 318/750
+Train Epoch: 317 [0/2500 (0%)]	KL_Loss: 13.246484  CE_Loss: 22.782230  Diversity_Loss: 1.870994
+
+Epoch 319/750
+Train Epoch: 318 [0/2500 (0%)]	KL_Loss: 12.286287  CE_Loss: 21.719788  Diversity_Loss: 1.736891
+
+Epoch 320/750
+Train Epoch: 319 [0/2500 (0%)]	KL_Loss: 12.048101  CE_Loss: 22.471100  Diversity_Loss: 1.994687
+
+Epoch 321/750
+Train Epoch: 320 [0/2500 (0%)]	KL_Loss: 10.990002  CE_Loss: 22.245022  Diversity_Loss: 2.889366
+
+Epoch 322/750
+Train Epoch: 321 [0/2500 (0%)]	KL_Loss: 11.313429  CE_Loss: 20.869240  Diversity_Loss: 1.695783
+
+Epoch 323/750
+Train Epoch: 322 [0/2500 (0%)]	KL_Loss: 9.774879  CE_Loss: 21.241709  Diversity_Loss: 2.354490
+
+Epoch 324/750
+Train Epoch: 323 [0/2500 (0%)]	KL_Loss: 10.774029  CE_Loss: 24.025723  Diversity_Loss: 2.830741
+
+Epoch 325/750
+Train Epoch: 324 [0/2500 (0%)]	KL_Loss: 11.392735  CE_Loss: 23.098007  Diversity_Loss: 1.616724
+
+Epoch 326/750
+Train Epoch: 325 [0/2500 (0%)]	KL_Loss: 15.083628  CE_Loss: 21.785362  Diversity_Loss: 2.113425
+
+Test set: Average loss: 6.3505, Top-1 Accuracy: 6853/31419 (21.81%), Top-5 Accuracy: 13011/31419 (41.41%)
+
+
+Epoch 327/750
+Train Epoch: 326 [0/2500 (0%)]	KL_Loss: 10.770646  CE_Loss: 21.770012  Diversity_Loss: 1.608170
+
+Epoch 328/750
+Train Epoch: 327 [0/2500 (0%)]	KL_Loss: 13.228762  CE_Loss: 23.364914  Diversity_Loss: 1.773311
+
+Epoch 329/750
+Train Epoch: 328 [0/2500 (0%)]	KL_Loss: 15.497412  CE_Loss: 26.311712  Diversity_Loss: 1.534534
+
+Epoch 330/750
+Train Epoch: 329 [0/2500 (0%)]	KL_Loss: 12.188743  CE_Loss: 23.540081  Diversity_Loss: 2.231369
+
+Epoch 331/750
+Train Epoch: 330 [0/2500 (0%)]	KL_Loss: 13.884794  CE_Loss: 22.732864  Diversity_Loss: 1.822152
+
+Epoch 332/750
+Train Epoch: 331 [0/2500 (0%)]	KL_Loss: 13.745469  CE_Loss: 21.939657  Diversity_Loss: 1.498659
+
+Epoch 333/750
+Train Epoch: 332 [0/2500 (0%)]	KL_Loss: 13.307394  CE_Loss: 22.010090  Diversity_Loss: 2.661297
+
+Epoch 334/750
+Train Epoch: 333 [0/2500 (0%)]	KL_Loss: 13.595716  CE_Loss: 22.155758  Diversity_Loss: 3.136806
+
+Epoch 335/750
+Train Epoch: 334 [0/2500 (0%)]	KL_Loss: 12.214097  CE_Loss: 23.555134  Diversity_Loss: 2.938454
+
+Epoch 336/750
+Train Epoch: 335 [0/2500 (0%)]	KL_Loss: 12.952938  CE_Loss: 25.780500  Diversity_Loss: 2.320643
+
+Epoch 337/750
+Train Epoch: 336 [0/2500 (0%)]	KL_Loss: 10.639438  CE_Loss: 22.312189  Diversity_Loss: 2.109514
+
+Epoch 338/750
+Train Epoch: 337 [0/2500 (0%)]	KL_Loss: 9.587323  CE_Loss: 21.637756  Diversity_Loss: 3.252829
+
+Epoch 339/750
+Train Epoch: 338 [0/2500 (0%)]	KL_Loss: 12.773952  CE_Loss: 23.842512  Diversity_Loss: 1.431798
+
+Epoch 340/750
+Train Epoch: 339 [0/2500 (0%)]	KL_Loss: 10.621258  CE_Loss: 20.841686  Diversity_Loss: 1.562725
+
+Epoch 341/750
+Train Epoch: 340 [0/2500 (0%)]	KL_Loss: 11.436625  CE_Loss: 22.807549  Diversity_Loss: 2.001527
+
+Epoch 342/750
+Train Epoch: 341 [0/2500 (0%)]	KL_Loss: 12.655935  CE_Loss: 24.453211  Diversity_Loss: 1.935393
+
+Epoch 343/750
+Train Epoch: 342 [0/2500 (0%)]	KL_Loss: 11.447165  CE_Loss: 21.136723  Diversity_Loss: 1.982472
+
+Epoch 344/750
+Train Epoch: 343 [0/2500 (0%)]	KL_Loss: 11.992169  CE_Loss: 22.080776  Diversity_Loss: 1.644934
+
+Epoch 345/750
+Train Epoch: 344 [0/2500 (0%)]	KL_Loss: 17.619787  CE_Loss: 24.582357  Diversity_Loss: 2.041724
+
+Epoch 346/750
+Train Epoch: 345 [0/2500 (0%)]	KL_Loss: 12.711353  CE_Loss: 23.416454  Diversity_Loss: 1.632202
+
+Epoch 347/750
+Train Epoch: 346 [0/2500 (0%)]	KL_Loss: 12.631277  CE_Loss: 23.709398  Diversity_Loss: 1.693304
+
+Epoch 348/750
+Train Epoch: 347 [0/2500 (0%)]	KL_Loss: 10.230141  CE_Loss: 23.584997  Diversity_Loss: 3.615354
+
+Epoch 349/750
+Train Epoch: 348 [0/2500 (0%)]	KL_Loss: 11.126577  CE_Loss: 22.443180  Diversity_Loss: 1.908465
+
+Epoch 350/750
+Train Epoch: 349 [0/2500 (0%)]	KL_Loss: 12.581316  CE_Loss: 26.921427  Diversity_Loss: 2.012574
+
+Epoch 351/750
+Train Epoch: 350 [0/2500 (0%)]	KL_Loss: 10.860880  CE_Loss: 22.081316  Diversity_Loss: 1.836645
+
+Test set: Average loss: 6.3257, Top-1 Accuracy: 7120/31419 (22.66%), Top-5 Accuracy: 13237/31419 (42.13%)
+
+Best ACC.
+
+Epoch 352/750
+Train Epoch: 351 [0/2500 (0%)]	KL_Loss: 12.237061  CE_Loss: 23.031998  Diversity_Loss: 1.341081
+
+Epoch 353/750
+Train Epoch: 352 [0/2500 (0%)]	KL_Loss: 15.703610  CE_Loss: 22.714828  Diversity_Loss: 1.339921
+
+Epoch 354/750
+Train Epoch: 353 [0/2500 (0%)]	KL_Loss: 14.413038  CE_Loss: 24.985273  Diversity_Loss: 2.402155
+
+Epoch 355/750
+Train Epoch: 354 [0/2500 (0%)]	KL_Loss: 9.500128  CE_Loss: 21.513744  Diversity_Loss: 2.741663
+
+Epoch 356/750
+Train Epoch: 355 [0/2500 (0%)]	KL_Loss: 12.198335  CE_Loss: 23.518383  Diversity_Loss: 1.324766
+
+Epoch 357/750
+Train Epoch: 356 [0/2500 (0%)]	KL_Loss: 10.500576  CE_Loss: 22.140888  Diversity_Loss: 2.576544
+
+Epoch 358/750
+Train Epoch: 357 [0/2500 (0%)]	KL_Loss: 10.197004  CE_Loss: 22.840345  Diversity_Loss: 2.085917
+
+Epoch 359/750
+Train Epoch: 358 [0/2500 (0%)]	KL_Loss: 11.487739  CE_Loss: 22.123055  Diversity_Loss: 1.266268
+
+Epoch 360/750
+Train Epoch: 359 [0/2500 (0%)]	KL_Loss: 10.302605  CE_Loss: 23.093397  Diversity_Loss: 1.769100
+
+Epoch 361/750
+Train Epoch: 360 [0/2500 (0%)]	KL_Loss: 9.642414  CE_Loss: 20.300909  Diversity_Loss: 2.000055
+
+Epoch 362/750
+Train Epoch: 361 [0/2500 (0%)]	KL_Loss: 11.902472  CE_Loss: 21.827566  Diversity_Loss: 1.397097
+
+Epoch 363/750
+Train Epoch: 362 [0/2500 (0%)]	KL_Loss: 13.926407  CE_Loss: 23.711294  Diversity_Loss: 1.293634
+
+Epoch 364/750
+Train Epoch: 363 [0/2500 (0%)]	KL_Loss: 12.750069  CE_Loss: 22.729839  Diversity_Loss: 1.323445
+
+Epoch 365/750
+Train Epoch: 364 [0/2500 (0%)]	KL_Loss: 9.924564  CE_Loss: 21.171507  Diversity_Loss: 3.032947
+
+Epoch 366/750
+Train Epoch: 365 [0/2500 (0%)]	KL_Loss: 10.626350  CE_Loss: 22.194744  Diversity_Loss: 2.370385
+
+Epoch 367/750
+Train Epoch: 366 [0/2500 (0%)]	KL_Loss: 11.151074  CE_Loss: 22.642954  Diversity_Loss: 2.067968
+
+Epoch 368/750
+Train Epoch: 367 [0/2500 (0%)]	KL_Loss: 12.235432  CE_Loss: 26.899677  Diversity_Loss: 2.043341
+
+Epoch 369/750
+Train Epoch: 368 [0/2500 (0%)]	KL_Loss: 13.002571  CE_Loss: 22.791765  Diversity_Loss: 1.181917
+
+Epoch 370/750
+Train Epoch: 369 [0/2500 (0%)]	KL_Loss: 12.358747  CE_Loss: 23.341805  Diversity_Loss: 2.080217
+
+Epoch 371/750
+Train Epoch: 370 [0/2500 (0%)]	KL_Loss: 11.609188  CE_Loss: 22.947355  Diversity_Loss: 1.958536
+
+Epoch 372/750
+Train Epoch: 371 [0/2500 (0%)]	KL_Loss: 13.338802  CE_Loss: 23.129457  Diversity_Loss: 1.930911
+
+Epoch 373/750
+Train Epoch: 372 [0/2500 (0%)]	KL_Loss: 11.135874  CE_Loss: 19.053715  Diversity_Loss: 1.851150
+
+Epoch 374/750
+Train Epoch: 373 [0/2500 (0%)]	KL_Loss: 12.041002  CE_Loss: 22.453959  Diversity_Loss: 1.857045
+
+Epoch 375/750
+Train Epoch: 374 [0/2500 (0%)]	KL_Loss: 11.874413  CE_Loss: 21.054035  Diversity_Loss: 1.880085
+
+Epoch 376/750
+Train Epoch: 375 [0/2500 (0%)]	KL_Loss: 11.656893  CE_Loss: 24.075447  Diversity_Loss: 3.161371
+
+Test set: Average loss: 7.1463, Top-1 Accuracy: 6620/31419 (21.07%), Top-5 Accuracy: 13414/31419 (42.69%)
+
+
+Epoch 377/750
+Train Epoch: 376 [0/2500 (0%)]	KL_Loss: 11.368627  CE_Loss: 19.393179  Diversity_Loss: 1.747240
+
+Epoch 378/750
+Train Epoch: 377 [0/2500 (0%)]	KL_Loss: 9.548148  CE_Loss: 20.800329  Diversity_Loss: 2.265534
+
+Epoch 379/750
+Train Epoch: 378 [0/2500 (0%)]	KL_Loss: 10.175495  CE_Loss: 22.252708  Diversity_Loss: 1.318639
+
+Epoch 380/750
+Train Epoch: 379 [0/2500 (0%)]	KL_Loss: 9.977174  CE_Loss: 21.016594  Diversity_Loss: 2.238343
+
+Epoch 381/750
+Train Epoch: 380 [0/2500 (0%)]	KL_Loss: 11.593675  CE_Loss: 21.035175  Diversity_Loss: 1.079804
+
+Epoch 382/750
+Train Epoch: 381 [0/2500 (0%)]	KL_Loss: 10.884468  CE_Loss: 22.018372  Diversity_Loss: 2.078814
+
+Epoch 383/750
+Train Epoch: 382 [0/2500 (0%)]	KL_Loss: 15.332087  CE_Loss: 24.081705  Diversity_Loss: 1.285825
+
+Epoch 384/750
+Train Epoch: 383 [0/2500 (0%)]	KL_Loss: 12.927706  CE_Loss: 22.106873  Diversity_Loss: 1.196250
+
+Epoch 385/750
+Train Epoch: 384 [0/2500 (0%)]	KL_Loss: 10.535595  CE_Loss: 22.132965  Diversity_Loss: 2.836360
+
+Epoch 386/750
+Train Epoch: 385 [0/2500 (0%)]	KL_Loss: 11.940218  CE_Loss: 22.438967  Diversity_Loss: 1.647278
+
+Epoch 387/750
+Train Epoch: 386 [0/2500 (0%)]	KL_Loss: 11.054493  CE_Loss: 20.874456  Diversity_Loss: 1.471085
+
+Epoch 388/750
+Train Epoch: 387 [0/2500 (0%)]	KL_Loss: 10.498796  CE_Loss: 20.939301  Diversity_Loss: 2.500482
+
+Epoch 389/750
+Train Epoch: 388 [0/2500 (0%)]	KL_Loss: 12.891133  CE_Loss: 22.577766  Diversity_Loss: 1.488999
+
+Epoch 390/750
+Train Epoch: 389 [0/2500 (0%)]	KL_Loss: 14.603601  CE_Loss: 24.063864  Diversity_Loss: 1.329409
+
+Epoch 391/750
+Train Epoch: 390 [0/2500 (0%)]	KL_Loss: 12.180922  CE_Loss: 23.244284  Diversity_Loss: 1.621867
+
+Epoch 392/750
+Train Epoch: 391 [0/2500 (0%)]	KL_Loss: 12.905054  CE_Loss: 21.270405  Diversity_Loss: 1.504008
+
+Epoch 393/750
+Train Epoch: 392 [0/2500 (0%)]	KL_Loss: 13.589836  CE_Loss: 26.085295  Diversity_Loss: 1.475704
+
+Epoch 394/750
+Train Epoch: 393 [0/2500 (0%)]	KL_Loss: 12.292795  CE_Loss: 20.539106  Diversity_Loss: 1.773830
+
+Epoch 395/750
+Train Epoch: 394 [0/2500 (0%)]	KL_Loss: 12.262286  CE_Loss: 25.576143  Diversity_Loss: 2.867210
+
+Epoch 396/750
+Train Epoch: 395 [0/2500 (0%)]	KL_Loss: 10.089046  CE_Loss: 24.765934  Diversity_Loss: 3.301375
+
+Epoch 397/750
+Train Epoch: 396 [0/2500 (0%)]	KL_Loss: 12.502952  CE_Loss: 25.519379  Diversity_Loss: 1.039935
+
+Epoch 398/750
+Train Epoch: 397 [0/2500 (0%)]	KL_Loss: 9.650978  CE_Loss: 20.524822  Diversity_Loss: 1.606517
+
+Epoch 399/750
+Train Epoch: 398 [0/2500 (0%)]	KL_Loss: 10.460623  CE_Loss: 21.410805  Diversity_Loss: 1.283064
+
+Epoch 400/750
+Train Epoch: 399 [0/2500 (0%)]	KL_Loss: 11.556743  CE_Loss: 22.530401  Diversity_Loss: 1.836704
+
+Epoch 401/750
+Train Epoch: 400 [0/2500 (0%)]	KL_Loss: 10.563956  CE_Loss: 22.435268  Diversity_Loss: 1.304791
+
+Test set: Average loss: 8.0355, Top-1 Accuracy: 6015/31419 (19.14%), Top-5 Accuracy: 13202/31419 (42.02%)
+
+
+Epoch 402/750
+Train Epoch: 401 [0/2500 (0%)]	KL_Loss: 11.948820  CE_Loss: 24.105669  Diversity_Loss: 1.793824
+
+Epoch 403/750
+Train Epoch: 402 [0/2500 (0%)]	KL_Loss: 12.404096  CE_Loss: 21.104645  Diversity_Loss: 2.239078
+
+Epoch 404/750
+Train Epoch: 403 [0/2500 (0%)]	KL_Loss: 10.538187  CE_Loss: 21.091702  Diversity_Loss: 2.622318
+
+Epoch 405/750
+Train Epoch: 404 [0/2500 (0%)]	KL_Loss: 9.004156  CE_Loss: 20.937429  Diversity_Loss: 3.141934
+
+Epoch 406/750
+Train Epoch: 405 [0/2500 (0%)]	KL_Loss: 9.533371  CE_Loss: 22.122040  Diversity_Loss: 2.595505
+
+Epoch 407/750
+Train Epoch: 406 [0/2500 (0%)]	KL_Loss: 11.087801  CE_Loss: 23.907639  Diversity_Loss: 1.217006
+
+Epoch 408/750
+Train Epoch: 407 [0/2500 (0%)]	KL_Loss: 10.923664  CE_Loss: 21.463354  Diversity_Loss: 1.598273
+
+Epoch 409/750
+Train Epoch: 408 [0/2500 (0%)]	KL_Loss: 10.217826  CE_Loss: 21.492943  Diversity_Loss: 2.022049
+
+Epoch 410/750
+Train Epoch: 409 [0/2500 (0%)]	KL_Loss: 8.997623  CE_Loss: 20.754707  Diversity_Loss: 2.868423
+
+Epoch 411/750
+Train Epoch: 410 [0/2500 (0%)]	KL_Loss: 15.126213  CE_Loss: 22.471308  Diversity_Loss: 1.963937
+
+Epoch 412/750
+Train Epoch: 411 [0/2500 (0%)]	KL_Loss: 22.743046  CE_Loss: 23.448668  Diversity_Loss: 1.657708
+
+Epoch 413/750
+Train Epoch: 412 [0/2500 (0%)]	KL_Loss: 18.254606  CE_Loss: 20.765446  Diversity_Loss: 1.223327
+
+Epoch 414/750
+Train Epoch: 413 [0/2500 (0%)]	KL_Loss: 18.924356  CE_Loss: 25.188305  Diversity_Loss: 1.999708
+
+Epoch 415/750
+Train Epoch: 414 [0/2500 (0%)]	KL_Loss: 15.225325  CE_Loss: 24.663589  Diversity_Loss: 1.504342
+
+Epoch 416/750
+Train Epoch: 415 [0/2500 (0%)]	KL_Loss: 14.045305  CE_Loss: 23.807114  Diversity_Loss: 1.721502
+
+Epoch 417/750
+Train Epoch: 416 [0/2500 (0%)]	KL_Loss: 10.229146  CE_Loss: 20.371588  Diversity_Loss: 1.770942
+
+Epoch 418/750
+Train Epoch: 417 [0/2500 (0%)]	KL_Loss: 13.289240  CE_Loss: 24.463278  Diversity_Loss: 2.671314
+
+Epoch 419/750
+Train Epoch: 418 [0/2500 (0%)]	KL_Loss: 12.427736  CE_Loss: 25.309523  Diversity_Loss: 3.535017
+
+Epoch 420/750
+Train Epoch: 419 [0/2500 (0%)]	KL_Loss: 10.160361  CE_Loss: 23.094360  Diversity_Loss: 1.770530
+
+Epoch 421/750
+Train Epoch: 420 [0/2500 (0%)]	KL_Loss: 12.349204  CE_Loss: 22.492270  Diversity_Loss: 1.238317
+
+Epoch 422/750
+Train Epoch: 421 [0/2500 (0%)]	KL_Loss: 10.742749  CE_Loss: 21.900467  Diversity_Loss: 1.588835
+
+Epoch 423/750
+Train Epoch: 422 [0/2500 (0%)]	KL_Loss: 9.706385  CE_Loss: 23.147934  Diversity_Loss: 2.448563
+
+Epoch 424/750
+Train Epoch: 423 [0/2500 (0%)]	KL_Loss: 11.986598  CE_Loss: 22.767395  Diversity_Loss: 1.525069
+
+Epoch 425/750
+Train Epoch: 424 [0/2500 (0%)]	KL_Loss: 11.821660  CE_Loss: 23.416040  Diversity_Loss: 1.302009
+
+Epoch 426/750
+Train Epoch: 425 [0/2500 (0%)]	KL_Loss: 9.305286  CE_Loss: 21.669041  Diversity_Loss: 2.488464
+
+Test set: Average loss: 7.5033, Top-1 Accuracy: 6529/31419 (20.78%), Top-5 Accuracy: 13320/31419 (42.39%)
+
+
+Epoch 427/750
+Train Epoch: 426 [0/2500 (0%)]	KL_Loss: 10.724060  CE_Loss: 22.998171  Diversity_Loss: 2.408207
+
+Epoch 428/750
+Train Epoch: 427 [0/2500 (0%)]	KL_Loss: 10.810085  CE_Loss: 21.819864  Diversity_Loss: 2.068532
+
+Epoch 429/750
+Train Epoch: 428 [0/2500 (0%)]	KL_Loss: 9.266830  CE_Loss: 21.877274  Diversity_Loss: 1.799190
+
+Epoch 430/750
+Train Epoch: 429 [0/2500 (0%)]	KL_Loss: 9.806993  CE_Loss: 22.124254  Diversity_Loss: 1.870659
+
+Epoch 431/750
+Train Epoch: 430 [0/2500 (0%)]	KL_Loss: 10.126728  CE_Loss: 21.792225  Diversity_Loss: 1.665799
+
+Epoch 432/750
+Train Epoch: 431 [0/2500 (0%)]	KL_Loss: 9.183373  CE_Loss: 21.768675  Diversity_Loss: 1.735185
+
+Epoch 433/750
+Train Epoch: 432 [0/2500 (0%)]	KL_Loss: 10.372245  CE_Loss: 24.042536  Diversity_Loss: 1.744240
+
+Epoch 434/750
+Train Epoch: 433 [0/2500 (0%)]	KL_Loss: 11.122272  CE_Loss: 22.140335  Diversity_Loss: 1.029146
+
+Epoch 435/750
+Train Epoch: 434 [0/2500 (0%)]	KL_Loss: 10.447692  CE_Loss: 22.262192  Diversity_Loss: 1.622666
+
+Epoch 436/750
+Train Epoch: 435 [0/2500 (0%)]	KL_Loss: 10.628603  CE_Loss: 23.742096  Diversity_Loss: 1.596359
+
+Epoch 437/750
+Train Epoch: 436 [0/2500 (0%)]	KL_Loss: 8.330070  CE_Loss: 20.650867  Diversity_Loss: 2.586562
+
+Epoch 438/750
+Train Epoch: 437 [0/2500 (0%)]	KL_Loss: 9.282259  CE_Loss: 21.460264  Diversity_Loss: 1.576693
+
+Epoch 439/750
+Train Epoch: 438 [0/2500 (0%)]	KL_Loss: 9.628214  CE_Loss: 22.013178  Diversity_Loss: 4.011297
+
+Epoch 440/750
+Train Epoch: 439 [0/2500 (0%)]	KL_Loss: 8.987244  CE_Loss: 22.437315  Diversity_Loss: 2.524936
+
+Epoch 441/750
+Train Epoch: 440 [0/2500 (0%)]	KL_Loss: 8.706268  CE_Loss: 22.695091  Diversity_Loss: 2.446818
+
+Epoch 442/750
+Train Epoch: 441 [0/2500 (0%)]	KL_Loss: 10.091991  CE_Loss: 23.468821  Diversity_Loss: 3.163152
+
+Epoch 443/750
+Train Epoch: 442 [0/2500 (0%)]	KL_Loss: 10.502428  CE_Loss: 22.583460  Diversity_Loss: 1.420338
+
+Epoch 444/750
+Train Epoch: 443 [0/2500 (0%)]	KL_Loss: 9.363829  CE_Loss: 21.217026  Diversity_Loss: 3.891057
+
+Epoch 445/750
+Train Epoch: 444 [0/2500 (0%)]	KL_Loss: 11.089728  CE_Loss: 24.197279  Diversity_Loss: 1.138938
+
+Epoch 446/750
+Train Epoch: 445 [0/2500 (0%)]	KL_Loss: 11.191431  CE_Loss: 23.725471  Diversity_Loss: 1.779796
+
+Epoch 447/750
+Train Epoch: 446 [0/2500 (0%)]	KL_Loss: 9.994196  CE_Loss: 22.605740  Diversity_Loss: 1.805690
+
+Epoch 448/750
+Train Epoch: 447 [0/2500 (0%)]	KL_Loss: 8.997414  CE_Loss: 20.245581  Diversity_Loss: 1.706842
+
+Epoch 449/750
+Train Epoch: 448 [0/2500 (0%)]	KL_Loss: 9.580282  CE_Loss: 22.265413  Diversity_Loss: 1.771685
+
+Epoch 450/750
+Train Epoch: 449 [0/2500 (0%)]	KL_Loss: 9.985002  CE_Loss: 22.472736  Diversity_Loss: 2.673644
+
+Epoch 451/750
+Train Epoch: 450 [0/2500 (0%)]	KL_Loss: 10.688527  CE_Loss: 22.942497  Diversity_Loss: 1.847625
+
+Test set: Average loss: 7.4181, Top-1 Accuracy: 6809/31419 (21.67%), Top-5 Accuracy: 13425/31419 (42.73%)
+
+
+Epoch 452/750
+Train Epoch: 451 [0/2500 (0%)]	KL_Loss: 10.008095  CE_Loss: 21.981602  Diversity_Loss: 2.101218
+
+Epoch 453/750
+Train Epoch: 452 [0/2500 (0%)]	KL_Loss: 12.456913  CE_Loss: 21.894268  Diversity_Loss: 1.326861
+
+Epoch 454/750
+Train Epoch: 453 [0/2500 (0%)]	KL_Loss: 9.141890  CE_Loss: 23.040400  Diversity_Loss: 2.487237
+
+Epoch 455/750
+Train Epoch: 454 [0/2500 (0%)]	KL_Loss: 8.931631  CE_Loss: 20.470261  Diversity_Loss: 1.842458
+
+Epoch 456/750
+Train Epoch: 455 [0/2500 (0%)]	KL_Loss: 11.246422  CE_Loss: 24.607227  Diversity_Loss: 1.247092
+
+Epoch 457/750
+Train Epoch: 456 [0/2500 (0%)]	KL_Loss: 9.799428  CE_Loss: 20.819771  Diversity_Loss: 1.355200
+
+Epoch 458/750
+Train Epoch: 457 [0/2500 (0%)]	KL_Loss: 12.641337  CE_Loss: 22.177498  Diversity_Loss: 1.704821
+
+Epoch 459/750
+Train Epoch: 458 [0/2500 (0%)]	KL_Loss: 11.085943  CE_Loss: 24.378155  Diversity_Loss: 1.500809
+
+Epoch 460/750
+Train Epoch: 459 [0/2500 (0%)]	KL_Loss: 18.507912  CE_Loss: 25.803560  Diversity_Loss: 1.163759
+
+Epoch 461/750
+Train Epoch: 460 [0/2500 (0%)]	KL_Loss: 10.286894  CE_Loss: 20.235966  Diversity_Loss: 1.335049
+
+Epoch 462/750
+Train Epoch: 461 [0/2500 (0%)]	KL_Loss: 10.527605  CE_Loss: 23.102760  Diversity_Loss: 1.750827
+
+Epoch 463/750
+Train Epoch: 462 [0/2500 (0%)]	KL_Loss: 12.610689  CE_Loss: 25.153538  Diversity_Loss: 1.486660
+
+Epoch 464/750
+Train Epoch: 463 [0/2500 (0%)]	KL_Loss: 11.873524  CE_Loss: 22.290714  Diversity_Loss: 1.362946
+
+Epoch 465/750
+Train Epoch: 464 [0/2500 (0%)]	KL_Loss: 9.755669  CE_Loss: 22.871553  Diversity_Loss: 2.173176
+
+Epoch 466/750
+Train Epoch: 465 [0/2500 (0%)]	KL_Loss: 12.722540  CE_Loss: 24.165340  Diversity_Loss: 1.073653
+
+Epoch 467/750
+Train Epoch: 466 [0/2500 (0%)]	KL_Loss: 9.365543  CE_Loss: 20.289320  Diversity_Loss: 2.298051
+
+Epoch 468/750
+Train Epoch: 467 [0/2500 (0%)]	KL_Loss: 9.340795  CE_Loss: 20.456993  Diversity_Loss: 1.504636
+
+Epoch 469/750
+Train Epoch: 468 [0/2500 (0%)]	KL_Loss: 11.231792  CE_Loss: 22.420204  Diversity_Loss: 1.146858
+
+Epoch 470/750
+Train Epoch: 469 [0/2500 (0%)]	KL_Loss: 8.360424  CE_Loss: 20.101208  Diversity_Loss: 2.674039
+
+Epoch 471/750
+Train Epoch: 470 [0/2500 (0%)]	KL_Loss: 10.558990  CE_Loss: 23.584425  Diversity_Loss: 1.804104
+
+Epoch 472/750
+Train Epoch: 471 [0/2500 (0%)]	KL_Loss: 9.975758  CE_Loss: 24.451477  Diversity_Loss: 2.164470
+
+Epoch 473/750
+Train Epoch: 472 [0/2500 (0%)]	KL_Loss: 9.799375  CE_Loss: 21.479660  Diversity_Loss: 1.460475
+
+Epoch 474/750
+Train Epoch: 473 [0/2500 (0%)]	KL_Loss: 10.615000  CE_Loss: 20.987606  Diversity_Loss: 1.890679
+
+Epoch 475/750
+Train Epoch: 474 [0/2500 (0%)]	KL_Loss: 10.482823  CE_Loss: 23.170341  Diversity_Loss: 1.659853
+
+Epoch 476/750
+Train Epoch: 475 [0/2500 (0%)]	KL_Loss: 11.169123  CE_Loss: 21.244680  Diversity_Loss: 1.252166
+
+Test set: Average loss: 7.4649, Top-1 Accuracy: 6660/31419 (21.20%), Top-5 Accuracy: 13398/31419 (42.64%)
+
+
+Epoch 477/750
+Train Epoch: 476 [0/2500 (0%)]	KL_Loss: 11.521318  CE_Loss: 25.084572  Diversity_Loss: 1.222782
+
+Epoch 478/750
+Train Epoch: 477 [0/2500 (0%)]	KL_Loss: 10.134207  CE_Loss: 21.918417  Diversity_Loss: 1.660837
+
+Epoch 479/750
+Train Epoch: 478 [0/2500 (0%)]	KL_Loss: 10.654210  CE_Loss: 20.380314  Diversity_Loss: 2.541325
+
+Epoch 480/750
+Train Epoch: 479 [0/2500 (0%)]	KL_Loss: 11.589965  CE_Loss: 24.397791  Diversity_Loss: 1.410085
+
+Epoch 481/750
+Train Epoch: 480 [0/2500 (0%)]	KL_Loss: 10.487501  CE_Loss: 23.116905  Diversity_Loss: 1.318341
+
+Epoch 482/750
+Train Epoch: 481 [0/2500 (0%)]	KL_Loss: 11.053170  CE_Loss: 22.512421  Diversity_Loss: 2.692955
+
+Epoch 483/750
+Train Epoch: 482 [0/2500 (0%)]	KL_Loss: 10.779566  CE_Loss: 22.859076  Diversity_Loss: 1.093904
+
+Epoch 484/750
+Train Epoch: 483 [0/2500 (0%)]	KL_Loss: 10.135099  CE_Loss: 23.067886  Diversity_Loss: 1.760434
+
+Epoch 485/750
+Train Epoch: 484 [0/2500 (0%)]	KL_Loss: 9.577372  CE_Loss: 21.720999  Diversity_Loss: 1.307024
+
+Epoch 486/750
+Train Epoch: 485 [0/2500 (0%)]	KL_Loss: 9.402782  CE_Loss: 22.182615  Diversity_Loss: 1.652678
+
+Epoch 487/750
+Train Epoch: 486 [0/2500 (0%)]	KL_Loss: 9.983690  CE_Loss: 24.189291  Diversity_Loss: 2.085088
+
+Epoch 488/750
+Train Epoch: 487 [0/2500 (0%)]	KL_Loss: 12.456513  CE_Loss: 23.656042  Diversity_Loss: 1.906819
+
+Epoch 489/750
+Train Epoch: 488 [0/2500 (0%)]	KL_Loss: 10.459424  CE_Loss: 23.529814  Diversity_Loss: 1.494679
+
+Epoch 490/750
+Train Epoch: 489 [0/2500 (0%)]	KL_Loss: 8.296753  CE_Loss: 19.933064  Diversity_Loss: 1.743820
+
+Epoch 491/750
+Train Epoch: 490 [0/2500 (0%)]	KL_Loss: 9.618524  CE_Loss: 21.235680  Diversity_Loss: 1.642353
+
+Epoch 492/750
+Train Epoch: 491 [0/2500 (0%)]	KL_Loss: 9.091378  CE_Loss: 22.612709  Diversity_Loss: 2.152527
+
+Epoch 493/750
+Train Epoch: 492 [0/2500 (0%)]	KL_Loss: 10.585069  CE_Loss: 24.692781  Diversity_Loss: 2.466091
+
+Epoch 494/750
+Train Epoch: 493 [0/2500 (0%)]	KL_Loss: 9.258443  CE_Loss: 21.861794  Diversity_Loss: 2.495219
+
+Epoch 495/750
+Train Epoch: 494 [0/2500 (0%)]	KL_Loss: 9.956882  CE_Loss: 22.156071  Diversity_Loss: 1.185624
+
+Epoch 496/750
+Train Epoch: 495 [0/2500 (0%)]	KL_Loss: 10.235620  CE_Loss: 21.587494  Diversity_Loss: 1.743137
+
+Epoch 497/750
+Train Epoch: 496 [0/2500 (0%)]	KL_Loss: 10.285656  CE_Loss: 22.668158  Diversity_Loss: 1.903458
+
+Epoch 498/750
+Train Epoch: 497 [0/2500 (0%)]	KL_Loss: 9.336004  CE_Loss: 20.125126  Diversity_Loss: 1.752639
+
+Epoch 499/750
+Train Epoch: 498 [0/2500 (0%)]	KL_Loss: 8.704548  CE_Loss: 20.374458  Diversity_Loss: 2.011135
+
+Epoch 500/750
+Train Epoch: 499 [0/2500 (0%)]	KL_Loss: 9.585927  CE_Loss: 23.164024  Diversity_Loss: 2.076906
+
+Epoch 501/750
+Train Epoch: 500 [0/2500 (0%)]	KL_Loss: 10.159771  CE_Loss: 24.536936  Diversity_Loss: 1.842622
+
+Test set: Average loss: 7.2791, Top-1 Accuracy: 6558/31419 (20.87%), Top-5 Accuracy: 13351/31419 (42.49%)
+
+
+Epoch 502/750
+Train Epoch: 501 [0/2500 (0%)]	KL_Loss: 10.439758  CE_Loss: 23.312054  Diversity_Loss: 1.741544
+
+Epoch 503/750
+Train Epoch: 502 [0/2500 (0%)]	KL_Loss: 11.112582  CE_Loss: 22.428297  Diversity_Loss: 1.556833
+
+Epoch 504/750
+Train Epoch: 503 [0/2500 (0%)]	KL_Loss: 8.633373  CE_Loss: 21.697435  Diversity_Loss: 1.886031
+
+Epoch 505/750
+Train Epoch: 504 [0/2500 (0%)]	KL_Loss: 10.968935  CE_Loss: 21.504448  Diversity_Loss: 1.497192
+
+Epoch 506/750
+Train Epoch: 505 [0/2500 (0%)]	KL_Loss: 9.636583  CE_Loss: 21.871817  Diversity_Loss: 3.629356
+
+Epoch 507/750
+Train Epoch: 506 [0/2500 (0%)]	KL_Loss: 10.251207  CE_Loss: 22.805391  Diversity_Loss: 1.361930
+
+Epoch 508/750
+Train Epoch: 507 [0/2500 (0%)]	KL_Loss: 10.544641  CE_Loss: 21.380417  Diversity_Loss: 1.611984
+
+Epoch 509/750
+Train Epoch: 508 [0/2500 (0%)]	KL_Loss: 8.004928  CE_Loss: 19.822420  Diversity_Loss: 2.024878
+
+Epoch 510/750
+Train Epoch: 509 [0/2500 (0%)]	KL_Loss: 9.998301  CE_Loss: 19.901978  Diversity_Loss: 1.896866
+
+Epoch 511/750
+Train Epoch: 510 [0/2500 (0%)]	KL_Loss: 11.262415  CE_Loss: 22.861134  Diversity_Loss: 1.268131
+
+Epoch 512/750
+Train Epoch: 511 [0/2500 (0%)]	KL_Loss: 10.590870  CE_Loss: 23.487242  Diversity_Loss: 1.287608
+
+Epoch 513/750
+Train Epoch: 512 [0/2500 (0%)]	KL_Loss: 9.392968  CE_Loss: 20.644323  Diversity_Loss: 1.265700
+
+Epoch 514/750
+Train Epoch: 513 [0/2500 (0%)]	KL_Loss: 10.216118  CE_Loss: 21.084604  Diversity_Loss: 1.049664
+
+Epoch 515/750
+Train Epoch: 514 [0/2500 (0%)]	KL_Loss: 8.511780  CE_Loss: 19.995689  Diversity_Loss: 2.138077
+
+Epoch 516/750
+Train Epoch: 515 [0/2500 (0%)]	KL_Loss: 9.479061  CE_Loss: 20.324987  Diversity_Loss: 1.237850
+
+Epoch 517/750
+Train Epoch: 516 [0/2500 (0%)]	KL_Loss: 11.051100  CE_Loss: 25.481800  Diversity_Loss: 1.630500
+
+Epoch 518/750
+Train Epoch: 517 [0/2500 (0%)]	KL_Loss: 9.596819  CE_Loss: 23.471710  Diversity_Loss: 1.395221
+
+Epoch 519/750
+Train Epoch: 518 [0/2500 (0%)]	KL_Loss: 10.782366  CE_Loss: 26.776941  Diversity_Loss: 1.481162
+
+Epoch 520/750
+Train Epoch: 519 [0/2500 (0%)]	KL_Loss: 11.164225  CE_Loss: 24.466032  Diversity_Loss: 2.121849
+
+Epoch 521/750
+Train Epoch: 520 [0/2500 (0%)]	KL_Loss: 12.502781  CE_Loss: 23.336216  Diversity_Loss: 1.413300
+
+Epoch 522/750
+Train Epoch: 521 [0/2500 (0%)]	KL_Loss: 10.910369  CE_Loss: 23.838699  Diversity_Loss: 3.788225
+
+Epoch 523/750
+Train Epoch: 522 [0/2500 (0%)]	KL_Loss: 10.752359  CE_Loss: 21.864620  Diversity_Loss: 1.531736
+
+Epoch 524/750
+Train Epoch: 523 [0/2500 (0%)]	KL_Loss: 12.560219  CE_Loss: 24.727789  Diversity_Loss: 0.980162
+
+Epoch 525/750
+Train Epoch: 524 [0/2500 (0%)]	KL_Loss: 10.678541  CE_Loss: 22.373718  Diversity_Loss: 2.041174
+
+Epoch 526/750
+Train Epoch: 525 [0/2500 (0%)]	KL_Loss: 9.352238  CE_Loss: 22.223442  Diversity_Loss: 2.886193
+
+Test set: Average loss: 8.1635, Top-1 Accuracy: 6463/31419 (20.57%), Top-5 Accuracy: 13523/31419 (43.04%)
+
+
+Epoch 527/750
+Train Epoch: 526 [0/2500 (0%)]	KL_Loss: 9.413877  CE_Loss: 20.455971  Diversity_Loss: 1.564357
+
+Epoch 528/750
+Train Epoch: 527 [0/2500 (0%)]	KL_Loss: 10.973803  CE_Loss: 22.659508  Diversity_Loss: 1.350709
+
+Epoch 529/750
+Train Epoch: 528 [0/2500 (0%)]	KL_Loss: 10.385203  CE_Loss: 21.767704  Diversity_Loss: 1.171935
+
+Epoch 530/750
+Train Epoch: 529 [0/2500 (0%)]	KL_Loss: 12.462487  CE_Loss: 26.083574  Diversity_Loss: 1.424788
+
+Epoch 531/750
+Train Epoch: 530 [0/2500 (0%)]	KL_Loss: 8.869143  CE_Loss: 20.775328  Diversity_Loss: 1.468125
+
+Epoch 532/750
+Train Epoch: 531 [0/2500 (0%)]	KL_Loss: 8.969509  CE_Loss: 22.196564  Diversity_Loss: 1.466903
+
+Epoch 533/750
+Train Epoch: 532 [0/2500 (0%)]	KL_Loss: 10.263433  CE_Loss: 21.524969  Diversity_Loss: 2.165160
+
+Epoch 534/750
+Train Epoch: 533 [0/2500 (0%)]	KL_Loss: 9.778368  CE_Loss: 21.048464  Diversity_Loss: 1.187259
+
+Epoch 535/750
+Train Epoch: 534 [0/2500 (0%)]	KL_Loss: 9.558824  CE_Loss: 21.694492  Diversity_Loss: 1.358180
+
+Epoch 536/750
+Train Epoch: 535 [0/2500 (0%)]	KL_Loss: 8.692898  CE_Loss: 20.583046  Diversity_Loss: 1.968087
+
+Epoch 537/750
+Train Epoch: 536 [0/2500 (0%)]	KL_Loss: 10.190523  CE_Loss: 21.610382  Diversity_Loss: 1.860014
+
+Epoch 538/750
+Train Epoch: 537 [0/2500 (0%)]	KL_Loss: 9.398644  CE_Loss: 24.023279  Diversity_Loss: 1.723716
+
+Epoch 539/750
+Train Epoch: 538 [0/2500 (0%)]	KL_Loss: 9.611748  CE_Loss: 23.030266  Diversity_Loss: 2.710247
+
+Epoch 540/750
+Train Epoch: 539 [0/2500 (0%)]	KL_Loss: 8.561697  CE_Loss: 21.639204  Diversity_Loss: 1.820155
+
+Epoch 541/750
+Train Epoch: 540 [0/2500 (0%)]	KL_Loss: 8.679674  CE_Loss: 22.338575  Diversity_Loss: 11.905808
+
+Epoch 542/750
+Train Epoch: 541 [0/2500 (0%)]	KL_Loss: 19.330795  CE_Loss: 22.757004  Diversity_Loss: 1.274569
+
+Epoch 543/750
+Train Epoch: 542 [0/2500 (0%)]	KL_Loss: 11.318501  CE_Loss: 21.200584  Diversity_Loss: 1.525459
+
+Epoch 544/750
+Train Epoch: 543 [0/2500 (0%)]	KL_Loss: 11.645424  CE_Loss: 23.673862  Diversity_Loss: 1.582643
+
+Epoch 545/750
+Train Epoch: 544 [0/2500 (0%)]	KL_Loss: 11.089481  CE_Loss: 22.920393  Diversity_Loss: 2.468570
+
+Epoch 546/750
+Train Epoch: 545 [0/2500 (0%)]	KL_Loss: 9.572602  CE_Loss: 23.276363  Diversity_Loss: 1.739483
+
+Epoch 547/750
+Train Epoch: 546 [0/2500 (0%)]	KL_Loss: 10.990943  CE_Loss: 23.320345  Diversity_Loss: 2.681054
+
+Epoch 548/750
+Train Epoch: 547 [0/2500 (0%)]	KL_Loss: 10.946077  CE_Loss: 22.651621  Diversity_Loss: 1.124079
+
+Epoch 549/750
+Train Epoch: 548 [0/2500 (0%)]	KL_Loss: 15.131442  CE_Loss: 22.515842  Diversity_Loss: 1.502501
+
+Epoch 550/750
+Train Epoch: 549 [0/2500 (0%)]	KL_Loss: 8.451317  CE_Loss: 20.201464  Diversity_Loss: 1.972253
+
+Epoch 551/750
+Train Epoch: 550 [0/2500 (0%)]	KL_Loss: 8.394369  CE_Loss: 22.248493  Diversity_Loss: 3.031358
+
+Test set: Average loss: 8.7696, Top-1 Accuracy: 6053/31419 (19.27%), Top-5 Accuracy: 13454/31419 (42.82%)
+
+
+Epoch 552/750
+Train Epoch: 551 [0/2500 (0%)]	KL_Loss: 9.412365  CE_Loss: 20.960098  Diversity_Loss: 1.550679
+
+Epoch 553/750
+Train Epoch: 552 [0/2500 (0%)]	KL_Loss: 8.543070  CE_Loss: 21.508444  Diversity_Loss: 2.143707
+
+Epoch 554/750
+Train Epoch: 553 [0/2500 (0%)]	KL_Loss: 9.215873  CE_Loss: 20.259968  Diversity_Loss: 1.268788
+
+Epoch 555/750
+Train Epoch: 554 [0/2500 (0%)]	KL_Loss: 11.879612  CE_Loss: 24.034342  Diversity_Loss: 1.360070
+
+Epoch 556/750
+Train Epoch: 555 [0/2500 (0%)]	KL_Loss: 7.669052  CE_Loss: 19.864140  Diversity_Loss: 2.174431
+
+Epoch 557/750
+Train Epoch: 556 [0/2500 (0%)]	KL_Loss: 9.020573  CE_Loss: 20.756018  Diversity_Loss: 1.525822
+
+Epoch 558/750
+Train Epoch: 557 [0/2500 (0%)]	KL_Loss: 8.986134  CE_Loss: 20.229736  Diversity_Loss: 1.512565
+
+Epoch 559/750
+Train Epoch: 558 [0/2500 (0%)]	KL_Loss: 10.774174  CE_Loss: 23.567213  Diversity_Loss: 1.279046
+
+Epoch 560/750
+Train Epoch: 559 [0/2500 (0%)]	KL_Loss: 9.391933  CE_Loss: 21.882235  Diversity_Loss: 1.707613
+
+Epoch 561/750
+Train Epoch: 560 [0/2500 (0%)]	KL_Loss: 8.611918  CE_Loss: 24.582487  Diversity_Loss: 1.665611
+
+Epoch 562/750
+Train Epoch: 561 [0/2500 (0%)]	KL_Loss: 9.201571  CE_Loss: 21.464788  Diversity_Loss: 1.699583
+
+Epoch 563/750
+Train Epoch: 562 [0/2500 (0%)]	KL_Loss: 10.616667  CE_Loss: 23.384741  Diversity_Loss: 1.177505
+
+Epoch 564/750
+Train Epoch: 563 [0/2500 (0%)]	KL_Loss: 11.045630  CE_Loss: 21.914421  Diversity_Loss: 0.983523
+
+Epoch 565/750
+Train Epoch: 564 [0/2500 (0%)]	KL_Loss: 10.530569  CE_Loss: 22.209782  Diversity_Loss: 1.261689
+
+Epoch 566/750
+Train Epoch: 565 [0/2500 (0%)]	KL_Loss: 11.177208  CE_Loss: 25.302740  Diversity_Loss: 1.719018
+
+Epoch 567/750
+Train Epoch: 566 [0/2500 (0%)]	KL_Loss: 17.163347  CE_Loss: 25.115320  Diversity_Loss: 1.654747
+
+Epoch 568/750
+Train Epoch: 567 [0/2500 (0%)]	KL_Loss: 9.523807  CE_Loss: 22.606491  Diversity_Loss: 1.292689
+
+Epoch 569/750
+Train Epoch: 568 [0/2500 (0%)]	KL_Loss: 6.976504  CE_Loss: 20.471458  Diversity_Loss: 2.919713
+
+Epoch 570/750
+Train Epoch: 569 [0/2500 (0%)]	KL_Loss: 10.951794  CE_Loss: 24.865572  Diversity_Loss: 1.313486
+
+Epoch 571/750
+Train Epoch: 570 [0/2500 (0%)]	KL_Loss: 11.130039  CE_Loss: 22.715389  Diversity_Loss: 0.981715
+
+Epoch 572/750
+Train Epoch: 571 [0/2500 (0%)]	KL_Loss: 11.095016  CE_Loss: 22.756901  Diversity_Loss: 1.541631
+
+Epoch 573/750
+Train Epoch: 572 [0/2500 (0%)]	KL_Loss: 9.705759  CE_Loss: 22.281176  Diversity_Loss: 1.224843
+
+Epoch 574/750
+Train Epoch: 573 [0/2500 (0%)]	KL_Loss: 8.974705  CE_Loss: 22.721420  Diversity_Loss: 2.260900
+
+Epoch 575/750
+Train Epoch: 574 [0/2500 (0%)]	KL_Loss: 9.137453  CE_Loss: 21.403831  Diversity_Loss: 2.126508
+
+Epoch 576/750
+Train Epoch: 575 [0/2500 (0%)]	KL_Loss: 13.227322  CE_Loss: 22.966970  Diversity_Loss: 1.789762
+
+Test set: Average loss: 8.3008, Top-1 Accuracy: 6420/31419 (20.43%), Top-5 Accuracy: 13487/31419 (42.93%)
+
+
+Epoch 577/750
+Train Epoch: 576 [0/2500 (0%)]	KL_Loss: 9.900296  CE_Loss: 21.773510  Diversity_Loss: 2.488841
+
+Epoch 578/750
+Train Epoch: 577 [0/2500 (0%)]	KL_Loss: 11.110855  CE_Loss: 22.359871  Diversity_Loss: 1.274917
+
+Epoch 579/750
+Train Epoch: 578 [0/2500 (0%)]	KL_Loss: 10.587252  CE_Loss: 21.347416  Diversity_Loss: 1.420564
+
+Epoch 580/750
+Train Epoch: 579 [0/2500 (0%)]	KL_Loss: 10.003202  CE_Loss: 21.560558  Diversity_Loss: 2.063311
+
+Epoch 581/750
+Train Epoch: 580 [0/2500 (0%)]	KL_Loss: 8.898499  CE_Loss: 20.740160  Diversity_Loss: 2.414059
+
+Epoch 582/750
+Train Epoch: 581 [0/2500 (0%)]	KL_Loss: 11.063746  CE_Loss: 24.109957  Diversity_Loss: 1.164264
+
+Epoch 583/750
+Train Epoch: 582 [0/2500 (0%)]	KL_Loss: 9.346142  CE_Loss: 22.106155  Diversity_Loss: 1.855839
+
+Epoch 584/750
+Train Epoch: 583 [0/2500 (0%)]	KL_Loss: 9.027803  CE_Loss: 21.825724  Diversity_Loss: 2.399051
+
+Epoch 585/750
+Train Epoch: 584 [0/2500 (0%)]	KL_Loss: 9.299522  CE_Loss: 21.179522  Diversity_Loss: 1.451058
+
+Epoch 586/750
+Train Epoch: 585 [0/2500 (0%)]	KL_Loss: 10.068949  CE_Loss: 22.003960  Diversity_Loss: 1.762424
+
+Epoch 587/750
+Train Epoch: 586 [0/2500 (0%)]	KL_Loss: 9.198083  CE_Loss: 25.129494  Diversity_Loss: 1.328260
+
+Epoch 588/750
+Train Epoch: 587 [0/2500 (0%)]	KL_Loss: 9.735600  CE_Loss: 21.226954  Diversity_Loss: 1.476654
+
+Epoch 589/750
+Train Epoch: 588 [0/2500 (0%)]	KL_Loss: 10.912464  CE_Loss: 26.826967  Diversity_Loss: 1.447643
+
+Epoch 590/750
+Train Epoch: 589 [0/2500 (0%)]	KL_Loss: 10.365232  CE_Loss: 21.810402  Diversity_Loss: 1.506932
+
+Epoch 591/750
+Train Epoch: 590 [0/2500 (0%)]	KL_Loss: 9.832975  CE_Loss: 22.675022  Diversity_Loss: 1.568308
+
+Epoch 592/750
+Train Epoch: 591 [0/2500 (0%)]	KL_Loss: 9.122265  CE_Loss: 22.864788  Diversity_Loss: 1.433873
+
+Epoch 593/750
+Train Epoch: 592 [0/2500 (0%)]	KL_Loss: 9.654175  CE_Loss: 20.659359  Diversity_Loss: 1.967734
+
+Epoch 594/750
+Train Epoch: 593 [0/2500 (0%)]	KL_Loss: 9.336941  CE_Loss: 21.849789  Diversity_Loss: 1.815282
+
+Epoch 595/750
+Train Epoch: 594 [0/2500 (0%)]	KL_Loss: 9.143696  CE_Loss: 20.976097  Diversity_Loss: 1.770655
+
+Epoch 596/750
+Train Epoch: 595 [0/2500 (0%)]	KL_Loss: 8.656162  CE_Loss: 22.481503  Diversity_Loss: 1.783481
+
+Epoch 597/750
+Train Epoch: 596 [0/2500 (0%)]	KL_Loss: 8.298482  CE_Loss: 20.594872  Diversity_Loss: 2.042840
+
+Epoch 598/750
+Train Epoch: 597 [0/2500 (0%)]	KL_Loss: 7.778406  CE_Loss: 21.316513  Diversity_Loss: 2.580784
+
+Epoch 599/750
+Train Epoch: 598 [0/2500 (0%)]	KL_Loss: 13.852519  CE_Loss: 22.733179  Diversity_Loss: 1.912726
+
+Epoch 600/750
+Train Epoch: 599 [0/2500 (0%)]	KL_Loss: 10.755397  CE_Loss: 22.443897  Diversity_Loss: 1.940724
+
+Epoch 601/750
+Train Epoch: 600 [0/2500 (0%)]	KL_Loss: 12.199039  CE_Loss: 22.284088  Diversity_Loss: 1.071200
+
+Test set: Average loss: 10.1454, Top-1 Accuracy: 6193/31419 (19.71%), Top-5 Accuracy: 13387/31419 (42.61%)
+
+
+Epoch 602/750
+Train Epoch: 601 [0/2500 (0%)]	KL_Loss: 9.189206  CE_Loss: 20.087584  Diversity_Loss: 2.424041
+
+Epoch 603/750
+Train Epoch: 602 [0/2500 (0%)]	KL_Loss: 7.906226  CE_Loss: 18.918940  Diversity_Loss: 1.896699
+
+Epoch 604/750
+Train Epoch: 603 [0/2500 (0%)]	KL_Loss: 8.397503  CE_Loss: 21.025700  Diversity_Loss: 1.864445
+
+Epoch 605/750
+Train Epoch: 604 [0/2500 (0%)]	KL_Loss: 8.522399  CE_Loss: 21.842257  Diversity_Loss: 2.184187
+
+Epoch 606/750
+Train Epoch: 605 [0/2500 (0%)]	KL_Loss: 10.940086  CE_Loss: 23.654600  Diversity_Loss: 1.757498
+
+Epoch 607/750
+Train Epoch: 606 [0/2500 (0%)]	KL_Loss: 8.828815  CE_Loss: 20.440197  Diversity_Loss: 1.576745
+
+Epoch 608/750
+Train Epoch: 607 [0/2500 (0%)]	KL_Loss: 8.341110  CE_Loss: 22.316008  Diversity_Loss: 4.135015
+
+Epoch 609/750
+Train Epoch: 608 [0/2500 (0%)]	KL_Loss: 10.724832  CE_Loss: 23.651011  Diversity_Loss: 1.883172
+
+Epoch 610/750
+Train Epoch: 609 [0/2500 (0%)]	KL_Loss: 8.000922  CE_Loss: 21.598251  Diversity_Loss: 2.434752
+
+Epoch 611/750
+Train Epoch: 610 [0/2500 (0%)]	KL_Loss: 9.974639  CE_Loss: 20.718023  Diversity_Loss: 1.414784
+
+Epoch 612/750
+Train Epoch: 611 [0/2500 (0%)]	KL_Loss: 8.649048  CE_Loss: 20.696215  Diversity_Loss: 2.109778
+
+Epoch 613/750
+Train Epoch: 612 [0/2500 (0%)]	KL_Loss: 11.612324  CE_Loss: 23.850225  Diversity_Loss: 1.345944
+
+Epoch 614/750
+Train Epoch: 613 [0/2500 (0%)]	KL_Loss: 10.083173  CE_Loss: 23.239740  Diversity_Loss: 1.298330
+
+Epoch 615/750
+Train Epoch: 614 [0/2500 (0%)]	KL_Loss: 8.600322  CE_Loss: 21.247740  Diversity_Loss: 1.577711
+
+Epoch 616/750
+Train Epoch: 615 [0/2500 (0%)]	KL_Loss: 8.074269  CE_Loss: 20.513906  Diversity_Loss: 1.683110
+
+Epoch 617/750
+Train Epoch: 616 [0/2500 (0%)]	KL_Loss: 9.255574  CE_Loss: 22.788818  Diversity_Loss: 1.841892
+
+Epoch 618/750
+Train Epoch: 617 [0/2500 (0%)]	KL_Loss: 9.744804  CE_Loss: 24.282310  Diversity_Loss: 1.334935
+
+Epoch 619/750
+Train Epoch: 618 [0/2500 (0%)]	KL_Loss: 9.278035  CE_Loss: 22.859228  Diversity_Loss: 1.617505
+
+Epoch 620/750
+Train Epoch: 619 [0/2500 (0%)]	KL_Loss: 8.181780  CE_Loss: 22.483320  Diversity_Loss: 2.150757
+
+Epoch 621/750
+Train Epoch: 620 [0/2500 (0%)]	KL_Loss: 8.707794  CE_Loss: 24.026604  Diversity_Loss: 1.900412
+
+Epoch 622/750
+Train Epoch: 621 [0/2500 (0%)]	KL_Loss: 7.644588  CE_Loss: 20.684584  Diversity_Loss: 1.575998
+
+Epoch 623/750
+Train Epoch: 622 [0/2500 (0%)]	KL_Loss: 9.611662  CE_Loss: 23.546818  Diversity_Loss: 1.415615
+
+Epoch 624/750
+Train Epoch: 623 [0/2500 (0%)]	KL_Loss: 7.267225  CE_Loss: 18.719395  Diversity_Loss: 1.537593
+
+Epoch 625/750
+Train Epoch: 624 [0/2500 (0%)]	KL_Loss: 9.798632  CE_Loss: 21.643227  Diversity_Loss: 1.976537
+
+Epoch 626/750
+Train Epoch: 625 [0/2500 (0%)]	KL_Loss: 8.223614  CE_Loss: 21.211668  Diversity_Loss: 1.993370
+
+Test set: Average loss: 9.2054, Top-1 Accuracy: 6030/31419 (19.19%), Top-5 Accuracy: 13513/31419 (43.01%)
+
+
+Epoch 627/750
+Train Epoch: 626 [0/2500 (0%)]	KL_Loss: 8.879799  CE_Loss: 21.632429  Diversity_Loss: 1.226260
+
+Epoch 628/750
+Train Epoch: 627 [0/2500 (0%)]	KL_Loss: 7.056780  CE_Loss: 20.295015  Diversity_Loss: 2.562538
+
+Epoch 629/750
+Train Epoch: 628 [0/2500 (0%)]	KL_Loss: 8.964850  CE_Loss: 22.478218  Diversity_Loss: 1.600453
+
+Epoch 630/750
+Train Epoch: 629 [0/2500 (0%)]	KL_Loss: 8.480226  CE_Loss: 22.956568  Diversity_Loss: 1.344177
+
+Epoch 631/750
+Train Epoch: 630 [0/2500 (0%)]	KL_Loss: 7.849410  CE_Loss: 22.106890  Diversity_Loss: 2.095257
+
+Epoch 632/750
+Train Epoch: 631 [0/2500 (0%)]	KL_Loss: 9.277929  CE_Loss: 22.509771  Diversity_Loss: 1.720961
+
+Epoch 633/750
+Train Epoch: 632 [0/2500 (0%)]	KL_Loss: 8.314799  CE_Loss: 22.775274  Diversity_Loss: 1.357200
+
+Epoch 634/750
+Train Epoch: 633 [0/2500 (0%)]	KL_Loss: 8.445856  CE_Loss: 23.319809  Diversity_Loss: 1.214908
+
+Epoch 635/750
+Train Epoch: 634 [0/2500 (0%)]	KL_Loss: 8.139021  CE_Loss: 19.718428  Diversity_Loss: 1.196500
+
+Epoch 636/750
+Train Epoch: 635 [0/2500 (0%)]	KL_Loss: 8.913862  CE_Loss: 21.966267  Diversity_Loss: 1.059495
+
+Epoch 637/750
+Train Epoch: 636 [0/2500 (0%)]	KL_Loss: 8.181667  CE_Loss: 22.242483  Diversity_Loss: 1.590044
+
+Epoch 638/750
+Train Epoch: 637 [0/2500 (0%)]	KL_Loss: 10.126390  CE_Loss: 22.714088  Diversity_Loss: 3.199703
+
+Epoch 639/750
+Train Epoch: 638 [0/2500 (0%)]	KL_Loss: 8.582485  CE_Loss: 19.684568  Diversity_Loss: 1.328330
+
+Epoch 640/750
+Train Epoch: 639 [0/2500 (0%)]	KL_Loss: 8.160983  CE_Loss: 18.842129  Diversity_Loss: 1.114638
+
+Epoch 641/750
+Train Epoch: 640 [0/2500 (0%)]	KL_Loss: 10.161198  CE_Loss: 24.507071  Diversity_Loss: 1.134487
+
+Epoch 642/750
+Train Epoch: 641 [0/2500 (0%)]	KL_Loss: 8.375477  CE_Loss: 22.362785  Diversity_Loss: 1.790983
+
+Epoch 643/750
+Train Epoch: 642 [0/2500 (0%)]	KL_Loss: 9.298334  CE_Loss: 22.030285  Diversity_Loss: 2.169771
+
+Epoch 644/750
+Train Epoch: 643 [0/2500 (0%)]	KL_Loss: 9.015684  CE_Loss: 21.082687  Diversity_Loss: 2.777409
+
+Epoch 645/750
+Train Epoch: 644 [0/2500 (0%)]	KL_Loss: 8.310759  CE_Loss: 20.519390  Diversity_Loss: 2.086053
+
+Epoch 646/750
+Train Epoch: 645 [0/2500 (0%)]	KL_Loss: 7.504933  CE_Loss: 20.351433  Diversity_Loss: 2.761092
+
+Epoch 647/750
+Train Epoch: 646 [0/2500 (0%)]	KL_Loss: 8.868084  CE_Loss: 22.432289  Diversity_Loss: 2.282362
+
+Epoch 648/750
+Train Epoch: 647 [0/2500 (0%)]	KL_Loss: 8.510948  CE_Loss: 21.310518  Diversity_Loss: 1.831362
+
+Epoch 649/750
+Train Epoch: 648 [0/2500 (0%)]	KL_Loss: 7.860725  CE_Loss: 19.988174  Diversity_Loss: 1.678833
+
+Epoch 650/750
+Train Epoch: 649 [0/2500 (0%)]	KL_Loss: 8.774286  CE_Loss: 22.370138  Diversity_Loss: 1.834363
+
+Epoch 651/750
+Train Epoch: 650 [0/2500 (0%)]	KL_Loss: 8.577237  CE_Loss: 21.940943  Diversity_Loss: 1.743323
+
+Test set: Average loss: 8.4808, Top-1 Accuracy: 6472/31419 (20.60%), Top-5 Accuracy: 13462/31419 (42.85%)
+
+
+Epoch 652/750
+Train Epoch: 651 [0/2500 (0%)]	KL_Loss: 8.129766  CE_Loss: 20.553274  Diversity_Loss: 1.531521
+
+Epoch 653/750
+Train Epoch: 652 [0/2500 (0%)]	KL_Loss: 8.515890  CE_Loss: 21.059853  Diversity_Loss: 1.790895
+
+Epoch 654/750
+Train Epoch: 653 [0/2500 (0%)]	KL_Loss: 9.263771  CE_Loss: 22.129086  Diversity_Loss: 1.363807
+
+Epoch 655/750
+Train Epoch: 654 [0/2500 (0%)]	KL_Loss: 9.670607  CE_Loss: 20.622383  Diversity_Loss: 0.972744
+
+Epoch 656/750
+Train Epoch: 655 [0/2500 (0%)]	KL_Loss: 10.958195  CE_Loss: 22.099440  Diversity_Loss: 1.598549
+
+Epoch 657/750
+Train Epoch: 656 [0/2500 (0%)]	KL_Loss: 10.078052  CE_Loss: 22.385405  Diversity_Loss: 2.370657
+
+Epoch 658/750
+Train Epoch: 657 [0/2500 (0%)]	KL_Loss: 9.803925  CE_Loss: 21.293159  Diversity_Loss: 1.346065
+
+Epoch 659/750
+Train Epoch: 658 [0/2500 (0%)]	KL_Loss: 9.176594  CE_Loss: 23.144966  Diversity_Loss: 1.710157
+
+Epoch 660/750
+Train Epoch: 659 [0/2500 (0%)]	KL_Loss: 8.039951  CE_Loss: 22.155287  Diversity_Loss: 1.519990
+
+Epoch 661/750
+Train Epoch: 660 [0/2500 (0%)]	KL_Loss: 8.226152  CE_Loss: 21.064219  Diversity_Loss: 1.635171
+
+Epoch 662/750
+Train Epoch: 661 [0/2500 (0%)]	KL_Loss: 8.707428  CE_Loss: 21.988808  Diversity_Loss: 1.250698
+
+Epoch 663/750
+Train Epoch: 662 [0/2500 (0%)]	KL_Loss: 10.081094  CE_Loss: 21.929783  Diversity_Loss: 1.081805
+
+Epoch 664/750
+Train Epoch: 663 [0/2500 (0%)]	KL_Loss: 17.487755  CE_Loss: 24.932669  Diversity_Loss: 1.678697
+
+Epoch 665/750
+Train Epoch: 664 [0/2500 (0%)]	KL_Loss: 11.101208  CE_Loss: 23.168877  Diversity_Loss: 1.843158
+
+Epoch 666/750
+Train Epoch: 665 [0/2500 (0%)]	KL_Loss: 12.039560  CE_Loss: 23.238716  Diversity_Loss: 1.345084
+
+Epoch 667/750
+Train Epoch: 666 [0/2500 (0%)]	KL_Loss: 8.550617  CE_Loss: 20.887434  Diversity_Loss: 1.438766
+
+Epoch 668/750
+Train Epoch: 667 [0/2500 (0%)]	KL_Loss: 9.802692  CE_Loss: 23.719551  Diversity_Loss: 1.345521
+
+Epoch 669/750
+Train Epoch: 668 [0/2500 (0%)]	KL_Loss: 9.355381  CE_Loss: 21.661501  Diversity_Loss: 1.370971
+
+Epoch 670/750
+Train Epoch: 669 [0/2500 (0%)]	KL_Loss: 8.897186  CE_Loss: 20.754347  Diversity_Loss: 1.641066
+
+Epoch 671/750
+Train Epoch: 670 [0/2500 (0%)]	KL_Loss: 8.246887  CE_Loss: 23.188099  Diversity_Loss: 1.558565
+
+Epoch 672/750
+Train Epoch: 671 [0/2500 (0%)]	KL_Loss: 8.251307  CE_Loss: 20.890921  Diversity_Loss: 0.906432
+
+Epoch 673/750
+Train Epoch: 672 [0/2500 (0%)]	KL_Loss: 7.796427  CE_Loss: 21.589306  Diversity_Loss: 1.641183
+
+Epoch 674/750
+Train Epoch: 673 [0/2500 (0%)]	KL_Loss: 7.756763  CE_Loss: 20.374123  Diversity_Loss: 1.164668
+
+Epoch 675/750
+Train Epoch: 674 [0/2500 (0%)]	KL_Loss: 7.470481  CE_Loss: 21.485617  Diversity_Loss: 4.196867
+
+Epoch 676/750
+Train Epoch: 675 [0/2500 (0%)]	KL_Loss: 8.920660  CE_Loss: 21.435677  Diversity_Loss: 1.392996
+
+Test set: Average loss: 10.5061, Top-1 Accuracy: 5997/31419 (19.09%), Top-5 Accuracy: 13457/31419 (42.83%)
+
+
+Epoch 677/750
+Train Epoch: 676 [0/2500 (0%)]	KL_Loss: 9.603512  CE_Loss: 23.193991  Diversity_Loss: 1.312006
+
+Epoch 678/750
+Train Epoch: 677 [0/2500 (0%)]	KL_Loss: 10.537772  CE_Loss: 20.694254  Diversity_Loss: 1.417465
+
+Epoch 679/750
+Train Epoch: 678 [0/2500 (0%)]	KL_Loss: 9.236012  CE_Loss: 22.676128  Diversity_Loss: 1.852832
+
+Epoch 680/750
+Train Epoch: 679 [0/2500 (0%)]	KL_Loss: 8.534804  CE_Loss: 23.027500  Diversity_Loss: 2.298250
+
+Epoch 681/750
+Train Epoch: 680 [0/2500 (0%)]	KL_Loss: 7.611573  CE_Loss: 22.202688  Diversity_Loss: 2.175221
+
+Epoch 682/750
+Train Epoch: 681 [0/2500 (0%)]	KL_Loss: 9.361095  CE_Loss: 23.218880  Diversity_Loss: 1.316561
+
+Epoch 683/750
+Train Epoch: 682 [0/2500 (0%)]	KL_Loss: 7.979341  CE_Loss: 21.561184  Diversity_Loss: 1.512500
+
+Epoch 684/750
+Train Epoch: 683 [0/2500 (0%)]	KL_Loss: 9.135078  CE_Loss: 24.430382  Diversity_Loss: 1.255079
+
+Epoch 685/750
+Train Epoch: 684 [0/2500 (0%)]	KL_Loss: 8.803963  CE_Loss: 21.935083  Diversity_Loss: 0.868773
+
+Epoch 686/750
+Train Epoch: 685 [0/2500 (0%)]	KL_Loss: 7.308646  CE_Loss: 19.566830  Diversity_Loss: 1.838309
+
+Epoch 687/750
+Train Epoch: 686 [0/2500 (0%)]	KL_Loss: 8.541268  CE_Loss: 21.635519  Diversity_Loss: 1.494917
+
+Epoch 688/750
+Train Epoch: 687 [0/2500 (0%)]	KL_Loss: 9.248124  CE_Loss: 26.116041  Diversity_Loss: 1.239495
+
+Epoch 689/750
+Train Epoch: 688 [0/2500 (0%)]	KL_Loss: 7.439329  CE_Loss: 22.348850  Diversity_Loss: 1.432743
+
+Epoch 690/750
+Train Epoch: 689 [0/2500 (0%)]	KL_Loss: 8.692638  CE_Loss: 21.579823  Diversity_Loss: 0.962279
+
+Epoch 691/750
+Train Epoch: 690 [0/2500 (0%)]	KL_Loss: 9.072494  CE_Loss: 21.034372  Diversity_Loss: 1.050498
+
+Epoch 692/750
+Train Epoch: 691 [0/2500 (0%)]	KL_Loss: 11.242550  CE_Loss: 23.492519  Diversity_Loss: 2.287999
+
+Epoch 693/750
+Train Epoch: 692 [0/2500 (0%)]	KL_Loss: 11.600039  CE_Loss: 22.447121  Diversity_Loss: 1.785777
+
+Epoch 694/750
+Train Epoch: 693 [0/2500 (0%)]	KL_Loss: 12.440492  CE_Loss: 23.072475  Diversity_Loss: 0.965095
+
+Epoch 695/750
+Train Epoch: 694 [0/2500 (0%)]	KL_Loss: 11.386286  CE_Loss: 23.543741  Diversity_Loss: 1.052856
+
+Epoch 696/750
+Train Epoch: 695 [0/2500 (0%)]	KL_Loss: 9.329998  CE_Loss: 23.374031  Diversity_Loss: 1.529220
+
+Epoch 697/750
+Train Epoch: 696 [0/2500 (0%)]	KL_Loss: 9.105145  CE_Loss: 22.540907  Diversity_Loss: 0.822562
+
+Epoch 698/750
+Train Epoch: 697 [0/2500 (0%)]	KL_Loss: 7.889850  CE_Loss: 20.613838  Diversity_Loss: 2.242761
+
+Epoch 699/750
+Train Epoch: 698 [0/2500 (0%)]	KL_Loss: 7.553141  CE_Loss: 20.726215  Diversity_Loss: 1.820511
+
+Epoch 700/750
+Train Epoch: 699 [0/2500 (0%)]	KL_Loss: 8.646982  CE_Loss: 20.745789  Diversity_Loss: 2.601593
+
+Epoch 701/750
+Train Epoch: 700 [0/2500 (0%)]	KL_Loss: 7.352358  CE_Loss: 19.752731  Diversity_Loss: 1.428598
+
+Test set: Average loss: 10.7693, Top-1 Accuracy: 5766/31419 (18.35%), Top-5 Accuracy: 13506/31419 (42.99%)
+
+
+Epoch 702/750
+Train Epoch: 701 [0/2500 (0%)]	KL_Loss: 9.132840  CE_Loss: 19.201067  Diversity_Loss: 1.433822
+
+Epoch 703/750
+Train Epoch: 702 [0/2500 (0%)]	KL_Loss: 9.343000  CE_Loss: 20.675621  Diversity_Loss: 0.741451
+
+Epoch 704/750
+Train Epoch: 703 [0/2500 (0%)]	KL_Loss: 10.964510  CE_Loss: 22.062269  Diversity_Loss: 1.318540
+
+Epoch 705/750
+Train Epoch: 704 [0/2500 (0%)]	KL_Loss: 8.701871  CE_Loss: 24.277506  Diversity_Loss: 1.198812
+
+Epoch 706/750
+Train Epoch: 705 [0/2500 (0%)]	KL_Loss: 8.007377  CE_Loss: 22.573898  Diversity_Loss: 1.040422
+
+Epoch 707/750
+Train Epoch: 706 [0/2500 (0%)]	KL_Loss: 8.274624  CE_Loss: 22.985079  Diversity_Loss: 1.429414
+
+Epoch 708/750
+Train Epoch: 707 [0/2500 (0%)]	KL_Loss: 9.117242  CE_Loss: 23.672316  Diversity_Loss: 1.008494
+
+Epoch 709/750
+Train Epoch: 708 [0/2500 (0%)]	KL_Loss: 7.418264  CE_Loss: 21.306959  Diversity_Loss: 1.412932
+
+Epoch 710/750
+Train Epoch: 709 [0/2500 (0%)]	KL_Loss: 9.468315  CE_Loss: 22.330656  Diversity_Loss: 1.534445
+
+Epoch 711/750
+Train Epoch: 710 [0/2500 (0%)]	KL_Loss: 8.064569  CE_Loss: 20.686106  Diversity_Loss: 1.258489
+
+Epoch 712/750
+Train Epoch: 711 [0/2500 (0%)]	KL_Loss: 7.849568  CE_Loss: 21.656193  Diversity_Loss: 1.405394
+
+Epoch 713/750
+Train Epoch: 712 [0/2500 (0%)]	KL_Loss: 8.993120  CE_Loss: 20.622921  Diversity_Loss: 1.245875
+
+Epoch 714/750
+Train Epoch: 713 [0/2500 (0%)]	KL_Loss: 7.948612  CE_Loss: 20.895302  Diversity_Loss: 1.327005
+
+Epoch 715/750
+Train Epoch: 714 [0/2500 (0%)]	KL_Loss: 9.258294  CE_Loss: 23.791893  Diversity_Loss: 1.310623
+
+Epoch 716/750
+Train Epoch: 715 [0/2500 (0%)]	KL_Loss: 8.204026  CE_Loss: 23.990265  Diversity_Loss: 2.075280
+
+Epoch 717/750
+Train Epoch: 716 [0/2500 (0%)]	KL_Loss: 7.521408  CE_Loss: 21.959620  Diversity_Loss: 3.355813
+
+Epoch 718/750
+Train Epoch: 717 [0/2500 (0%)]	KL_Loss: 11.108083  CE_Loss: 24.577906  Diversity_Loss: 1.079894
+
+Epoch 719/750
+Train Epoch: 718 [0/2500 (0%)]	KL_Loss: 8.624807  CE_Loss: 22.385460  Diversity_Loss: 1.352915
+
+Epoch 720/750
+Train Epoch: 719 [0/2500 (0%)]	KL_Loss: 7.263190  CE_Loss: 20.396111  Diversity_Loss: 1.606270
+
+Epoch 721/750
+Train Epoch: 720 [0/2500 (0%)]	KL_Loss: 9.819822  CE_Loss: 22.531357  Diversity_Loss: 1.531104
+
+Epoch 722/750
+Train Epoch: 721 [0/2500 (0%)]	KL_Loss: 7.462685  CE_Loss: 19.973562  Diversity_Loss: 1.147937
+
+Epoch 723/750
+Train Epoch: 722 [0/2500 (0%)]	KL_Loss: 7.695864  CE_Loss: 20.572285  Diversity_Loss: 1.169199
+
+Epoch 724/750
+Train Epoch: 723 [0/2500 (0%)]	KL_Loss: 8.021364  CE_Loss: 22.044855  Diversity_Loss: 1.331273
+
+Epoch 725/750
+Train Epoch: 724 [0/2500 (0%)]	KL_Loss: 8.312453  CE_Loss: 22.256779  Diversity_Loss: 1.185793
+
+Epoch 726/750
+Train Epoch: 725 [0/2500 (0%)]	KL_Loss: 7.928130  CE_Loss: 22.541527  Diversity_Loss: 2.766460
+
+Test set: Average loss: 11.0716, Top-1 Accuracy: 5751/31419 (18.30%), Top-5 Accuracy: 13398/31419 (42.64%)
+
+
+Epoch 727/750
+Train Epoch: 726 [0/2500 (0%)]	KL_Loss: 8.072242  CE_Loss: 20.283577  Diversity_Loss: 1.228609
+
+Epoch 728/750
+Train Epoch: 727 [0/2500 (0%)]	KL_Loss: 8.489770  CE_Loss: 21.875237  Diversity_Loss: 1.421696
+
+Epoch 729/750
+Train Epoch: 728 [0/2500 (0%)]	KL_Loss: 10.421648  CE_Loss: 24.473347  Diversity_Loss: 1.741519
+
+Epoch 730/750
+Train Epoch: 729 [0/2500 (0%)]	KL_Loss: 10.262507  CE_Loss: 23.117975  Diversity_Loss: 0.933680
+
+Epoch 731/750
+Train Epoch: 730 [0/2500 (0%)]	KL_Loss: 9.153259  CE_Loss: 22.044279  Diversity_Loss: 0.832015
+
+Epoch 732/750
+Train Epoch: 731 [0/2500 (0%)]	KL_Loss: 10.298328  CE_Loss: 21.843801  Diversity_Loss: 1.237222
+
+Epoch 733/750
+Train Epoch: 732 [0/2500 (0%)]	KL_Loss: 9.489727  CE_Loss: 22.199062  Diversity_Loss: 1.632251
+
+Epoch 734/750
+Train Epoch: 733 [0/2500 (0%)]	KL_Loss: 11.275945  CE_Loss: 22.563263  Diversity_Loss: 1.632354
+
+Epoch 735/750
+Train Epoch: 734 [0/2500 (0%)]	KL_Loss: 9.282006  CE_Loss: 24.508883  Diversity_Loss: 1.074741
+
+Epoch 736/750
+Train Epoch: 735 [0/2500 (0%)]	KL_Loss: 7.989046  CE_Loss: 22.370438  Diversity_Loss: 2.188569
+
+Epoch 737/750
+Train Epoch: 736 [0/2500 (0%)]	KL_Loss: 6.960671  CE_Loss: 20.687958  Diversity_Loss: 1.539820
+
+Epoch 738/750
+Train Epoch: 737 [0/2500 (0%)]	KL_Loss: 8.080912  CE_Loss: 22.723774  Diversity_Loss: 1.238530
+
+Epoch 739/750
+Train Epoch: 738 [0/2500 (0%)]	KL_Loss: 8.357666  CE_Loss: 22.316904  Diversity_Loss: 1.802891
+
+Epoch 740/750
+Train Epoch: 739 [0/2500 (0%)]	KL_Loss: 10.171148  CE_Loss: 21.748528  Diversity_Loss: 1.032540
+
+Epoch 741/750
+Train Epoch: 740 [0/2500 (0%)]	KL_Loss: 8.551367  CE_Loss: 19.306129  Diversity_Loss: 1.513607
+
+Epoch 742/750
+Train Epoch: 741 [0/2500 (0%)]	KL_Loss: 11.706063  CE_Loss: 25.095728  Diversity_Loss: 1.134192
+
+Epoch 743/750
+Train Epoch: 742 [0/2500 (0%)]	KL_Loss: 16.237686  CE_Loss: 23.665550  Diversity_Loss: 2.451030
+
+Epoch 744/750
+Train Epoch: 743 [0/2500 (0%)]	KL_Loss: 11.982486  CE_Loss: 24.912579  Diversity_Loss: 1.786041
+
+Epoch 745/750
+Train Epoch: 744 [0/2500 (0%)]	KL_Loss: 8.940558  CE_Loss: 22.203682  Diversity_Loss: 2.022696
+
+Epoch 746/750
+Train Epoch: 745 [0/2500 (0%)]	KL_Loss: 7.813618  CE_Loss: 21.948586  Diversity_Loss: 2.650622
+
+Epoch 747/750
+Train Epoch: 746 [0/2500 (0%)]	KL_Loss: 8.080099  CE_Loss: 22.819603  Diversity_Loss: 1.375591
+
+Epoch 748/750
+Train Epoch: 747 [0/2500 (0%)]	KL_Loss: 10.586531  CE_Loss: 23.426441  Diversity_Loss: 1.462611
+
+Epoch 749/750
+Train Epoch: 748 [0/2500 (0%)]	KL_Loss: 6.980441  CE_Loss: 19.649643  Diversity_Loss: 1.515666
+
+Epoch 750/750
+Train Epoch: 749 [0/2500 (0%)]	KL_Loss: 8.063593  CE_Loss: 22.541222  Diversity_Loss: 1.512642
