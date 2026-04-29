@@ -1,0 +1,10 @@
+Namespace(attack_mode='ours-w', seed=666, device=0, exp_name=None, target_dataset='vggface2', dataset='celeba_partial256', arch_name_target='inception_resnetv1_vggface2', bs=8, target=1, index=0, lr=0.2, epochs=200, loss_class_ce=1.0, p_std_ce=1.0, EorOG='SMILE', arch_name_finetune='inception_resnetv1_casia', finetune_mode='vggface2->CASIA', num_experts=3, population_size=2500, candidate=20, final_selection=20, iterations=100, test_only=False, test_target=None)
+2026-04-29 14:19:33.876922
+using device: cuda:0
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=8, batch_size=8, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+finetune_model loaded.
+Path:  model_checkpoints_SMILE/vggface2_inception_resnetv1_vggface2_inception_resnetv1_casia_vggface2->CASIA_celeba_partial256_2500_3
