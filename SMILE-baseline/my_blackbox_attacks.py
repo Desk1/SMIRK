@@ -922,7 +922,7 @@ def main(args):
                 ws_og = []
                 for t in targets:
                     folder_path = args.exp_name + '/LOGS/' + str(t) +'/'+ str(args.index)
-                    final_sample = torch.load(os.path.join(folder_path, 'final_w.pt'))
+                    final_sample = torch.load(os.path.join(folder_path, 'final_w.pt'), map_location=args.device)
                     w = final_sample.value
                     ws.append(w.squeeze().to(device))
                     score = math.exp(final_sample.fitness_score)

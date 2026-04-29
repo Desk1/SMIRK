@@ -1,5 +1,0 @@
-Experiment name: ./blackbox_attack/ours-surrogate_model/inception_resnetv1_vggface2-celeba_partial256-NGOpt-1000-2500-SMILE-200-0.2-inception_resnetv1_casia-vggface2->CASIA-3
-top1 acc: 1/1 = 1.0000
-topk acc: 1/1 = 1.0000
-image path:
-[0]

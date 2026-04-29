@@ -1,8 +1,0 @@
-13
-all_ws.shape: torch.Size([2500, 512])
-all_w_mins.shape: torch.Size([1, 512])
-all_prediction.shape torch.Size([2500]) device cuda:0
-<bound method NGOptBase._info of Instance of NGOpt(parametrization=Array{(512,)}[sigma=1], budget=1000, num_workers=1)>
-tensor([[  13, 7440, 6989, 4780, 2597, 5358, 7930, 1870, 4125, 4527, 5368, 8180,
-         4789, 1509, 1804, 1572, 1125, 3432,  775, 7289]], device='cuda:0')
-tensor([-1.2599], device='cuda:0')
