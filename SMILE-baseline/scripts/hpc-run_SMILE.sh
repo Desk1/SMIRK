@@ -11,11 +11,12 @@
 #SBATCH --mem=0
 #SBATCH --time=12:00:00
 
-#SBATCH --output=jobs/job_output_%j.log
-#SBATCH --error=jobs/job_error_%j.log
+#SBATCH --output=jobs/job_b_output_%j.log
+#SBATCH --error=jobs/job_b_error_%j.log
 
 # activate environment
 conda activate SMIRK-HPC
+cd SMILE-baseline
 
 # run py script
 python my_whitebox_attacks.py --attack_mode ours-w --target_dataset vggface2 --dataset celeba_partial256 --arch_name_target inception_resnetv1_vggface2 --target 1 --epochs 200 --arch_name_finetune inception_resnetv1_casia --finetune_mode 'vggface2->CASIA' --num_experts 3 --EorOG SMILE --population_size 2500
