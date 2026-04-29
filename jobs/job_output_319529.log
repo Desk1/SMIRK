@@ -1,0 +1,66 @@
+[2026-04-29 11:23:31,531][__main__][INFO] - Using device: cuda
+Namespace(model_name='stylegan_celeba_partial256', save_dir=None, num=100, batch_size=100, seed=0, trunc_psi=0.7, trunc_layers=8, randomize_noise=False)
+Building generator for model `stylegan_celeba_partial256` ...
+Finish building generator.
+Loading checkpoint from `/scratch/users/u03kj22/SMIRK/smirk/genforce/checkpoints/stylegan_celeba_partial256.pth` ...
+Finish loading checkpoint.
+[2026-04-29 11:23:38,537][__main__][INFO] - Generating elite starting vector for target: 1
+[2026-04-29 11:23:56,954][__main__][INFO] - Generating elite starting vector for target: 2
+[2026-04-29 11:24:13,521][__main__][INFO] - Generating elite starting vector for target: 3
+[2026-04-29 11:24:30,825][__main__][INFO] - Generating elite starting vector for target: 4
+[2026-04-29 11:24:48,457][__main__][INFO] - Generating elite starting vector for target: 5
+[2026-04-29 11:25:06,121][__main__][INFO] - Executing blackbox attack on target: 1
+[2026-04-29 11:27:15,944][__main__][INFO] - Executing blackbox attack on target: 2
+[2026-04-29 11:29:28,961][__main__][INFO] - Executing blackbox attack on target: 3
+[2026-04-29 11:31:43,446][__main__][INFO] - Executing blackbox attack on target: 4
+[2026-04-29 11:33:56,476][__main__][INFO] - Executing blackbox attack on target: 5
+[2026-04-29 11:36:08,424][__main__][INFO] - Attack successful. Output saved to /scratch/users/u03kj22/SMIRK/output/attacks
+[2026-04-29 11:36:41,770][__main__][INFO] - Using device: cuda
+[2026-04-29 11:36:42,658][__main__][INFO] - Processing target 1
+[2026-04-29 11:36:44,576][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.475582122802734
+[2026-04-29 11:36:44,594][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.45692253112793
+[2026-04-29 11:36:44,609][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.45692253112793
+[2026-04-29 11:36:44,625][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.45692253112793
+[2026-04-29 11:36:44,639][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.45692253112793
+[2026-04-29 11:36:44,654][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.45692253112793
+[2026-04-29 11:36:44,669][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.475582122802734
+[2026-04-29 11:36:44,670][__main__][INFO] - Processing target 2
+[2026-04-29 11:36:44,685][__main__][INFO] -   0.pt: ASR=False, fitness_score=-738.7103271484375
+[2026-04-29 11:36:44,699][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.345977783203125
+[2026-04-29 11:36:44,714][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.345977783203125
+[2026-04-29 11:36:44,728][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.345977783203125
+[2026-04-29 11:36:44,743][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.345977783203125
+[2026-04-29 11:36:44,757][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.345977783203125
+[2026-04-29 11:36:44,772][__main__][INFO] -   original.pt: ASR=False, fitness_score=-738.7103271484375
+[2026-04-29 11:36:44,773][__main__][INFO] - Processing target 3
+[2026-04-29 11:36:44,788][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.112805366516113
+[2026-04-29 11:36:44,803][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.607988357543945
+[2026-04-29 11:36:44,817][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.607988357543945
+[2026-04-29 11:36:44,831][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.607988357543945
+[2026-04-29 11:36:44,846][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.607988357543945
+[2026-04-29 11:36:44,861][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.607988357543945
+[2026-04-29 11:36:44,875][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.112805366516113
+[2026-04-29 11:36:44,877][__main__][INFO] - Processing target 4
+[2026-04-29 11:36:44,892][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.493098258972168
+[2026-04-29 11:36:44,906][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.366264343261719
+[2026-04-29 11:36:44,921][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.366264343261719
+[2026-04-29 11:36:44,935][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.366264343261719
+[2026-04-29 11:36:44,950][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.36572551727295
+[2026-04-29 11:36:44,964][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.366264343261719
+[2026-04-29 11:36:44,978][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.493098258972168
+[2026-04-29 11:36:44,979][__main__][INFO] - Processing target 5
+[2026-04-29 11:36:44,994][__main__][INFO] -   0.pt: ASR=False, fitness_score=-9.26809310913086
+[2026-04-29 11:36:45,008][__main__][INFO] -   1000.pt: ASR=False, fitness_score=-9.02977466583252
+[2026-04-29 11:36:45,022][__main__][INFO] -   1500.pt: ASR=False, fitness_score=-9.02977466583252
+[2026-04-29 11:36:45,036][__main__][INFO] -   2000.pt: ASR=False, fitness_score=-9.02977466583252
+[2026-04-29 11:36:45,050][__main__][INFO] -   500.pt: ASR=False, fitness_score=-9.064069747924805
+[2026-04-29 11:36:45,064][__main__][INFO] -   final.pt: ASR=False, fitness_score=-9.02977466583252
+[2026-04-29 11:36:45,078][__main__][INFO] -   original.pt: ASR=False, fitness_score=-9.26809310913086
+[2026-04-29 11:36:45,082][__main__][INFO] - Evaluation results saved to /scratch/users/u03kj22/SMIRK/output/attacks/evaluation_results.csv
+[2026-04-29 11:36:45,082][__main__][INFO] - Summary: 0/35 successful attacks (ASR: 0.00%)
+[report] Loading CSV from /scratch/users/u03kj22/SMIRK/output/attacks/evaluation_results.csv
+[report] Loading attack results from /scratch/users/u03kj22/SMIRK/output/attacks
+[report] Targets: 5  |  ASR: 0.00%
+[report] Written → /scratch/users/u03kj22/SMIRK/output/attacks/report.html
+[report] Open in browser: file:///scratch/users/u03kj22/SMIRK/output/attacks/report.html
+[2026-04-29 11:36:45,833][__main__][INFO] - HTML report: file:///scratch/users/u03kj22/SMIRK/output/attacks/report.html

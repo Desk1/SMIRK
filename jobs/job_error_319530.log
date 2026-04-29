@@ -1,0 +1,156 @@
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+  0%|          | 0/25 [00:00<?, ?it/s]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+  4%|▍         | 1/25 [01:00<24:13, 60.54s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+  8%|▊         | 2/25 [02:02<23:35, 61.53s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 12%|█▏        | 3/25 [03:05<22:50, 62.29s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 16%|█▌        | 4/25 [04:06<21:35, 61.67s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 20%|██        | 5/25 [05:11<20:53, 62.67s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 24%|██▍       | 6/25 [06:13<19:47, 62.50s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 28%|██▊       | 7/25 [07:14<18:40, 62.23s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 32%|███▏      | 8/25 [08:16<17:32, 61.90s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 36%|███▌      | 9/25 [09:19<16:36, 62.26s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 40%|████      | 10/25 [10:21<15:35, 62.39s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 44%|████▍     | 11/25 [11:22<14:26, 61.92s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 48%|████▊     | 12/25 [12:26<13:30, 62.38s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 52%|█████▏    | 13/25 [13:29<12:31, 62.61s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 56%|█████▌    | 14/25 [14:34<11:38, 63.50s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 60%|██████    | 15/25 [15:37<10:32, 63.28s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 64%|██████▍   | 16/25 [16:37<09:19, 62.17s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 68%|██████▊   | 17/25 [17:36<08:10, 61.37s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 72%|███████▏  | 18/25 [18:37<07:08, 61.20s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 76%|███████▌  | 19/25 [19:40<06:10, 61.74s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 80%|████████  | 20/25 [20:40<05:06, 61.23s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 84%|████████▍ | 21/25 [21:41<04:04, 61.14s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 88%|████████▊ | 22/25 [22:45<03:05, 61.88s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 92%|█████████▏| 23/25 [23:46<02:03, 61.82s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+ 96%|█████████▌| 24/25 [24:50<01:02, 62.53s/it]/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+/tmp/slurmd/job319530/slurm_script: line 27: nvidia-smi: command not found
+100%|██████████| 25/25 [25:50<00:00, 61.77s/it]100%|██████████| 25/25 [25:50<00:00, 62.04s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  3.06it/s]100%|██████████| 1/1 [00:00<00:00,  3.03it/s]
