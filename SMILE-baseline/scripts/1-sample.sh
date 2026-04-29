@@ -5,18 +5,17 @@
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
+#SBATCH --nodelist=gpu02
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem=32G
-#SBATCH --time=1:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=0
+#SBATCH --time=12:00:00
 
-#SBATCH --output=jobs/job_output_%j.log   # Standard output (print statements)
-#SBATCH --error=jobs/job_error_%j.log     # Errors/Tracebacks
-
-
+#SBATCH --output=jobs/job_b_output_%j.log
+#SBATCH --error=jobs/job_b_error_%j.log
 
 # activate environment
 conda activate SMIRK-HPC
 
 # run py script
-python scripts/hpc-gpudebug.py
+PYTHONPATH="$(cd "$(dirname "$0")/.." && pwd)" python my_sample_z_w_space.py 
