@@ -1,0 +1,12 @@
+[2026-04-29 11:23:31,531][__main__][INFO] - Using device: cuda
+[2026-04-29 11:23:38,537][__main__][INFO] - Generating elite starting vector for target: 1
+[2026-04-29 11:23:56,954][__main__][INFO] - Generating elite starting vector for target: 2
+[2026-04-29 11:24:13,521][__main__][INFO] - Generating elite starting vector for target: 3
+[2026-04-29 11:24:30,825][__main__][INFO] - Generating elite starting vector for target: 4
+[2026-04-29 11:24:48,457][__main__][INFO] - Generating elite starting vector for target: 5
+[2026-04-29 11:25:06,121][__main__][INFO] - Executing blackbox attack on target: 1
+[2026-04-29 11:27:15,944][__main__][INFO] - Executing blackbox attack on target: 2
+[2026-04-29 11:29:28,961][__main__][INFO] - Executing blackbox attack on target: 3
+[2026-04-29 11:31:43,446][__main__][INFO] - Executing blackbox attack on target: 4
+[2026-04-29 11:33:56,476][__main__][INFO] - Executing blackbox attack on target: 5
+[2026-04-29 11:36:08,424][__main__][INFO] - Attack successful. Output saved to /scratch/users/u03kj22/SMIRK/output/attacks

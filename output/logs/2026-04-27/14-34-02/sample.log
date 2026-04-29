@@ -1,0 +1,2 @@
+[2026-04-27 14:34:07,207][__main__][INFO] - Using device: cuda
+[2026-04-27 14:34:20,947][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /scratch/users/u03kj22/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25

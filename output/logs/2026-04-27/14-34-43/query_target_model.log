@@ -1,0 +1,2 @@
+[2026-04-27 14:34:47,975][__main__][INFO] - Using device: cuda
+[2026-04-27 14:35:10,831][__main__][INFO] - Finished querying inception_resnetv1_vggface2 to /scratch/users/u03kj22/SMIRK/output/blackbox_attack_data/vggface2/inception_resnetv1_vggface2/stylegan_celeba_partial256_0.7_8_25
