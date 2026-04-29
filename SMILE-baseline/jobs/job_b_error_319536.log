@@ -1,0 +1,35 @@
+/tmp/slurmd/job319536/slurm_script: line 19: cd: SMILE-baseline: No such file or directory
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_whitebox_attacks.py", line 1178, in <module>
+    main(args)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_whitebox_attacks.py", line 1090, in main
+    args.net = load_finetune_model(args)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_whitebox_attacks.py", line 826, in load_finetune_model
+    model_4finetune = InceptionResnetV1_4finetune_E(
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/model_architectures/inceptionresnetv1_4finetune.py", line 377, in __init__
+    state_dict = torch.load(cached_file)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 998, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 445, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 426, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './classification_models/20180408-102900-casia-webface.pt'
+Traceback (most recent call last):
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_blackbox_attacks.py", line 1240, in <module>
+    main(args)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_blackbox_attacks.py", line 1024, in main
+    my_attack_surrogate_model(args, generator, generate_images_func)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/my_blackbox_attacks.py", line 372, in my_attack_surrogate_model
+    test_model = get_model(args.test_arch_name, args.device)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/model_architectures/my_target_models.py", line 127, in get_model
+    net = resnet50_scratch_dag.resnet50_scratch_dag('./classification_models/resnet50_scratch_dag.pth').to(device)
+  File "/scratch/users/u03kj22/SMIRK/SMILE-baseline/model_architectures/resnet50_scratch_dag.py", line 712, in resnet50_scratch_dag
+    state_dict = torch.load(weights_path)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 998, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 445, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/u03kj22/sharedscratch/.conda/envs/SMIRK-HPC/lib/python3.10/site-packages/torch/serialization.py", line 426, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './classification_models/resnet50_scratch_dag.pth'
