@@ -1,4 +1,3 @@
-/blackbox_attack/*
 /blackbox_attack_data/*
 /checkpoints/*
 /samples/*
@@ -13,3 +12,5 @@ conf_mask.pt
 /model_checkpoints_SMILE/*
 __pycache__/
 Dockerfile
+
+*tfevents*
