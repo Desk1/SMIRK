@@ -11,8 +11,8 @@
 #SBATCH --mem=0
 #SBATCH --time=12:00:00
 
-#SBATCH --output=jobs/job_output_%j.log
-#SBATCH --error=jobs/job_error_%j.log
+#SBATCH --output=jobs/job_b_eval_output_%j.log
+#SBATCH --error=jobs/job_b_eval_error_%j.log
 
 # activate environment
 conda activate SMIRK-HPC

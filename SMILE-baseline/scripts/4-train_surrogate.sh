@@ -11,8 +11,8 @@
 #SBATCH --mem=0
 #SBATCH --time=12:00:00
 
-#SBATCH --output=jobs/job_b_output_%j.log
-#SBATCH --error=jobs/job_b_error_%j.log  
+#SBATCH --output=jobs/job_b_train_output_%j.log
+#SBATCH --error=jobs/job_b_train_error_%j.log  
 
 
 # activate environment
