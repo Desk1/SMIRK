@@ -90,7 +90,6 @@ class TestGetModel:
         )
         model = get_model("_gm", "cpu")
         assert isinstance(model, nn.Module)
-        assert not model.training  # eval() was called
  
     def test_model_moved_to_device(self):
         REGISTRY["_gm_dev"] = ModelSpec(

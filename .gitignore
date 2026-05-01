@@ -22,3 +22,4 @@ output/samples
 output/surrogate_model_checkpoints
 
 *tfevents*
+tf_data
