@@ -65,7 +65,7 @@ class SMILEBlackboxAttack(BaseAttack):
         self.writer.add_scalar('Evaluation Score', logits_softmax_0.item(), 0)
         self.writer.add_scalar('Rank of label', rank_of_label_0.item(), 0)
         
-        self.results["original"] = AttackResult(
+        self.results["original_w"] = AttackResult(
             latent_vector = self.elite.cpu().clone(),
             fitness_score = logits_softmax_0.item(),
             generated_image = img_0
@@ -96,9 +96,8 @@ class SMILEBlackboxAttack(BaseAttack):
             logits_softmax = F.log_softmax(outputs, dim=1)[:, target_label]
 
             # intermediate checkpoints
-            if r % 500 == 0:
-                save_w = Sample(recommendation.detach().clone(), logits_softmax.item())
-                self.results[str(r)] = AttackResult(
+            if r == 500 or r == 700 or r == 1000 or r == 1500 == 0:
+                self.results[f"{r}_w"] = AttackResult(
                     latent_vector = recommendation.detach().clone(),
                     fitness_score = logits_softmax.item(),
                     generated_image = img
@@ -112,7 +111,7 @@ class SMILEBlackboxAttack(BaseAttack):
                 self.writer.add_scalar('Rank of label', rank_of_label.item(), r+1)
                 self.writer.add_image('Generated Image', img.squeeze(), global_step=r)
             
-        self.results["final"] = AttackResult(
+        self.results["final_w"] = AttackResult(
             latent_vector = recommendation.detach().clone(),
             fitness_score = logits_softmax.item(),
             generated_image = img

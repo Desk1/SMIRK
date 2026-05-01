@@ -1,0 +1,2 @@
+[2026-05-01 16:10:55,074][__main__][INFO] - Using device: cpu
+[2026-05-01 16:23:21,921][__main__][INFO] - Finished sampling stylegan_celeba_partial256 to /home/ken/projects/Thesis/SMIRK/output/samples/stylegan_celeba_partial256_0.7_8_25

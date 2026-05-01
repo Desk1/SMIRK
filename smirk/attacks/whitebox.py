@@ -89,7 +89,7 @@ class SMILEWhiteboxAttack(BaseAttack):
 
                     self.writer.add_image('Generated Image', img1.squeeze(), global_step=epoch)
 
-        self.results["elite"] = AttackResult(
+        self.results["final_w"] = AttackResult(
             latent_vector = self.L.detach().clone(),
             fitness_score = logits_softmax.item(),
             generated_image = img1.squeeze()
